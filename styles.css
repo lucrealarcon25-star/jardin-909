@@ -1040,4 +1040,8 @@ main { flex: 1 0 auto; }
 @media (max-width: 600px) {
   .portada__grilla, .modo-solapas .portada__grilla { grid-template-columns: minmax(0, 1fr) 80px; padding-block: 32px 44px; }
   .portada__ilustracion { max-width: 80px; }
+      /* Celulares: "Siguiente" a la derecha, indicando hacia adelante */
+   @media (max-width: 760px) {
+     .pie__volver { justify-self: end; }
+   }
 }
