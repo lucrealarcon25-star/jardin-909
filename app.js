@@ -823,15 +823,15 @@
 
     enlace.textContent = "";
     enlace.setAttribute("href", "#" + destino);
+    enlace.setAttribute("title", ultima ? C.pie.volver : (C.pie.siguiente || "Siguiente") + ": " + nombre);
     enlace.classList.toggle("pie__volver--arriba", ultima);
     if (ultima) {
       enlace.appendChild(pico("pico pico--arriba"));
-      enlace.appendChild(h("span", null, C.pie.volver));
+      enlace.appendChild(h("span", { class: "visualmente-oculto" }, C.pie.volver));
     } else {
       enlace.appendChild(pico("pico"));
-      enlace.appendChild(h("span", null, C.pie.siguiente || "Siguiente"));
-      // Para lectores de pantalla se indica a qué página lleva
-      enlace.appendChild(h("span", { class: "visualmente-oculto" }, ": " + nombre));
+      // Solo se ve el pico; el texto queda para lectores de pantalla
+      enlace.appendChild(h("span", { class: "visualmente-oculto" }, (C.pie.siguiente || "Siguiente") + ": " + nombre));
     }
 
     // "Anterior": no se muestra en la portada
@@ -841,9 +841,9 @@
     var previo = orden[i - 1];
     var nombrePrevio = (C.menu.filter(function (m) { return m.destino === previo; })[0] || {}).texto || "";
     atras.setAttribute("href", "#" + previo);
+    atras.setAttribute("title", (C.pie.anterior || "Anterior") + ": " + nombrePrevio);
     atras.appendChild(pico("pico pico--izquierda"));
-    atras.appendChild(h("span", null, C.pie.anterior || "Anterior"));
-    atras.appendChild(h("span", { class: "visualmente-oculto" }, ": " + nombrePrevio));
+    atras.appendChild(h("span", { class: "visualmente-oculto" }, (C.pie.anterior || "Anterior") + ": " + nombrePrevio));
     atras.hidden = false;
   }
 

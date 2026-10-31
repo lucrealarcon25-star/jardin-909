@@ -1076,3 +1076,21 @@ main { flex: 1 0 auto; }
 html { background: var(--beige); }
 body { background: var(--blanco); }
 main { padding-bottom: clamp(24px, 4vw, 40px); }
+
+/* Pie: solo el pico amarillo como flecha (sin palabra) */
+.pie__nav { gap: 12px; }
+.pie__nav a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transform-origin: center;
+}
+.pie__nav a:hover { background: rgba(243, 175, 61, .16); }
+.pie__nav .pico { width: 20px; height: 24px; }
+.pie__nav .pico--izquierda { transform: rotate(180deg); }
+.pie__nav .pico--arriba { transform: rotate(-90deg); }
+@media (max-width: 760px) {
+  .pie__nav a { width: 52px; height: 52px; }
+}
