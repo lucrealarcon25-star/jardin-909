@@ -1094,3 +1094,15 @@ main { padding-bottom: clamp(24px, 4vw, 40px); }
 @media (max-width: 760px) {
   .pie__nav a { width: 52px; height: 52px; }
 }
+
+/* Sin fondo blanco al "estirar" la pantalla en el celular:
+   lo que asoma debajo del pie es crema, y se desactiva el rebote. */
+html, body {
+  background: var(--beige);
+  overscroll-behavior-y: none;
+}
+.encabezado { background: var(--blanco); }
+main { background: var(--blanco); }
+
+/* Al entrar con #seccion la página queda arriba de todo (sin saltito) */
+.modo-solapas main > section[id] { scroll-margin-top: 400px; }

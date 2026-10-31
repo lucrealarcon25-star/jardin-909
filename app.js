@@ -316,6 +316,9 @@
 
     window.addEventListener("hashchange", mostrar);
     mostrar();
+    // El navegador salta solo al #ancla al cargar; volvemos arriba de la solapa
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("load", function () { window.scrollTo(0, 0); });
   }
 
   /* ---------------- 1. Portada ---------------- */
