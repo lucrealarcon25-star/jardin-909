@@ -1,5 +1,5 @@
 /* ================================================================
- 
+       CONTENIDO DEL SITIO — Jardín de Infantes N.º 909
    ================================================================
 
    CÓMO EDITAR ESTE ARCHIVO
@@ -35,7 +35,7 @@ window.CONTENIDO = {
     // true = vista de propuesta (muestra el aviso superior y lo pendiente).
     // Cambiá a false para la versión definitiva.
     modoPropuesta: true,
-    avisoPropuesta: "Vista de propuesta · Información institucional por completar",
+    avisoPropuesta: "",
 
     // Texto que se muestra en los datos pendientes (solo en modoPropuesta).
     textoPendiente: "A confirmar por la institución",
