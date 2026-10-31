@@ -510,7 +510,7 @@ section[id] { scroll-margin-top: var(--alto-encabezado); }
 .contacto__nota { margin-top: 32px; font-size: 0.8125rem; color: var(--gris-suave); }
 
 /* ---------- Pie ---------- */
-.pie { background: var(--beige); margin-top: clamp(24px, 4vw, 40px); }
+.pie { background: var(--beige); margin-top: 0; }
 
 .pie__fila {
   display: grid;
@@ -1069,3 +1069,10 @@ main { flex: 1 0 auto; }
   .pie__nav { justify-self: stretch; justify-content: space-between; width: 100%; }
   .pie__nav .pie__volver { margin-left: auto; justify-self: auto; }
 }
+
+/* Sin franjas blancas al desplazar en el celular:
+   el contenido llega pegado al pie, y si se "estira" la pantalla
+   al final se ve el color del pie (crema) en lugar de blanco. */
+html { background: var(--beige); }
+body { background: var(--blanco); }
+main { padding-bottom: clamp(24px, 4vw, 40px); }
