@@ -399,12 +399,14 @@
     C.jardin.apartados.forEach(function (a, i) {
       var boton = h("button", { class: "enlace-indicador", type: "button" },
         pico("pico"), h("span", null, a.titulo));
-      botones.appendChild(h("li", null, boton));
+      var item = h("li", null, boton);
+      botones.appendChild(item);
+      // En forma de lista: la información se abre justo debajo del ítem tocado
+      boton.addEventListener("click", function () { item.appendChild(solapa.nodo); });
       solapa.conectar(boton, i);
     });
 
     contenedor.appendChild(botones);
-    contenedor.appendChild(solapa.nodo);
   }
 
   /* ---------------- 3. Salas ---------------- */

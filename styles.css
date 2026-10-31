@@ -1152,3 +1152,23 @@ body.en-portada main > section#inicio > .contenedor { width: 100%; }
 body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
 main { flex: 1 0 auto; }
 .pie { flex: none; }
+
+/* ---------- Nuestro jardín: apartados en forma de lista ---------- */
+.apartados__botones {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 760px;
+  border-top: 1px solid var(--linea);
+}
+.apartados__botones > li { border-bottom: 1px solid var(--linea); }
+.apartados__botones .enlace-indicador {
+  width: 100%;
+  padding: 16px 4px;
+  font-size: 1.0625rem;
+  text-align: left;
+}
+.apartados__botones .solapa { margin: 0 0 16px; }
+@media (max-width: 600px) {
+  .apartados__botones .enlace-indicador { padding: 15px 2px; font-size: 1rem; }
+}
