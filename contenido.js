@@ -1,5 +1,5 @@
 /* ================================================================
-   CONTENIDO DEL SITIO — Jardín de Infantes N.º 909 "Malvinas Argentinas"
+ 
    ================================================================
 
    CÓMO EDITAR ESTE ARCHIVO
