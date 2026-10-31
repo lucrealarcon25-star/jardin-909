@@ -991,4 +991,8 @@ main { position: relative; isolation: isolate; }
 }
 @media (max-width: 600px) {
   .portada__ilustracion:has(.portada__video-caja) { max-width: none; justify-self: stretch; }
+      /* Celulares: proyectos sin líneas separadoras, solo espacio */
+   @media (max-width: 760px) {
+     .proyectos .proyecto { border-bottom: 0; margin-bottom: 8px; }
+   }
 }
