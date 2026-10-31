@@ -833,6 +833,18 @@
       // Para lectores de pantalla se indica a qué página lleva
       enlace.appendChild(h("span", { class: "visualmente-oculto" }, ": " + nombre));
     }
+
+    // "Anterior": no se muestra en la portada
+    var atras = $("#pie-anterior");
+    atras.textContent = "";
+    if (i <= 0) { atras.hidden = true; return; }
+    var previo = orden[i - 1];
+    var nombrePrevio = (C.menu.filter(function (m) { return m.destino === previo; })[0] || {}).texto || "";
+    atras.setAttribute("href", "#" + previo);
+    atras.appendChild(pico("pico pico--izquierda"));
+    atras.appendChild(h("span", null, C.pie.anterior || "Anterior"));
+    atras.appendChild(h("span", { class: "visualmente-oculto" }, ": " + nombrePrevio));
+    atras.hidden = false;
   }
 
   /* ---------------- Inicio ---------------- */

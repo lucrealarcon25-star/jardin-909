@@ -302,6 +302,7 @@ window.CONTENIDO = {
   /* ---------- PIE DE PÁGINA ---------- */
   pie: {
     lineas: ["Morón · DGCyE"],
+    anterior: "Anterior",        // lleva a la página anterior (no aparece en la portada)
     siguiente: "Siguiente",      // lleva a la página siguiente del menú
     volver: "Volver al inicio"   // solo en la última página (Contacto)
   }
