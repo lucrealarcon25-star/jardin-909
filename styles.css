@@ -991,8 +991,53 @@ main { position: relative; isolation: isolate; }
 }
 @media (max-width: 600px) {
   .portada__ilustracion:has(.portada__video-caja) { max-width: none; justify-self: stretch; }
-      /* Celulares: proyectos sin líneas separadoras, solo espacio */
-   @media (max-width: 760px) {
-     .proyectos .proyecto { border-bottom: 0; margin-bottom: 8px; }
-   }
+}
+
+/* Celulares: proyectos sin líneas separadoras, solo espacio */
+@media (max-width: 760px) {
+  .proyectos .proyecto { border-bottom: 0; margin-bottom: 8px; }
+}
+
+/* Celulares y tablets: sin altura mínima, así no queda espacio en blanco abajo */
+@media (max-width: 900px) {
+  .modo-solapas main { min-height: 0; }
+}
+
+/* Instagram */
+.enlace-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  text-decoration: none;
+  transform-origin: left center;
+  transition: transform .15s ease;
+}
+.enlace-instagram .icono-instagram { width: 20px; height: 20px; flex-shrink: 0; }
+.enlace-instagram span:not(.visualmente-oculto) { text-decoration: underline; text-underline-offset: 3px; }
+@media (hover: hover) { .enlace-instagram:hover { transform: scale(var(--zoom)); } }
+.enlace-instagram:focus-visible { transform: scale(var(--zoom)); }
+.pie__centro { display: grid; gap: 6px; justify-items: start; }
+.pie__instagram { font-size: 0.8125rem; }
+
+/* La página ocupa siempre el alto de la pantalla y el pie queda al final */
+body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+main { flex: 1 0 auto; }
+
+/* Celulares: el pingüino a la derecha del título, mirando hacia el texto (como en computadora) */
+@media (max-width: 600px) {
+  .portada__grilla,
+  .modo-solapas .portada__grilla {
+    grid-template-columns: minmax(0, 1fr) 72px;
+    column-gap: 14px;
+    align-items: start;
+  }
+  .portada__ilustracion { order: 0; grid-column: 2; grid-row: 1; justify-self: end; max-width: 72px; margin-top: 8px; }
+  .portada__texto { grid-column: 1; grid-row: 1; }
+  .portada__titulo { font-size: clamp(1.85rem, 8.4vw, 2.3rem); }
+}
+@media (max-width: 600px) {
+  .portada__grilla, .modo-solapas .portada__grilla { grid-template-columns: minmax(0, 1fr) 80px; padding-block: 32px 44px; }
+  .portada__ilustracion { max-width: 80px; }
 }

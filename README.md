@@ -30,7 +30,9 @@ Historia, misión, visión, descripción de cada sala, edad/turno/docentes de ca
 
 Ya cargados: dirección (Berutti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo y el texto de Propuesta educativa (tomado del relevamiento institucional: revisarlo con la institución).
 
-El lema "Travesía de Infancias…" y la presentación se tomaron del mockup: confirmarlos.
+La presentación de "El jardín" se tomó del mockup: confirmarla.
+
+**Instagram:** en `contenido.js` → `redes.instagram`, completá `url` (enlace al perfil) y `usuario` (ej.: `@jardin909`). Aparece en el pie y en Contacto.
 
 ## Recursos gráficos
 

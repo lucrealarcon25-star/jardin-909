@@ -649,6 +649,8 @@
     if (!vacio(D.email)) {
       datos.push(h("p", null, "Correo: ", h("a", { class: "enlace-texto", href: "mailto:" + D.email }, D.email)));
     }
+    var igContacto = enlaceInstagram();
+    if (igContacto) datos.push(h("p", null, igContacto));
     if (!datos.length && PROPUESTA) datos.push(h("p", null, pendiente()));
 
     [columna("Dirección", direccion), columna("Horarios", horarios), columna("Contacto institucional", datos)]
@@ -776,6 +778,24 @@
     caja.hidden = false;
   }
 
+  // Enlace a Instagram con ícono (se muestra solo si hay url)
+  function enlaceInstagram(clase) {
+    var ig = (C.redes && C.redes.instagram) || {};
+    if (vacio(ig.url)) return null;
+    var svg = document.createElementNS(SVG_NS, "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("class", "icono-instagram");
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+    svg.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>' +
+      '<circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/>' +
+      '<circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/>';
+    return h("a", { class: "enlace-instagram " + (clase || ""), href: ig.url, target: "_blank", rel: "noopener" },
+      svg,
+      h("span", null, vacio(ig.usuario) ? "Instagram" : ig.usuario),
+      h("span", { class: "visualmente-oculto" }, " – Instagram del jardín (se abre en una pestaña nueva)"));
+  }
+
   /* ---------------- Pie ---------------- */
 
   function pie() {
@@ -785,6 +805,9 @@
       if (i) texto.appendChild(h("br"));
       texto.appendChild(document.createTextNode(l));
     });
+    var ig = enlaceInstagram("pie__instagram");
+    if (ig) texto.parentNode.insertBefore(h("div", { class: "pie__centro" }), texto);
+    if (ig) { var centro = $(".pie__centro"); centro.appendChild(texto); centro.appendChild(ig); }
     actualizarPie("inicio");
   }
 

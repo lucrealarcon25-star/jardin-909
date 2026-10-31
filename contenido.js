@@ -1,5 +1,5 @@
 /* ================================================================
-       CONTENIDO DEL SITIO — Jardín de Infantes N.º 909
+   CONTENIDO DEL SITIO — Jardín de Infantes N.º 909 "Malvinas Argentinas"
    ================================================================
 
    CÓMO EDITAR ESTE ARCHIVO
@@ -35,7 +35,7 @@ window.CONTENIDO = {
     // true = vista de propuesta (muestra el aviso superior y lo pendiente).
     // Cambiá a false para la versión definitiva.
     modoPropuesta: true,
-    avisoPropuesta: "",
+    avisoPropuesta: "", // Texto de la franja superior. Vacío = no se muestra.
 
     // Texto que se muestra en los datos pendientes (solo en modoPropuesta).
     textoPendiente: "A confirmar por la institución",
@@ -62,7 +62,7 @@ window.CONTENIDO = {
   portada: {
     titulo: "Un lugar para jugar, descubrir y crecer.",
     // Bajada basada en la propuesta educativa. Se puede cambiar.
-    bajada: "Un jardín de Nivel Inicial en Morón donde el juego, la literatura y la educación ambiental guían cada travesía.",
+    bajada: "Un jardín de infantes en Morón donde el juego, la literatura y la educación ambiental guían cada travesía.",
 
     ilustracion: {
       src: "assets/ilustraciones/pinguino.png",
@@ -90,7 +90,7 @@ window.CONTENIDO = {
   jardin: {
     titulo: "Nuestro jardín",
     // Lema y presentación tomados del mockup y del brandboard. Confirmar con la institución.
-    lema: "Travesía de Infancias: un territorio de exploración, juego y construcción colectiva.",
+    lema: "", // Subtítulo opcional debajo de "Nuestro jardín". Vacío = no se muestra.
     presentacion: "Una mirada inclusiva, orientada a los derechos de las infancias, que acompaña la autonomía y fortalece el lazo comunitario y la cultura del encuentro.",
 
     // Cada apartado se abre en una solapa al hacer clic. Completá "texto".
@@ -102,7 +102,7 @@ window.CONTENIDO = {
         id: "propuesta",
         titulo: "Propuesta educativa",
         // Texto tomado del relevamiento institucional. Revisar con la institución.
-        texto: "El Jardín 909 es una institución de Nivel Inicial que trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\nDesde lo **pedagógico**, la institución trabaja desde un **enfoque de derechos, constructivista y sociocrítico**, incorporando también la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar importante dentro de la propuesta, ya que es entendido como parte del aprendizaje."
+        texto: "El Jardín de Infantes N.º 909 trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\nDesde lo **pedagógico**, la institución trabaja desde un **enfoque de derechos, constructivista y sociocrítico**, incorporando también la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar importante dentro de la propuesta, ya que es entendido como parte del aprendizaje."
       },
       {
         id: "mapa",
@@ -249,7 +249,7 @@ window.CONTENIDO = {
     domicilio: "Berutti 488",
     entreCalles: "entre Constituyentes y Gandora",
     codigoPostal: "1708",
-    nivel: "Nivel Inicial",
+    nivel: "", // Opcional: se muestra debajo de la dirección
     horarios: "",   // PENDIENTE
     telefono: "",   // PENDIENTE (ej.: "011 1234-5678")
     email: "",      // PENDIENTE
@@ -290,9 +290,18 @@ window.CONTENIDO = {
     // { texto: "", url: "" },
   ],
 
+  /* ---------- REDES SOCIALES ----------
+     Pegá el enlace completo del perfil, por ejemplo:
+     url: "https://www.instagram.com/jardin909/"
+     y en "usuario" el nombre como querés que se vea: "@jardin909".
+     Si "url" queda vacío, no se muestra. */
+  redes: {
+    instagram: { usuario: "@ji909malvinasargentinas", url: "https://www.instagram.com/ji909malvinasargentinas/" }
+  },
+
   /* ---------- PIE DE PÁGINA ---------- */
   pie: {
-    lineas: ["Morón · DGCyE", "Travesía de Infancias · 2026"],
+    lineas: ["Morón · DGCyE"],
     siguiente: "Siguiente",      // lleva a la página siguiente del menú
     volver: "Volver al inicio"   // solo en la última página (Contacto)
   }
