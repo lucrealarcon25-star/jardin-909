@@ -1147,3 +1147,8 @@ body.en-portada main > section#inicio > .contenedor { width: 100%; }
   .pie__nav .pie__volver { margin-left: 0; }
   .pie__instagram { font-size: 0.8125rem; word-break: break-all; }
 }
+
+/* El pie queda siempre al final de la pantalla y mide lo mismo en todas las páginas */
+body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+main { flex: 1 0 auto; }
+.pie { flex: none; }
