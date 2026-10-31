@@ -1106,3 +1106,13 @@ main { background: var(--blanco); }
 
 /* Al entrar con #seccion la página queda arriba de todo (sin saltito) */
 .modo-solapas main > section[id] { scroll-margin-top: 400px; }
+
+/* La página termina donde termina el contenido: sin relleno antes del pie.
+   (Si la pantalla es más alta que el contenido, debajo se ve el crema del pie.) */
+body { min-height: 0; display: block; }
+main { flex: none; }
+.modo-solapas main { min-height: 0; }
+.portada__grilla { min-height: 0; }
+@media (max-width: 900px) {
+  main { padding-bottom: 16px; }
+}
