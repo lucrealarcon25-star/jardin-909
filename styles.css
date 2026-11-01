@@ -1172,3 +1172,87 @@ main { flex: 1 0 auto; }
 @media (max-width: 600px) {
   .apartados__botones .enlace-indicador { padding: 15px 2px; font-size: 1rem; }
 }
+
+/* Video de la portada: el fondo blanco del video se funde con la trama */
+.portada__video { border-radius: 0; mix-blend-mode: multiply; }
+.video__icono--repetir { font-size: 1.25rem; line-height: 1; color: var(--azul-oscuro); font-weight: 700; }
+@media (max-width: 600px) {
+  .portada__ilustracion:has(.portada__video-caja) { max-width: 150px; justify-self: end; }
+  .portada__grilla:has(.portada__video-caja) { grid-template-columns: minmax(0, 1fr) 150px; }
+}
+
+/* ================================================================
+   PANTALLA DE ENTRADA: la marca se arma sobre el fondo con la trama
+   ================================================================ */
+html.intro-activa { overflow: hidden; }
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: var(--blanco);
+  transition: opacity .7s ease;
+}
+.intro--saliendo { opacity: 0; pointer-events: none; }
+
+.intro__trama { opacity: var(--trama-portada); z-index: 0; }
+
+.intro__video {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 1100px);
+  height: auto;
+  max-height: 86vh;
+  object-fit: contain;
+  mix-blend-mode: multiply;   /* el fondo blanco del video se funde con la trama */
+}
+
+.intro__saltar {
+  position: absolute;
+  z-index: 2;
+  right: clamp(16px, 4vw, 40px);
+  bottom: clamp(16px, 4vw, 40px);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  background: rgba(255, 255, 255, .85);
+  border: 2px solid var(--linea);
+  border-radius: 999px;
+  transition: transform .15s ease;
+}
+@media (hover: hover) { .intro__saltar:hover { transform: scale(var(--zoom)); } }
+.intro__saltar:focus-visible { transform: scale(var(--zoom)); }
+
+@media (max-width: 600px) {
+  .intro__video { width: 100vw; }
+}
+
+/* La marca queda sólida: solo el fondo blanco del video deja ver la trama */
+.intro__video, .portada__video { mix-blend-mode: darken; }
+
+/* ---------- Portada: el pingüino se arma (video) y queda fijo ---------- */
+.portada__ilustracion:has(.portada__video-caja) { max-width: 440px; justify-self: end; }
+.portada__video-caja { position: relative; aspect-ratio: 560 / 720; width: 100%; }
+.portada__video, .portada__video-final {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; mix-blend-mode: darken; border-radius: 0;
+}
+.portada__video-final { opacity: 0; transition: opacity .35s ease; }
+.portada__video-final--visible { opacity: 1; }
+@media (max-width: 600px) {
+  .portada__grilla:has(.portada__video-caja),
+  .modo-solapas .portada__grilla:has(.portada__video-caja) { grid-template-columns: minmax(0, 1fr) 150px; column-gap: 4px; }
+  .portada__ilustracion:has(.portada__video-caja) { max-width: 150px; margin-top: -8px; }
+}
+
+.portada__video { transition: opacity .35s ease; }
+.portada__video--oculto { opacity: 0; }
+/* El video y su imagen final ya vienen espejados (miran hacia el texto) */
+.portada__ilustracion--espejada .portada__video-final,
+.portada__ilustracion--espejada .portada__video { transform: none; }

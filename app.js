@@ -337,39 +337,97 @@
 
   }
 
-  // Video de la portada: sin sonido, con botón para pausar.
-  // Si la persona prefiere "reducir movimiento", no arranca solo.
+  // Video de la portada: el pingüino se arma una vez y queda fijo.
+  // Al terminar, se funde con la imagen final (nítida). Sin sonido.
+  // Si la persona prefiere "reducir movimiento", se ve directamente la imagen final.
   function videoPortada(V, alFallar) {
-    var quieto = reducirMovimiento();
+    var caja = h("div", { class: "portada__video-caja" });
+    var final = vacio(V.imagenFinal) ? null
+      : imagen({ src: V.imagenFinal, alt: "" }, "portada__video-final");
+
+    if (reducirMovimiento() && final) {
+      final.classList.add("portada__video-final--visible");
+      caja.appendChild(final);
+      return caja;
+    }
+
     var video = h("video", {
-      class: "portada__video",
-      src: V.src,
-      poster: vacio(V.poster) ? null : V.poster,
-      playsinline: true,
-      preload: "metadata",
+      class: "portada__video", src: V.src, playsinline: true, preload: "auto",
       "aria-label": V.descripcion || ""
     });
     video.muted = true;
-    video.loop = V.repetir !== false;
-    if (!quieto) video.autoplay = true;
+    video.defaultMuted = true;
+    video.loop = V.repetir === true;
+    video.autoplay = true;
     video.addEventListener("error", alFallar, { once: true });
-
-    var boton = h("button", { class: "video__control", type: "button" });
-    function actualizar() {
-      var pausado = video.paused;
-      boton.textContent = "";
-      boton.appendChild(h("span", { class: "video__icono video__icono--" + (pausado ? "play" : "pausa"), "aria-hidden": "true" }));
-      boton.setAttribute("aria-label", pausado ? "Reproducir animación" : "Pausar animación");
+    function mostrarFinal() {
+      if (!final) return;
+      final.classList.add("portada__video-final--visible");
+      video.classList.add("portada__video--oculto");
     }
-    boton.addEventListener("click", function () {
-      if (video.paused) video.play(); else video.pause();
+    // Se funde un poco antes del final, para que el saltito termine en la imagen quieta
+    video.addEventListener("timeupdate", function () {
+      if (video.duration && video.currentTime >= video.duration - 0.35) mostrarFinal();
     });
-    video.addEventListener("play", actualizar);
-    video.addEventListener("pause", actualizar);
-    video.addEventListener("ended", actualizar);
-    actualizar();
+    video.addEventListener("ended", mostrarFinal);
+    var intento = video.play && video.play();
+    if (intento && intento.catch) intento.catch(mostrarFinal);
 
-    return h("div", { class: "portada__video-caja" }, video, boton);
+    caja.appendChild(video);
+    if (final) caja.appendChild(final);
+    return caja;
+  }
+
+  /* ---------------- Pantalla de entrada ---------------- */
+  function introMarca() {
+    var I = C.intro;
+    if (!I || vacio(I.src)) return;
+    var hash = location.hash.slice(1);
+    if (hash && hash !== "inicio") return;          // solo al entrar por la portada
+    if (reducirMovimiento()) return;
+    var CLAVE = "jardin909-intro-vista";
+    try { if (I.unaVezPorVisita && sessionStorage.getItem(CLAVE)) return; } catch (e) {}
+
+    var cerrada = false;
+    var video = h("video", {
+      class: "intro__video", src: I.src, playsinline: true, preload: "auto",
+      "aria-label": I.descripcion || ""
+    });
+    video.muted = true;
+    video.defaultMuted = true;
+    video.autoplay = true;
+
+    var saltar = h("button", { class: "intro__saltar", type: "button" },
+      h("span", null, I.textoSaltar || "Saltar"), pico("pico"));
+
+    var capa = h("div", { class: "intro", role: "dialog", "aria-modal": "true", "aria-label": "Presentación del jardín" },
+      h("div", { class: "trama intro__trama", "aria-hidden": "true" }),
+      video, saltar);
+
+    function cerrar() {
+      if (cerrada) return;
+      cerrada = true;
+      try { sessionStorage.setItem(CLAVE, "1"); } catch (e) {}
+      capa.classList.add("intro--saliendo");
+      document.documentElement.classList.remove("intro-activa");
+      setTimeout(function () {
+        if (capa.parentNode) capa.parentNode.removeChild(capa);
+        var t = $("#portada-titulo"); if (t) t.focus({ preventScroll: true });
+      }, 700);
+    }
+
+    saltar.addEventListener("click", cerrar);
+    video.addEventListener("ended", cerrar);
+    video.addEventListener("error", cerrar);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") cerrar(); });
+    // Por seguridad: si el video no arranca o se traba, la página aparece igual
+    setTimeout(function () { if (video.paused && video.currentTime === 0) cerrar(); }, 4000);
+    setTimeout(cerrar, 20000);
+
+    document.documentElement.classList.add("intro-activa");
+    document.body.appendChild(capa);
+    var intento = video.play();
+    if (intento && intento.catch) intento.catch(cerrar);
   }
 
   /* ---------------- 2. Nuestro jardín ---------------- */
@@ -867,6 +925,7 @@
     contacto();
     pie();
     navegacionPorSolapas();
+    introMarca();
   }
 
   iniciar();

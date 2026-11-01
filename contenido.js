@@ -74,16 +74,33 @@ window.CONTENIDO = {
     espejarIlustracion: true,
 
     // VIDEO ANIMADO (After Effects)
-    // Si "src" tiene un archivo, la portada muestra el video en lugar del pingüino.
-    // Exportalo como MP4 (H.264), sin sonido, y guardalo en assets/video/.
-    // "poster" es una imagen fija (primer cuadro) que se ve mientras carga.
-    // Si el archivo falta o no carga, se muestra el pingüino.
+    // Si "src" tiene un archivo, la portada muestra la animación en lugar del pingüino:
+    // se arma una sola vez al abrir la página y queda fija en el último cuadro
+    // (la marca completa). Después aparece un botón para volver a verla.
+    // - src: el video MP4 (H.264), sin sonido, con FONDO BLANCO.
+    // - imagenFinal: PNG del último cuadro (la marca armada). Se usa si la persona
+    //   tiene activado "reducir movimiento" en su dispositivo.
+    // Si el video falta o no carga, se muestra el pingüino.
     video: {
-      src: "",            // ej.: "assets/video/animacion-portada.mp4"
-      poster: "",         // ej.: "assets/video/animacion-portada.jpg"
-      descripcion: "Animación del pingüino del jardín",
-      repetir: true       // true = se repite en bucle; false = se reproduce una vez
+      src: "assets/video/pinguino-armado.mp4",
+      imagenFinal: "assets/video/pinguino-final.png",
+      descripcion: "El pingüino del jardín se arma pieza por pieza",
+      repetir: false      // false = se arma una vez y queda fijo (recomendado)
     }
+  },
+
+  /* ---------- PANTALLA DE ENTRADA (animación de la marca) ----------
+     Al abrir la página en Inicio, la marca se arma a pantalla completa
+     sobre el fondo con la trama y luego se desvanece mostrando la portada.
+     - Se ve una vez por visita (si se recarga en otra pestaña, vuelve a verse).
+     - Tiene botón "Saltar". También se salta con la tecla Esc.
+     - Si la persona tiene activado "reducir movimiento", no se muestra.
+     Para desactivarla, dejá "src" vacío: "" */
+  intro: {
+    src: "", // Desactivada: el pingüino se arma en la portada. Para activarla: "assets/video/intro-marca.mp4"
+    descripcion: "Animación: las piezas geométricas forman el pingüino y el logo del Jardín de Infantes N.º 909 Malvinas Argentinas",
+    textoSaltar: "Saltar",
+    unaVezPorVisita: true
   },
 
   /* ---------- 2. NUESTRO JARDÍN ---------- */
@@ -102,7 +119,7 @@ window.CONTENIDO = {
         id: "propuesta",
         titulo: "Propuesta educativa",
         // Texto tomado del relevamiento institucional. Revisar con la institución.
-        texto: "El Jardín de Infantes N.º 909 trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\n En lo **pedagógico**, la institución se basa en un **enfoque de derechos, constructivista y sociocrítico**, e incorpora la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar central en la propuesta, porque se lo entiende como parte del aprendizaje."
+        texto: "El Jardín de Infantes N.º 909 trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\nEn lo **pedagógico**, la institución se basa en un **enfoque de derechos, constructivista y sociocrítico**, e incorpora la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar central en la propuesta, porque se lo entiende como parte del aprendizaje."
       },
       {
         id: "mapa",

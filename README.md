@@ -59,13 +59,14 @@ Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarI
 
 Texto a la izquierda (título y bajada) alineado con el logo y el menú. A la derecha, el pingüino del logo o la animación de After Effects.
 
-### Video animado de la portada
-1. En After Effects: **Archivo → Exportar → Añadir a la cola de Adobe Media Encoder**. Formato **H.264**, sin audio, 1080 px como máximo, y que pese menos de 5 MB si se puede. Si querés que el video tenga fondo transparente, avisá: se exporta distinto (WebM).
-2. Guardalo como `assets/video/animacion-portada.mp4`.
-3. Opcional: exportá el primer cuadro como `assets/video/animacion-portada.jpg`.
-4. En `contenido.js` → `portada.video`, completá `src` (y `poster` si hiciste la imagen).
+### Pingüino animado de la portada
+Al abrir la página, el pingüino se arma pieza por pieza (`assets/video/pinguino-armado.mp4`, 7 s, 115 KB) y al terminar se funde con la imagen quieta (`assets/video/pinguino-final.png`), que queda fija. El video original (4K, fondo crema) se espejó para que mire hacia el texto, se recortó alrededor del pingüino y se pasó a fondo blanco para que se funda con la trama. Si la persona tiene activado "reducir movimiento", se ve directamente la imagen quieta. Se configura en `contenido.js` → `portada.video`.
 
-El video arranca solo, sin sonido y en bucle, y tiene un botón para pausarlo. Si la persona tiene activada la opción "reducir movimiento", no arranca solo. Si el archivo falta, se ve el pingüino. Los textos se cambian en `contenido.js` → `portada`.
+## Pantalla de entrada
+
+**Desactivada por ahora** (el pingüino se arma en la portada). Si se activa: al abrir la página en Inicio, la marca se arma a pantalla completa sobre el fondo con la trama (`assets/video/intro-marca.mp4`, 13 s, 316 KB) y al terminar se desvanece mostrando la portada con el pingüino. Se ve una vez por visita, tiene botón "Saltar" (o tecla Esc) y no aparece si la persona tiene activado "reducir movimiento" ni si se entra directo a otra sección. Se configura en `contenido.js` → `intro` (dejá `src` vacío para desactivarla).
+
+El video original (4K, fondo crema) se convirtió a 1280 px con fondo blanco para que se funda con la trama.
 
 ## Trama de fondo
 
