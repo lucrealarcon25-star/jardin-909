@@ -122,13 +122,13 @@ window.CONTENIDO = {
         id: "mision",
         titulo: "Misión",
         // BORRADOR armado con los textos del cuestionario institucional. Lo tiene que aprobar el jardín.
-        texto: "Somos un jardín de infantes de Morón que recibe a niñas y niños de 2 a 5 años como **sujetos plenos de derecho** y **ciudadanos activos** desde la primera infancia.\n\nNuestra misión es ofrecerles una **educación integral y transformadora**, en la que **el juego, la literatura y la educación ambiental** se entraman todos los días para construir **identidad, pertenencia y cuidado mutuo**.\n\nLo hacemos desde una **pedagogía de la hospitalidad, la ternura y el cuidado**. Alojamos a cada niña, niño y familia en su singularidad, valoramos la **diversidad cultural** de nuestra comunidad y trabajamos para eliminar las barreras que impiden aprender y participar."
+        texto: "Somos un jardín de infantes de Morón que recibe a niñas y niños de 2 a 5 años como **sujetos plenos de derecho** y **ciudadanos activos** desde la primera infancia.\n\nNuestra misión es ofrecerles una **educación integral y transformadora**, en la que **el juego, la literatura y la educación ambiental** se entraman todos los días para construir **identidad, pertenencia y cuidado mutuo**.\n\nReconocemos a cada niña, niño y familia en su singularidad, valoramos la **diversidad cultural** de nuestra comunidad y trabajamos para eliminar las barreras que impiden aprender y participar."
       },
       {
         id: "vision",
         titulo: "Visión",
         // BORRADOR armado con los textos del cuestionario institucional. Lo tiene que aprobar el jardín.
-        texto: "Soñamos con un jardín que sea una **comunidad de vida y de sostén**, donde niñas, niños, familias y docentes construyan juntos **un horizonte común**.\n\nUn jardín donde **cada espacio enseñe**: un Puerto, un Faro, unas Mareas y un Muelle que las infancias puedan leer y recorrer con autonomía, en una **travesía** compartida.\n\nQueremos que nuestro nombre, **“Malvinas Argentinas”**, siga invitando a la **memoria colectiva, la soberanía y la cultura de la paz y del encuentro**. Y que toda la comunidad reconozca **el valor del juego y del arte** como formas de aprender y de ejercer la ciudadanía."
+        texto: "Soñamos con un jardín que sea una **comunidad de vida y de sostén**, donde niñas, niños, familias y docentes construyan juntos **un horizonte común**.\n\nUn jardín donde **cada espacio enseñe** e invite a explorar, y donde las niñas y los niños se muevan con **autonomía y confianza**.\n\nQueremos que nuestro nombre, **“Malvinas Argentinas”**, siga invitando a la **memoria colectiva, la soberanía y la cultura de la paz y del encuentro**. Y que toda la comunidad reconozca **el valor del juego y del arte** como formas de aprender y de ejercer la ciudadanía."
       },
       {
         id: "propuesta",
