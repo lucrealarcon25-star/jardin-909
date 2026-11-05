@@ -116,25 +116,25 @@ window.CONTENIDO = {
         id: "historia",
         titulo: "Nuestra historia",
         // Texto tomado del Informe de Establecimiento. Revisar con la institución.
-        texto: "El jardín fue creado en 1972 con el número 913, junto a la Escuela Primaria N.º 99 “José Hernández”. Nació de la necesidad de ofrecer a los futuros alumnos y alumnas de esa escuela los años de escolaridad inicial, tan importantes para su formación.\n\nEn 1996, cuando el partido de Morón se dividió en Morón, Hurlingham e Ituzaingó, pasó a ser el Jardín de Infantes N.º 909 de Morón. En 2011, durante la dirección de la Sra. Diana Nari, recibió el nombre “Malvinas Argentinas”, elegido con una amplia participación de la comunidad educativa. En 2022 cumplió 50 años.\n\nMuchas de las familias que hoy nos acompañan tienen padres, madres, hermanos u otros parientes que también pasaron por el jardín. Desde 2024 las primeras secciones reciben también a niñas y niños de 2 años, en salas multiciclo."
+        texto: "El jardín fue **creado en 1972** con el número 913, junto a la **Escuela Primaria N.º 99 “José Hernández”**. Nació de la necesidad de ofrecer a los futuros alumnos y alumnas de esa escuela los años de escolaridad inicial, tan importantes para su formación.\n\n**En 1996**, cuando el partido de Morón se dividió en Morón, Hurlingham e Ituzaingó, pasó a ser el **Jardín de Infantes N.º 909 de Morón**. **En 2011**, durante la dirección de la Sra. Diana Nari, recibió el nombre **“Malvinas Argentinas”**, elegido con una **amplia participación de la comunidad educativa**. En 2022 **cumplió 50 años**.\n\nMuchas de las familias que hoy nos acompañan tienen padres, madres, hermanos u otros parientes que también pasaron por el jardín. Desde 2024 las primeras secciones reciben también a **niñas y niños de 2 años, en salas multiciclo**."
       },
       {
         id: "mision",
         titulo: "Misión",
         // BORRADOR armado con los textos del cuestionario institucional. Lo tiene que aprobar el jardín.
-        texto: "Somos un jardín de infantes de Morón que recibe a niñas y niños de 2 a 5 años y los reconoce como sujetos de derecho y ciudadanos activos desde la primera infancia.\n\nNuestra misión es brindarles una educación integral en la que el juego, la literatura y la educación ambiental se entrelazan cada día para construir identidad, pertenencia y cuidado mutuo. Reconocemos a cada niña, niño y familia en su singularidad, valoramos la diversidad cultural de nuestra comunidad y trabajamos para que todos puedan aprender y participar."
+        texto: "Somos un jardín de infantes de Morón que recibe a **niñas y niños de 2 a 5 años** y los reconoce como **sujetos de derecho** y **ciudadanos activos** desde la primera infancia.\n\nNuestra misión es brindarles una **educación integral** en la que **el juego, la literatura y la educación ambiental** se entrelazan cada día para construir **identidad, pertenencia y cuidado mutuo**. Reconocemos a cada niña, niño y familia en su singularidad, valoramos la **diversidad cultural** de nuestra comunidad y trabajamos para que todos puedan aprender y participar."
       },
       {
         id: "vision",
         titulo: "Visión",
         // BORRADOR armado con los textos del cuestionario institucional. Lo tiene que aprobar el jardín.
-        texto: "Soñamos con un jardín que sea una comunidad de vida y de sostén, donde niñas, niños, familias y docentes construyan juntos un horizonte común, y donde cada espacio enseñe, invite a explorar y permita moverse con autonomía y confianza.\n\nQueremos que nuestro nombre, “Malvinas Argentinas”, siga siendo una invitación a la memoria colectiva, la soberanía y la cultura de la paz y del encuentro, y que toda la comunidad reconozca el valor del juego y del arte como formas de aprender y de ejercer la ciudadanía."
+        texto: "Soñamos con un jardín que sea una **comunidad de vida y de sostén**, donde niñas, niños, familias y docentes construyan juntos un **horizonte común**, y donde **cada espacio enseñe**, invite a explorar y permita moverse con **autonomía y confianza**.\n\nQueremos que nuestro nombre, “Malvinas Argentinas”, siga siendo una invitación a la **memoria colectiva, la soberanía y la cultura de la paz y del encuentro**, y que toda la comunidad reconozca el **valor del juego y del arte** como formas de aprender y de ejercer la ciudadanía."
       },
       {
         id: "propuesta",
         titulo: "Propuesta educativa",
         // Texto tomado del relevamiento institucional. Revisar con la institución.
-        texto: "Nuestra propuesta se organiza alrededor del proyecto anual **“Travesía de Infancias: Juego, identidad y horizontes comunes”**. Concebimos a las niñas y los niños como sujetos de derecho y ciudadanos activos desde la primera infancia, y hacemos del juego, la literatura y la educación ambiental los ejes que atraviesan la tarea de todos los días.\n\nEl nombre del jardín, “Malvinas Argentinas”, se trabaja desde la memoria, la soberanía y la cultura de la paz, y da origen a una metáfora marítima que recorre la propuesta y los espacios. Por eso el jardín se organiza en cuatro sectores con nombre propio, el Puerto Sustentable, el Faro de Historias, las Mareas Creativas y el Muelle de Juegos. El edificio, de más de 50 años, con sus rampas, barandas, desniveles y galerías, acompaña esa idea y se recorre como si fuera un barco o un muelle.\n\nTrabajamos desde un enfoque de derechos, constructivista y sociocrítico, en diálogo con el Diseño Curricular de la Provincia de Buenos Aires. Entendemos el ambiente como parte del aprendizaje e incorporamos de manera transversal la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral."
+        texto: "Nuestra propuesta se organiza alrededor del proyecto anual **“Travesía de Infancias: Juego, identidad y horizontes comunes”**. Concebimos a las niñas y los niños como **sujetos de derecho** y **ciudadanos activos** desde la primera infancia, y hacemos d**el juego, la literatura y la educación ambiental** los ejes que atraviesan la tarea de todos los días.\n\nEl nombre del jardín, “Malvinas Argentinas”, se trabaja desde la memoria, la soberanía y la cultura de la paz, y da origen a una **metáfora marítima** que recorre la propuesta y los espacios. Por eso el jardín se organiza en cuatro sectores con nombre propio, **el Puerto Sustentable, el Faro de Historias, las Mareas Creativas y el Muelle de Juegos**. El edificio, de más de 50 años, con sus rampas, barandas, desniveles y galerías, acompaña esa idea y se recorre como si fuera **un barco o un muelle**.\n\nTrabajamos desde un **enfoque de derechos, constructivista y sociocrítico**, en diálogo con el **Diseño Curricular de la Provincia de Buenos Aires**. Entendemos **el ambiente como parte del aprendizaje** e incorporamos de manera transversal la **Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral**."
       },
       {
         id: "mapa",
@@ -166,8 +166,7 @@ window.CONTENIDO = {
         descripcion: "", // PENDIENTE: información de la sala
         datos: [
           { etiqueta: "Edad",     valor: "3 años" },
-          { etiqueta: "Turno",    valor: "Mañana y tarde" },
-          { etiqueta: "Docentes", valor: "" }  // PENDIENTE: confirmar
+          { etiqueta: "Turno",    valor: "Mañana y tarde" }
         ]
       },
       {
@@ -179,8 +178,7 @@ window.CONTENIDO = {
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "5 años" },
-          { etiqueta: "Turno",    valor: "Mañana y tarde" },
-          { etiqueta: "Docentes", valor: "" }
+          { etiqueta: "Turno",    valor: "Mañana y tarde" }
         ]
       },
       {
@@ -192,8 +190,7 @@ window.CONTENIDO = {
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "4 años" },
-          { etiqueta: "Turno",    valor: "Mañana y tarde" },
-          { etiqueta: "Docentes", valor: "" }
+          { etiqueta: "Turno",    valor: "Mañana y tarde" }
         ]
       }
     ]
@@ -209,28 +206,28 @@ window.CONTENIDO = {
         id: "puerto-sustentable",
         titulo: "Puerto sustentable",
         resumen: "Exploramos el cuidado del ambiente y nuestro entorno.",
-        detalle: "En el Puerto Sustentable trabajamos el cuidado del ambiente desde la Educación Ambiental Integral. Las niñas y los niños exploran la tierra y sus texturas, observan, hacen preguntas y construyen junto a sus docentes hábitos de cuidado del entorno y de los demás. Aunque el jardín cuenta con poco espacio verde, el ambiente ocupa un lugar central en la propuesta.",
+        detalle: "En el Puerto Sustentable trabajamos el **cuidado del ambiente** desde la **Educación Ambiental Integral**. Las niñas y los niños exploran la tierra y sus texturas, observan, hacen preguntas y construyen junto a sus docentes **hábitos de cuidado** del entorno y de los demás. Aunque el jardín cuenta con poco espacio verde, el ambiente ocupa un **lugar central** en la propuesta.",
         imagen: { src: "assets/proyectos/puerto-sustentable-reciclaje.png", alt: "Símbolo geométrico de reciclaje en verde y celeste" }
       },
       {
         id: "mareas-creativas",
         titulo: "Mareas creativas",
         resumen: "Arte, expresión y nuevas formas de comunicar.",
-        detalle: "Mareas Creativas reúne las propuestas de expresión artística, con la plástica, la música, el cuerpo y el movimiento como lenguajes para expresarse y comunicarse. Valoramos el proceso tanto como el resultado, porque una experiencia artística no siempre termina en un trabajo para la carpeta y muchas veces deja una huella en toda la sala. Las producciones de los chicos se exhiben en las salas y en los pasillos.",
+        detalle: "Mareas Creativas reúne las propuestas de **expresión artística**, con **la plástica, la música, el cuerpo y el movimiento** como lenguajes para expresarse y comunicarse. **Valoramos el proceso tanto como el resultado**, porque una experiencia artística no siempre termina en un trabajo para la carpeta y muchas veces deja una huella en toda la sala. Las producciones de los chicos **se exhiben en las salas** y en los pasillos.",
         imagen: { src: "assets/proyectos/mareas-creativas-ola.png", alt: "Ola geométrica en azules y verde agua" }
       },
       {
         id: "muelle-de-juegos",
         titulo: "Muelle de juegos",
         resumen: "El juego como motor de aprendizajes compartidos.",
-        detalle: "El Muelle de Juegos es el patio, el espacio del juego. Sus rampas y desniveles invitan a subir, bajar, mirar desde lo alto y recorrer distintos planos, y así enriquecen el juego simbólico y el juego motor. Allí se proponen juegos dramáticos, de construcción y con reglas, en los que las niñas y los niños aprenden a negociar, a ponerse de acuerdo y a convivir con otros.",
+        detalle: "El Muelle de Juegos **es el patio, el espacio del juego**. Sus rampas y desniveles invitan a subir, bajar, mirar desde lo alto y recorrer distintos planos, y así enriquecen el **juego simbólico y el juego motor**. Allí se proponen **juegos dramáticos, de construcción y con reglas**, en los que las niñas y los niños aprenden a negociar, a ponerse de acuerdo y a **convivir con otros**.",
         imagen: { src: "assets/proyectos/muelle-de-juegos-barco.png", alt: "Muelle de madera y barco a vela geométricos" }
       },
       {
         id: "faro-de-historias",
         titulo: "Faro de historias",
         resumen: "La lectura como puente hacia nuevos mundos.",
-        detalle: "El Faro de Historias es la biblioteca del jardín, donde compartimos cuentos, relatos y poesías y disfrutamos de la lectura en voz alta. Con los cuadernos y las bolsas viajeras literarias, los libros también llegan a las casas para que la lectura se comparta en familia.",
+        detalle: "El Faro de Historias es la **biblioteca del jardín**, donde compartimos cuentos, relatos y poesías y disfrutamos de la **lectura en voz alta**. Con los cuadernos y las **bolsas viajeras literarias**, los libros también llegan a las casas para que la lectura se comparta **en familia**.",
         imagen: { src: "assets/proyectos/faro-de-historias-faro.png", alt: "Faro geométrico en amarillo y coral, con rayos de luz" }
       }
     ]

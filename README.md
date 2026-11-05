@@ -26,7 +26,7 @@ Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
 ### Pendientes de la institución
 
-Aprobar el borrador de Misión y Visión, descripción de cada sala, docentes de cada sala, textos de las novedades y horario exacto de cada turno.
+Aprobar el borrador de Misión y Visión, descripción de cada sala, textos de las novedades y horario exacto de cada turno.
 
 Ya cargados: edad y turno de cada sala (Lila 3 años, Celeste 4 años, Verde 5 años; mañana y tarde), dirección (Beruti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
 
