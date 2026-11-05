@@ -165,8 +165,8 @@ window.CONTENIDO = {
         animal: "Caballito de mar. Es un animal de tamaño reducido que habita la costa bonaerense y patagónica. Explora su entorno aferrándose con su cola prensil a restos de algas flotantes, viajando a nuevos micro hábitats de forma pausada y minuciosa.",
         descripcion: "", // PENDIENTE: información de la sala
         datos: [
-          { etiqueta: "Edad",     valor: "3 años" }, // PENDIENTE: confirmar
-          { etiqueta: "Turno",    valor: "Mañana y tarde" }, // PENDIENTE: confirmar
+          { etiqueta: "Edad",     valor: "3 años" },
+          { etiqueta: "Turno",    valor: "Mañana y tarde" },
           { etiqueta: "Docentes", valor: "" }  // PENDIENTE: confirmar
         ]
       },
