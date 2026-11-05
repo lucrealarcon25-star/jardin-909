@@ -1256,3 +1256,49 @@ html.intro-activa { overflow: hidden; }
 /* El video y su imagen final ya vienen espejados (miran hacia el texto) */
 .portada__ilustracion--espejada .portada__video-final,
 .portada__ilustracion--espejada .portada__video { transform: none; }
+
+/* ---------- Pie: etiqueta "Anterior" / "Siguiente" al apoyar el mouse ----------
+   Aparece arriba del pico cuando se apoya el mouse o se llega con la tecla Tab. */
+.pie__nav a { position: relative; }
+.pie__etiqueta {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translate(-50%, 4px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.pie__etiqueta::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: var(--azul-oscuro);
+}
+@media (hover: hover) {
+  .pie__nav a:hover .pie__etiqueta { opacity: 1; transform: translate(-50%, 0); }
+}
+.pie__nav a:focus-visible .pie__etiqueta { opacity: 1; transform: translate(-50%, 0); }
+/* En celular el pico de la derecha queda pegado al borde: la etiqueta se alinea a la derecha */
+@media (max-width: 760px) {
+  .pie__nav .pie__volver .pie__etiqueta { left: auto; right: 0; transform: translateY(4px); }
+  .pie__nav .pie__volver .pie__etiqueta::after { left: auto; right: 17px; }
+  .pie__nav .pie__volver:focus-visible .pie__etiqueta { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pie__etiqueta { transition: none; }
+}
+
+/* Leyenda del pie */
+.pie__leyenda { font-style: italic; }

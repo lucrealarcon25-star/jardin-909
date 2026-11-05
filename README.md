@@ -26,9 +26,9 @@ Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
 ### Pendientes de la institución
 
-Historia, misión, visión, descripción de cada sala, edad/turno/docentes de cada sala (no se asignaron), detalle de cada proyecto, textos de las novedades, horarios, teléfono y correo.
+Misión, visión, descripción de cada sala, edad/turno/docentes de cada sala (no se asignaron), detalle de cada proyecto, textos de las novedades y horario exacto de cada turno.
 
-Ya cargados: dirección (Berutti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo y el texto de Propuesta educativa (tomado del relevamiento institucional: revisarlo con la institución).
+Ya cargados: dirección (Beruti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo, teléfono, correo, historia y el texto de Propuesta educativa (tomados del relevamiento y del Informe de Establecimiento: revisarlos con la institución).
 
 La presentación de "El jardín" se tomó del mockup: confirmarla.
 
@@ -51,9 +51,13 @@ Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarI
 
 ## Solapas
 
-- **Solapas del menú:** la primera pantalla muestra solo la portada. Cada opción del menú (Inicio, El jardín, Salas, Proyectos, Novedades, Contacto) abre su sección, de a una por vez. El logo o la solapa "Inicio" regresan a la portada. En el pie, el pico amarillo con "Siguiente" lleva a la página siguiente; en Contacto, la última, lleva de vuelta al inicio. La dirección cambia (`#salas`, `#proyectos`…), así funcionan el botón Atrás del navegador y los enlaces directos.
+- **Solapas del menú:** la primera pantalla muestra solo la portada. Cada opción del menú (Inicio, El jardín, Salas, Proyectos, Novedades, Contacto) abre su sección, de a una por vez. El logo o la solapa "Inicio" regresan a la portada. En el pie, al apoyar el mouse (o llegar con Tab) sobre los picos amarillos aparece la etiqueta "Anterior" o "Siguiente"; el pico "Siguiente" lleva a la página siguiente; en Contacto, la última, lleva de vuelta al inicio. La dirección cambia (`#salas`, `#proyectos`…), así funcionan el botón Atrás del navegador y los enlaces directos.
 - **Mapa del jardín:** está en "El jardín", junto a Historia, Misión, Visión y Propuesta educativa. Se puede abrir en tamaño completo.
 - **Solapas internas:** dentro de cada sección, "Nuestra historia", "Conocer la sala", "Conocer más" o "Leer comunicación" abren debajo **solo la información de ese ítem**. Se cierran con "Cerrar", con Esc o tocando de nuevo el mismo enlace.
+
+## Leyenda del pie
+
+Debajo de "Morón · DGCyE" se lee "Página para proyecto institucional". Se cambia en `contenido.js` → `pie.leyenda` (vacío = no se muestra).
 
 ## Portada
 

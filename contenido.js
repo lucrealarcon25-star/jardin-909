@@ -112,14 +112,19 @@ window.CONTENIDO = {
 
     // Cada apartado se abre en una solapa al hacer clic. Completá "texto".
     apartados: [
-      { id: "historia",  titulo: "Nuestra historia",    texto: "" }, // PENDIENTE
+      {
+        id: "historia",
+        titulo: "Nuestra historia",
+        // Texto tomado del Informe de Establecimiento. Revisar con la institución.
+        texto: "El jardín fue **creado en 1972** con el número 913. Lindero a la **Escuela Primaria N.º 99 “José Hernández”**, su creación está estrechamente vinculada a esa escuela: nació de la necesidad de ofrecer a sus futuros alumnos y alumnas los años de escolaridad inicial, tan necesarios para su formación.\n\nEn **1996**, al dividirse el partido de Morón en Morón, Hurlingham e Ituzaingó, cambió de número y pasó a ser el **Jardín de Infantes N.º 909 de Morón**. En **2011**, bajo la dirección de la Sra. Diana Nari, se le impuso el nombre **“Malvinas Argentinas”**, con una amplia participación de la comunidad educativa en su elección. En **2022** el jardín cumplió **50 años**.\n\nMuchas de las familias que hoy nos acompañan tienen padres, madres, hermanos, hermanas u otros parientes que también fueron alumnos y alumnas del jardín. Desde el ciclo lectivo 2024, las primeras secciones reciben también a niñas y niños de **2 años**, en **salas multiciclo**."
+      },
       { id: "mision",    titulo: "Misión",              texto: "" }, // PENDIENTE
       { id: "vision",    titulo: "Visión",              texto: "" }, // PENDIENTE
       {
         id: "propuesta",
         titulo: "Propuesta educativa",
         // Texto tomado del relevamiento institucional. Revisar con la institución.
-        texto: "El Jardín de Infantes N.º 909 trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\nEn lo **pedagógico**, la institución se basa en un **enfoque de derechos, constructivista y sociocrítico**, e incorpora la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar central en la propuesta, porque se lo entiende como parte del aprendizaje."
+        texto: "El Jardín de Infantes N.º 909 trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\nEn lo **pedagógico**, la institución se basa en un **enfoque de derechos, constructivista y sociocrítico**, e incorpora la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar central en la propuesta, porque se lo entiende como parte del aprendizaje.\n\nNuestra comunidad reúne familias nacidas en Morón y familias que llegaron de **Perú, Bolivia, Venezuela** y de distintas provincias del país. Esa diversidad sostiene un **trabajo intercultural** que enriquece a todos y promueve la aceptación y la no discriminación.\n\nEl jardín participa del **Proyecto Regional “Memorias e Infancias”**, que invita a conocer las plazas como espacios de memoria, identidad y lucha, y del **Proyecto Distrital “Sabores, saberes y sentires”**, desde los lenguajes artísticos. Además, articula con instituciones cercanas como el Museo de Morón, la Plaza de la Cultura, la Escuela Municipal de Danzas, el Club Social y Deportivo Saavedra y las escuelas de la zona."
       },
       {
         id: "mapa",
@@ -138,7 +143,7 @@ window.CONTENIDO = {
      Completá "valor" en cada dato cuando la institución lo confirme. */
   salas: {
     titulo: "Nuestras salas",
-    bajada: "Propuestas para niñas y niños de 3, 4 y 5 años.",
+    bajada: "Propuestas para niñas y niños de 2 a 5 años, en turno mañana y turno tarde.",
     textoEnlace: "Conocer la sala",
     items: [
       {
@@ -263,21 +268,21 @@ window.CONTENIDO = {
   contacto: {
     titulo: "Estamos cerca",
     localidad: "Morón, Provincia de Buenos Aires",
-    domicilio: "Berutti 488",
+    domicilio: "Beruti 488",
     entreCalles: "entre Constituyentes y Gandora",
     codigoPostal: "1708",
-    nivel: "", // Opcional: se muestra debajo de la dirección
-    horarios: "",   // PENDIENTE
-    telefono: "",   // PENDIENTE (ej.: "011 1234-5678")
-    email: "",      // PENDIENTE
+    nivel: "Nivel Inicial · Región Educativa 8 · DGCyE", // Opcional: se muestra debajo de la dirección
+    horarios: "Turno mañana y turno tarde",   // PENDIENTE: agregar el horario exacto de cada turno
+    telefono: "(011) 3758-1782",
+    email: "jardin909moron@abc.gob.ar",
     // Enlace "Ver en el mapa" (abre Google Maps)
-    mapa: "https://www.google.com/maps/search/?api=1&query=Berutti%20488%2C%20B1708%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires",
+    mapa: "https://www.google.com/maps/search/?api=1&query=Beruti%20488%2C%20B1708%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires",
 
     // MAPA "ESTAMOS ACÁ" (mapa de Google dentro de la página)
     // Para cambiarlo: en Google Maps buscá el jardín → Compartir →
     // Insertar un mapa → copiá SOLO lo que está entre comillas en src="..."
     tituloMapa: "Estamos acá",
-    mapaInsertado: "https://maps.google.com/maps?q=Berutti%20488%2C%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina&z=16&output=embed",
+    mapaInsertado: "https://maps.google.com/maps?q=Beruti%20488%2C%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina&z=16&output=embed",
 
     // FORMULARIO "¿NOS EMPEZAMOS A CONOCER?"
     // Para que los mensajes lleguen al correo del jardín:
@@ -319,6 +324,7 @@ window.CONTENIDO = {
   /* ---------- PIE DE PÁGINA ---------- */
   pie: {
     lineas: ["Morón · DGCyE"],
+    leyenda: "Página para proyecto institucional", // Leyenda debajo. Vacío = no se muestra.
     anterior: "Anterior",        // lleva a la página anterior (no aparece en la portada)
     siguiente: "Siguiente",      // lleva a la página siguiente del menú
     volver: "Volver al inicio"   // solo en la última página (Contacto)

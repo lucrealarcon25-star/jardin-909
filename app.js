@@ -868,6 +868,10 @@
       if (i) texto.appendChild(h("br"));
       texto.appendChild(document.createTextNode(l));
     });
+    if (!vacio(C.pie.leyenda)) {
+      if (texto.firstChild) texto.appendChild(h("br"));
+      texto.appendChild(h("span", { class: "pie__leyenda" }, C.pie.leyenda));
+    }
     var ig = enlaceInstagram("pie__instagram");
     if (ig) texto.parentNode.insertBefore(h("div", { class: "pie__centro" }), texto);
     if (ig) { var centro = $(".pie__centro"); centro.appendChild(texto); centro.appendChild(ig); }
@@ -886,15 +890,18 @@
 
     enlace.textContent = "";
     enlace.setAttribute("href", "#" + destino);
-    enlace.setAttribute("title", ultima ? C.pie.volver : (C.pie.siguiente || "Siguiente") + ": " + nombre);
+    enlace.removeAttribute("title"); // la etiqueta propia reemplaza al cartel del navegador
     enlace.classList.toggle("pie__volver--arriba", ultima);
     if (ultima) {
       enlace.appendChild(pico("pico pico--arriba"));
       enlace.appendChild(h("span", { class: "visualmente-oculto" }, C.pie.volver));
+      enlace.appendChild(h("span", { class: "pie__etiqueta", "aria-hidden": "true" }, C.pie.volver));
     } else {
       enlace.appendChild(pico("pico"));
       // Solo se ve el pico; el texto queda para lectores de pantalla
       enlace.appendChild(h("span", { class: "visualmente-oculto" }, (C.pie.siguiente || "Siguiente") + ": " + nombre));
+      // Etiqueta que aparece al apoyar el mouse (o al llegar con Tab)
+      enlace.appendChild(h("span", { class: "pie__etiqueta", "aria-hidden": "true" }, C.pie.siguiente || "Siguiente"));
     }
 
     // "Anterior": no se muestra en la portada
@@ -904,9 +911,10 @@
     var previo = orden[i - 1];
     var nombrePrevio = (C.menu.filter(function (m) { return m.destino === previo; })[0] || {}).texto || "";
     atras.setAttribute("href", "#" + previo);
-    atras.setAttribute("title", (C.pie.anterior || "Anterior") + ": " + nombrePrevio);
+    atras.removeAttribute("title");
     atras.appendChild(pico("pico pico--izquierda"));
     atras.appendChild(h("span", { class: "visualmente-oculto" }, (C.pie.anterior || "Anterior") + ": " + nombrePrevio));
+    atras.appendChild(h("span", { class: "pie__etiqueta", "aria-hidden": "true" }, C.pie.anterior || "Anterior"));
     atras.hidden = false;
   }
 
