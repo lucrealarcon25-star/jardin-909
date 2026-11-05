@@ -118,8 +118,18 @@ window.CONTENIDO = {
         // Texto tomado del Informe de Establecimiento. Revisar con la institución.
         texto: "El jardín fue **creado en 1972** con el número 913. Lindero a la **Escuela Primaria N.º 99 “José Hernández”**, su creación está estrechamente vinculada a esa escuela: nació de la necesidad de ofrecer a sus futuros alumnos y alumnas los años de escolaridad inicial, tan necesarios para su formación.\n\nEn **1996**, al dividirse el partido de Morón en Morón, Hurlingham e Ituzaingó, cambió de número y pasó a ser el **Jardín de Infantes N.º 909 de Morón**. En **2011**, bajo la dirección de la Sra. Diana Nari, se le impuso el nombre **“Malvinas Argentinas”**, con una amplia participación de la comunidad educativa en su elección. En **2022** el jardín cumplió **50 años**.\n\nMuchas de las familias que hoy nos acompañan tienen padres, madres, hermanos, hermanas u otros parientes que también fueron alumnos y alumnas del jardín. Desde el ciclo lectivo 2024, las primeras secciones reciben también a niñas y niños de **2 años**, en **salas multiciclo**."
       },
-      { id: "mision",    titulo: "Misión",              texto: "" }, // PENDIENTE
-      { id: "vision",    titulo: "Visión",              texto: "" }, // PENDIENTE
+      {
+        id: "mision",
+        titulo: "Misión",
+        // BORRADOR armado con los textos del cuestionario institucional. Lo tiene que aprobar el jardín.
+        texto: "Somos un jardín de infantes de Morón que recibe a niñas y niños de 2 a 5 años como **sujetos plenos de derecho** y **ciudadanos activos** desde la primera infancia.\n\nNuestra misión es ofrecerles una **educación integral y transformadora**, en la que **el juego, la literatura y la educación ambiental** se entraman todos los días para construir **identidad, pertenencia y cuidado mutuo**.\n\nLo hacemos desde una **pedagogía de la hospitalidad, la ternura y el cuidado**. Alojamos a cada niña, niño y familia en su singularidad, valoramos la **diversidad cultural** de nuestra comunidad y trabajamos para eliminar las barreras que impiden aprender y participar."
+      },
+      {
+        id: "vision",
+        titulo: "Visión",
+        // BORRADOR armado con los textos del cuestionario institucional. Lo tiene que aprobar el jardín.
+        texto: "Soñamos con un jardín que sea una **comunidad de vida y de sostén**, donde niñas, niños, familias y docentes construyan juntos **un horizonte común**.\n\nUn jardín donde **cada espacio enseñe**: un Puerto, un Faro, unas Mareas y un Muelle que las infancias puedan leer y recorrer con autonomía, en una **travesía** compartida.\n\nQueremos que nuestro nombre, **“Malvinas Argentinas”**, siga invitando a la **memoria colectiva, la soberanía y la cultura de la paz y del encuentro**. Y que toda la comunidad reconozca **el valor del juego y del arte** como formas de aprender y de ejercer la ciudadanía."
+      },
       {
         id: "propuesta",
         titulo: "Propuesta educativa",
