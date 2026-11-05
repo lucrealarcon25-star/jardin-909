@@ -124,7 +124,19 @@ window.CONTENIDO = {
         id: "propuesta",
         titulo: "Propuesta educativa",
         // Texto tomado del relevamiento institucional. Revisar con la institución.
-        texto: "El Jardín de Infantes N.º 909 trabaja desde una **mirada integral de las infancias**, entendiendo a los niños y niñas como **sujetos de derecho** y participantes activos de la comunidad educativa. Su proyecto anual, **“Travesía de Infancias: Juego, identidad y horizontes comunes”**, toma como ejes principales **el juego, la literatura y la educación ambiental**.\n\nLa **identidad del jardín** está fuertemente relacionada con su nombre, **“Malvinas Argentinas”**, y con una **metáfora marítima** que se refleja tanto en su **propuesta pedagógica** como en sus espacios. La institución **organiza diferentes sectores** bajo esta idea, como el **Puerto Sustentable, el Faro de Historias, Mareas Creativas y el Muelle de Juegos**. De esta manera, el espacio físico también forma parte de la experiencia educativa.\n\nEn lo **pedagógico**, la institución se basa en un **enfoque de derechos, constructivista y sociocrítico**, e incorpora la Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral. El ambiente ocupa un lugar central en la propuesta, porque se lo entiende como parte del aprendizaje.\n\nNuestra comunidad reúne familias nacidas en Morón y familias que llegaron de **Perú, Bolivia, Venezuela** y de distintas provincias del país. Esa diversidad sostiene un **trabajo intercultural** que enriquece a todos y promueve la aceptación y la no discriminación.\n\nEl jardín participa del **Proyecto Regional “Memorias e Infancias”**, que invita a conocer las plazas como espacios de memoria, identidad y lucha, y del **Proyecto Distrital “Sabores, saberes y sentires”**, desde los lenguajes artísticos. Además, articula con instituciones cercanas como el Museo de Morón, la Plaza de la Cultura, la Escuela Municipal de Danzas, el Club Social y Deportivo Saavedra y las escuelas de la zona."
+        texto: "Nuestra propuesta es **integral y transformadora**. Se organiza alrededor del proyecto anual **“Travesía de Infancias: Juego, identidad y horizontes comunes”** y concibe a las niñas y los niños como **sujetos plenos de derecho** y ciudadanos activos desde la primera infancia. **El juego, la literatura y la educación ambiental** son sus ejes. No funcionan por separado: se entraman todos los días para construir identidad, pertenencia y cuidado mutuo.\n\nNuestro nombre, **“Malvinas Argentinas”**, se resignifica desde una **pedagogía de la paz, la soberanía, la memoria colectiva y la cultura del encuentro**. Inspirados en esa identidad, organizamos el jardín en **cuatro territorios pedagógicos con nombres marítimos**: el **Puerto Sustentable**, el **Faro de Historias**, las **Mareas Creativas** y el **Muelle de Juegos**.\n\nNuestro edificio tiene más de 50 años. Sus rampas, barandas, desniveles, alturas y galerías semicubiertas le dan una identidad propia: el jardín se recorre como **un barco, una cubierta o un muelle**, y la metáfora de la travesía se vive con el cuerpo.\n\nTrabajamos desde un **enfoque de derechos, constructivista y sociocrítico**, en diálogo con el Diseño Curricular de la Provincia de Buenos Aires. Entendemos **el ambiente como educador**: el espacio también enseña e invita a explorar. La **Educación Ambiental Integral**, la **interculturalidad**, la **Justicia Curricular** y la **Educación Sexual Integral** atraviesan toda la propuesta.\n\nMás que un engranaje administrativo, el jardín es **una comunidad de vida y de sostén**. Cada niña, niño, docente y familia es nombrado, alojado y reconocido en su singularidad, desde una **pedagogía de la hospitalidad, la ternura y el cuidado mutuo**."
+      },
+      {
+        id: "juego",
+        titulo: "¿Por qué jugamos?",
+        // Texto tomado del relevamiento institucional. Revisar con la institución.
+        texto: "En el jardín, **el juego no es un pasatiempo**: es un **principio didáctico**, un **derecho** de las infancias y un contenido de gran valor cultural. Proponemos juego dramático, juegos de construcción y juegos con reglas, en las salas y en el patio.\n\nCuando negocian un rol en el **Muelle de Juegos**, exploran las texturas de la tierra en el **Puerto Sustentable** o disfrutan juntos de un relato en el **Faro de Historias**, las niñas y los niños aprenden **nociones complejas** sobre el espacio, el lenguaje, la convivencia democrática y la construcción de ciudadanía.\n\nPor eso, no todos los días vuelven a casa con una hoja pintada. **Una experiencia artística valiosa no siempre termina en un trabajito para la carpeta**: muchas veces deja una vivencia estética y una huella colectiva que transforma a toda la sala."
+      },
+      {
+        id: "diversidad",
+        titulo: "Diversidad e inclusión",
+        // Texto tomado del relevamiento institucional. Revisar con la institución.
+        texto: "Nuestra comunidad reúne familias nacidas en Morón y familias que llegaron de **Perú, Bolivia, Venezuela** y de distintas provincias del país. El jardín trabaja la diversidad **en clave intercultural y comunitaria**: aloja las distintas configuraciones familiares, los ritmos singulares de crianza, las identidades migrantes, las lenguas de origen y las historias de vida que conviven en el barrio.\n\nEntendemos la discapacidad como algo **relacional y no individual**. Por eso, el foco no está en “cambiar al niño”, sino en **modificar el ambiente, el dispositivo escolar y las propuestas** para eliminar las barreras de acceso, aprendizaje y participación.\n\nEl jardín participa del **Proyecto Regional “Memorias e Infancias”**, que invita a conocer las plazas como espacios de memoria, identidad y lucha, y del **Proyecto Distrital “Sabores, saberes y sentires”**, desde los lenguajes artísticos. Además, articula con instituciones cercanas como el Museo de Morón, la Plaza de la Cultura, la Escuela Municipal de Danzas, el Club Social y Deportivo Saavedra y las escuelas de la zona."
       },
       {
         id: "mapa",
@@ -199,28 +211,28 @@ window.CONTENIDO = {
         id: "puerto-sustentable",
         titulo: "Puerto sustentable",
         resumen: "Exploramos el cuidado del ambiente y nuestro entorno.",
-        detalle: "", // PENDIENTE: descripción ampliada del proyecto
+        detalle: "El **Puerto Sustentable** es el territorio del **ambiente y el cuidado**. Desde la **Educación Ambiental Integral**, entendemos el ambiente como parte del aprendizaje: exploramos la tierra y sus texturas, observamos, indagamos y construimos juntos hábitos de cuidado del entorno y de los demás.\n\nNuestro jardín tiene poco espacio verde, y por eso mismo la educación ambiental ocupa un lugar central en la propuesta.",
         imagen: { src: "assets/proyectos/puerto-sustentable-reciclaje.png", alt: "Símbolo geométrico de reciclaje en verde y celeste" }
       },
       {
         id: "mareas-creativas",
         titulo: "Mareas creativas",
         resumen: "Arte, expresión y nuevas formas de comunicar.",
-        detalle: "", // PENDIENTE
+        detalle: "Las **Mareas Creativas** son el territorio de la **expresión artística multimodal**: plástica, música, cuerpo, movimiento y otros lenguajes para expresarse y comunicarse.\n\nUna experiencia artística valiosa no siempre termina en un trabajito para la carpeta: muchas veces deja una **vivencia estética** y una **huella colectiva** que transforma a toda la sala. Las producciones de las niñas y los niños son protagonistas y se exhiben en las salas y pasillos.",
         imagen: { src: "assets/proyectos/mareas-creativas-ola.png", alt: "Ola geométrica en azules y verde agua" }
       },
       {
         id: "muelle-de-juegos",
         titulo: "Muelle de juegos",
         resumen: "El juego como motor de aprendizajes compartidos.",
-        detalle: "", // PENDIENTE
+        detalle: "El **Muelle de Juegos** es el **espacio lúdico y el patio**. Con sus rampas y desniveles, el patio se convierte en un verdadero muelle: las niñas y los niños suben, bajan, miran desde lo alto y recorren distintos planos, y así se enriquecen el **juego simbólico** y el **juego motor**.\n\nProponemos **juego dramático**, **juegos de construcción** y **juegos con reglas**. Al negociar un rol o acordar una regla, aprenden sobre el espacio, el lenguaje y la convivencia democrática.",
         imagen: { src: "assets/proyectos/muelle-de-juegos-barco.png", alt: "Muelle de madera y barco a vela geométricos" }
       },
       {
         id: "faro-de-historias",
         titulo: "Faro de historias",
         resumen: "La lectura como puente hacia nuevos mundos.",
-        detalle: "", // PENDIENTE
+        detalle: "El **Faro de Historias** es la **biblioteca** y el territorio de la **literatura**. Allí compartimos relatos, cuentos y poesías, y disfrutamos juntos de la lectura en voz alta.\n\nLos **cuadernos y bolsas viajeras literarias** llevan los libros a las casas, para que la lectura también se comparta en familia.",
         imagen: { src: "assets/proyectos/faro-de-historias-faro.png", alt: "Faro geométrico en amarillo y coral, con rayos de luz" }
       }
     ]
@@ -247,7 +259,7 @@ window.CONTENIDO = {
         categoria: "comunicaciones",
         fecha: "",
         resumen: "Un espacio para los avisos y la información institucional.",
-        texto: "", // PENDIENTE
+        texto: "Acá vas a encontrar la información importante del jardín: convocatorias a actos y talleres, el cronograma de actividades de la **“Travesía de Infancias”**, acuerdos de convivencia, pautas de cuidado ambiental y de salud, novedades de la Asociación Cooperadora y pedidos de colaboración.\n\nAdemás, nos comunicamos por el **cuaderno de comunicaciones**, las **carteleras** de la entrada, los **grupos de WhatsApp** de cada sala y nuestro **Instagram**. También nos encontramos en la entrada y la salida, en entrevistas, reuniones de sala, talleres y muestras abiertas.",
         enlace: { texto: "", url: "" },
         ejemplo: false
       },
@@ -256,7 +268,7 @@ window.CONTENIDO = {
         categoria: "experiencias",
         fecha: "",
         resumen: "Propuestas y experiencias para compartir con las familias.",
-        texto: "", // PENDIENTE
+        texto: "En el jardín **documentamos los procesos de aprendizaje**, no solo los resultados: bitácoras, fotografías, videos breves, podcasts, las voces de las niñas y los niños, y sus producciones gráficas y tridimensionales.\n\nEsos registros nos permiten **mirar e interpretar lo que aprenden** y planificar juntos a partir de ellos. En el marco de la ESI y la Educación Digital, les enseñamos el **derecho a la intimidad** y **les pedimos su consentimiento** antes de fotografiarlos.",
         enlace: { texto: "", url: "" },
         ejemplo: false
       }
