@@ -149,8 +149,8 @@ window.CONTENIDO = {
   },
 
   /* ---------- 3. NUESTRAS SALAS ----------
-     No se asignan edades ni turnos a los colores hasta que se confirmen.
-     Completá "valor" en cada dato cuando la institución lo confirme. */
+     Edades y turnos confirmados por la institución.
+     Completá "valor" en cada dato que falte cuando la institución lo confirme. */
   salas: {
     titulo: "Nuestras salas",
     bajada: "Propuestas para niñas y niños de 2 a 5 años, en turno mañana y turno tarde.",
@@ -165,8 +165,8 @@ window.CONTENIDO = {
         animal: "Caballito de mar. Es un animal de tamaño reducido que habita la costa bonaerense y patagónica. Explora su entorno aferrándose con su cola prensil a restos de algas flotantes, viajando a nuevos micro hábitats de forma pausada y minuciosa.",
         descripcion: "", // PENDIENTE: información de la sala
         datos: [
-          { etiqueta: "Edad",     valor: "" }, // PENDIENTE: confirmar
-          { etiqueta: "Turno",    valor: "" }, // PENDIENTE: confirmar
+          { etiqueta: "Edad",     valor: "3 años" }, // PENDIENTE: confirmar
+          { etiqueta: "Turno",    valor: "Mañana y tarde" }, // PENDIENTE: confirmar
           { etiqueta: "Docentes", valor: "" }  // PENDIENTE: confirmar
         ]
       },
@@ -178,8 +178,8 @@ window.CONTENIDO = {
         animal: "Delfín. Es el cetáceo más emblemático de la costa bonaerense. De color gris azulado, suele nadar cerca de la orilla. La curiosidad es inherente a los cetáceos juveniles, que suelen asomarse y seguir la trayectoria de las olas costeras.",
         descripcion: "", // PENDIENTE
         datos: [
-          { etiqueta: "Edad",     valor: "" },
-          { etiqueta: "Turno",    valor: "" },
+          { etiqueta: "Edad",     valor: "5 años" },
+          { etiqueta: "Turno",    valor: "Mañana y tarde" },
           { etiqueta: "Docentes", valor: "" }
         ]
       },
@@ -191,8 +191,8 @@ window.CONTENIDO = {
         animal: "Estrella de mar. Sus formas no siguen un patrón rígido, pueden regenerar partes de su cuerpo con asimetrías orgánicas. Su capacidad de fragmentarse y reconstruirse remite a la deconstrucción y reorganización de formas propia del pensamiento abstracto.",
         descripcion: "", // PENDIENTE
         datos: [
-          { etiqueta: "Edad",     valor: "" },
-          { etiqueta: "Turno",    valor: "" },
+          { etiqueta: "Edad",     valor: "4 años" },
+          { etiqueta: "Turno",    valor: "Mañana y tarde" },
           { etiqueta: "Docentes", valor: "" }
         ]
       }
