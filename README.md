@@ -26,9 +26,9 @@ Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
 ### Pendientes de la institución
 
-Aprobar el borrador de Misión y Visión, descripción de cada sala, edad/turno/docentes de cada sala (no se asignaron) y horario exacto de cada turno.
+Aprobar el borrador de Misión y Visión, descripción de cada sala, edad/turno/docentes de cada sala (no se asignaron), textos de las novedades y horario exacto de cada turno.
 
-Ya cargados: dirección (Beruti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa, "¿Por qué jugamos?", "Diversidad e inclusión", el detalle de los cuatro proyectos y los textos de las novedades (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
+Ya cargados: dirección (Beruti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
 
 La presentación de "El jardín" se tomó del mockup: confirmarla.
 
