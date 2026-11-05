@@ -38,7 +38,9 @@ window.CONTENIDO = {
     avisoPropuesta: "", // Texto de la franja superior. Vacío = no se muestra.
 
     // Texto que se muestra en los datos pendientes (solo en modoPropuesta).
-    textoPendiente: "A confirmar por la institución",
+    // Vacío = no se muestra nada donde falta información.
+    // Para volver a verlo: "A confirmar por la institución"
+    textoPendiente: "",
 
     // Logo original. No se modifica ni se redibuja.
     logo: {
@@ -309,7 +311,7 @@ window.CONTENIDO = {
       sinConectar: "El formulario todavía no está conectado, así que este mensaje no se envió."
     },
 
-    nota: "Los datos institucionales se completarán antes de publicar."
+    nota: "" // Texto opcional al final de Contacto
   },
 
   /* ---------- ENLACES INSTITUCIONALES ----------

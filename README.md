@@ -18,7 +18,7 @@ jardin-909/
 
 Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
-- Campo vacío `""` → en modo propuesta se ve "A confirmar…"; en la versión final se oculta.
+- Campo vacío `""` → no se muestra. (Si en `sitio.textoPendiente` escribís "A confirmar por la institución", en modo propuesta se ve ese aviso donde falta información.)
 - `ejemplo: true` → muestra la etiqueta "Contenido de ejemplo".
 - `modoPropuesta: true` → muestra el aviso superior y lo pendiente. **Antes de publicar la versión definitiva, cambialo a `false`.**
 - Para agregar una novedad, copiá un bloque `{ … }` dentro de `novedades.items`.

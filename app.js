@@ -54,8 +54,9 @@
 
   // Texto de dato pendiente (solo visible en modo propuesta)
   function pendiente(texto) {
-    if (!PROPUESTA) return null;
-    return h("span", { class: "pendiente" }, texto || C.sitio.textoPendiente);
+    var t = texto || C.sitio.textoPendiente;
+    if (!PROPUESTA || vacio(t)) return null; // texto vacío = no se muestra nada
+    return h("span", { class: "pendiente" }, t);
   }
 
   // Convierte un texto largo en párrafos (separados por una línea en blanco)
@@ -478,7 +479,7 @@
         if (vacio(d.valor) && !PROPUESTA) return;
         datos.appendChild(h("div", null,
           h("dt", null, d.etiqueta),
-          h("dd", null, vacio(d.valor) ? pendiente("A confirmar") : d.valor)
+          h("dd", null, vacio(d.valor) ? pendiente() : d.valor)
         ));
       });
       return {
