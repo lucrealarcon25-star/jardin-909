@@ -244,12 +244,11 @@ window.CONTENIDO = {
   novedades: {
     titulo: "Información para las familias",
     textoEnlace: "Leer comunicación",
-    // true = muestra las pestañas Todas / Comunicaciones / Experiencias
+    // true = muestra las pestañas Comunicaciones / Experiencias
     // y la categoría debajo de cada título. false = solo la lista.
     mostrarFiltros: true,
     textoSinResultados: "Todavía no hay publicaciones en esta categoría.",
     filtros: [
-      { id: "todas",          texto: "Todas" },
       { id: "comunicaciones", texto: "Comunicaciones", enlace: "Leer comunicación" },
       { id: "experiencias",   texto: "Experiencias",   enlace: "Leer experiencia" }
     ],

@@ -671,7 +671,9 @@
     function meta(it) {
       var partes = [];
       var cat = N.filtros.filter(function (f) { return f.id === it.categoria; })[0];
-      if (cat && N.mostrarFiltros !== false) partes.push(h("span", { class: "novedad__categoria" }, cat.texto));
+      // La categoría se muestra solo si hay una pestaña "Todas" (si no, ya la dice la pestaña elegida)
+      var hayTodas = N.filtros.some(function (f) { return f.id === "todas"; });
+      if (cat && N.mostrarFiltros !== false && hayTodas) partes.push(h("span", { class: "novedad__categoria" }, cat.texto));
       if (!vacio(it.fecha)) partes.push(h("time", { datetime: it.fecha }, (partes.length ? " · " : "") + formatoFecha(it.fecha)));
       if (it.ejemplo) partes.push(h("span", null, (partes.length ? " · " : "") + "Contenido de ejemplo"));
       return partes.length ? h("p", { class: "novedad__meta" }, partes) : null;
