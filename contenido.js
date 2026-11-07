@@ -342,7 +342,7 @@ window.CONTENIDO = {
     // Los cuatro pingüinos (la comunidad) a la izquierda del pie, en lugar del logo.
     pinguino: "assets/ilustraciones/pinguino.png",
     lineas: ["Morón · Provincia de Buenos Aires · DGCyE"],
-    leyenda: "Página desarrollada como proyecto de tesis", // Leyenda debajo. Vacío = no se muestra.
+    leyenda: "", // Leyenda debajo (ej.: "Página desarrollada como proyecto de tesis"). Vacío = no se muestra.
     anterior: "Anterior",        // lleva a la página anterior (no aparece en la portada)
     siguiente: "Siguiente",      // lleva a la página siguiente del menú
     volver: "Volver al inicio"   // solo en la última página (Contacto)
