@@ -1309,3 +1309,31 @@ html.intro-activa { overflow: hidden; }
 .pie__pinguino--chico   { height: 40px; }
 .pie__pinguino--mediano { height: 56px; }
 .pie__pinguino--grande  { height: 80px; }
+
+/* Los pingüinos entran caminando desde la izquierda, uno detrás del otro,
+   bamboleándose. Primero el grande, después el mediano y los chicos. */
+.pie { overflow-x: clip; }
+.pie__pinguinos--animado .pie__pinguino { opacity: 0; transform-origin: 50% 100%; }
+.pie__pinguinos--caminando .pie__pinguino {
+  animation:
+    pinguino-entrar 1.8s cubic-bezier(.25, .7, .35, 1) both,
+    pinguino-bambolear .3s ease-in-out 6 alternate;
+}
+.pie__pinguinos--caminando .pie__pinguino--grande               { animation-delay: 0s, 0s; }
+.pie__pinguinos--caminando .pie__pinguino--mediano              { animation-delay: .25s, .25s; }
+.pie__pinguinos--caminando .pie__pinguino--chico:nth-child(2)   { animation-delay: .5s, .5s; }
+.pie__pinguinos--caminando .pie__pinguino--chico:nth-child(1)   { animation-delay: .7s, .7s; }
+@keyframes pinguino-entrar {
+  from { opacity: 0; translate: -220px 0; }
+  15%  { opacity: 1; }
+  to   { opacity: 1; translate: 0 0; }
+}
+@keyframes pinguino-bambolear {
+  from { rotate: -6deg; }
+  to   { rotate: 6deg; }
+}
+/* El último paso termina derecho */
+.pie__pinguinos--caminando .pie__pinguino { rotate: 0deg; }
+@media (prefers-reduced-motion: reduce) {
+  .pie__pinguinos--animado .pie__pinguino { opacity: 1; animation: none; }
+}

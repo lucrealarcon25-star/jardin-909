@@ -871,6 +871,7 @@
         grupo.appendChild(h("img", { class: "pie__pinguino pie__pinguino--" + t, src: C.pie.pinguino, alt: "" }));
       });
       marca.appendChild(grupo);
+      caminarPinguinos(grupo);
     } else {
       marca.appendChild(imagen({ src: C.sitio.logo.src, alt: C.sitio.nombre + " " + C.sitio.denominacion }, "pie__logo"));
     }
@@ -887,6 +888,22 @@
     if (ig) texto.parentNode.insertBefore(h("div", { class: "pie__centro" }), texto);
     if (ig) { var centro = $(".pie__centro"); centro.appendChild(texto); centro.appendChild(ig); }
     actualizarPie("inicio");
+  }
+
+  // Los pingüinos del pie entran caminando la primera vez que el pie aparece en pantalla.
+  // Si la persona tiene activado "reducir movimiento", quedan quietos.
+  function caminarPinguinos(grupo) {
+    var quieto = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (quieto || !("IntersectionObserver" in window)) return;
+    grupo.classList.add("pie__pinguinos--animado");
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        grupo.classList.add("pie__pinguinos--caminando");
+        obs.disconnect();
+      });
+    }, { threshold: 0.6 });
+    obs.observe(grupo);
   }
 
   // Enlace del pie: lleva a la página siguiente del menú.

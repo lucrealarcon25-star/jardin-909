@@ -172,18 +172,6 @@ window.CONTENIDO = {
         ]
       },
       {
-        id: "verde",
-        nombre: "Sala Verde",
-        imagen: { src: "assets/salas/sala-verde-delfin.png", alt: "Delfín geométrico, símbolo de la Sala Verde" },
-        valor: "Curiosidad",
-        animal: "Delfín. Es el cetáceo más emblemático de la costa bonaerense. De color gris azulado, suele nadar cerca de la orilla. La curiosidad es inherente a los cetáceos juveniles, que suelen asomarse y seguir la trayectoria de las olas costeras.",
-        descripcion: "", // PENDIENTE
-        datos: [
-          { etiqueta: "Edad",     valor: "5 años" },
-          { etiqueta: "Turno",    valor: "Mañana y tarde" }
-        ]
-      },
-      {
         id: "celeste",
         nombre: "Sala Celeste",
         imagen: { src: "assets/salas/sala-celeste-estrella.png", alt: "Estrella de mar geométrica, símbolo de la Sala Celeste" },
@@ -192,6 +180,18 @@ window.CONTENIDO = {
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "4 años" },
+          { etiqueta: "Turno",    valor: "Mañana y tarde" }
+        ]
+      },
+      {
+        id: "verde",
+        nombre: "Sala Verde",
+        imagen: { src: "assets/salas/sala-verde-delfin.png", alt: "Delfín geométrico, símbolo de la Sala Verde" },
+        valor: "Curiosidad",
+        animal: "Delfín. Es el cetáceo más emblemático de la costa bonaerense. De color gris azulado, suele nadar cerca de la orilla. La curiosidad es inherente a los cetáceos juveniles, que suelen asomarse y seguir la trayectoria de las olas costeras.",
+        descripcion: "", // PENDIENTE
+        datos: [
+          { etiqueta: "Edad",     valor: "5 años" },
           { etiqueta: "Turno",    valor: "Mañana y tarde" }
         ]
       }
