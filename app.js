@@ -134,7 +134,8 @@
      Devuelve { nodo, conectar(boton, indice) } */
   var cantidadSolapas = 0;
 
-  function crearSolapa(nombre, items) {
+  // opciones.ubicar(i): opcional, se llama antes de abrir el ítem i (para mover la solapa de lugar)
+  function crearSolapa(nombre, items, opciones) {
     var id = "solapa-" + (++cantidadSolapas);
     var disparadores = [];
     var actual = -1;
@@ -155,6 +156,7 @@
 
     function abrir(i) {
       actual = i;
+      if (opciones && opciones.ubicar) opciones.ubicar(i);
       paneles.forEach(function (p, j) { p.hidden = i !== j; });
       disparadores.forEach(function (d) { d.boton.setAttribute("aria-expanded", String(d.i === i)); });
       nodo.hidden = false;
@@ -536,6 +538,9 @@
 
   function proyectos() {
     var lista = $("#proyectos-lista");
+    var tarjetas = [];
+    // La solapa se abre justo debajo de la fila del proyecto elegido (no al final de todo)
+    var lugar = h("li", { class: "proyectos__solapa" });
 
     var solapa = crearSolapa(C.proyectos.titulo, C.proyectos.items.map(function (p) {
       return {
@@ -544,12 +549,20 @@
           h("div", { class: "ficha__imagen" }, imagen(p.imagen, "ficha__img")),
           h("div", { class: "ficha__texto" },
             h("h3", { class: "solapa__titulo" }, p.titulo),
-            h("p", { class: "ficha__resumen" }, p.resumen),
+            h("p", { class: "ficha__resumen" }, conResaltados(p.resumen)),
             bloqueTexto(p.detalle)
           )
         )
       };
-    }));
+    }), {
+      ubicar: function (i) {
+        // Último proyecto de la misma fila que el elegido (en celular, el mismo proyecto)
+        var arriba = tarjetas[i].offsetTop;
+        var ultimo = tarjetas[i];
+        tarjetas.forEach(function (t) { if (t.offsetTop === arriba) ultimo = t; });
+        if (ultimo.nextSibling !== lugar) ultimo.insertAdjacentElement("afterend", lugar);
+      }
+    });
 
     C.proyectos.items.forEach(function (p, i) {
       var boton = h("button", { class: "enlace-pico enlace-pico--chico", type: "button" },
@@ -557,18 +570,21 @@
         h("span", { class: "enlace-pico__texto" }, C.proyectos.textoEnlace),
         h("span", { class: "visualmente-oculto" }, " – " + p.titulo));
 
-      lista.appendChild(h("li", { class: "proyecto" },
+      var tarjeta = h("li", { class: "proyecto" },
         h("div", { class: "proyecto__icono" }, imagen(p.imagen, "proyecto__img")),
         h("div", { class: "proyecto__texto" },
           h("h3", { class: "proyecto__titulo" }, p.titulo),
           h("p", { class: "proyecto__resumen" }, p.resumen),
           boton
         )
-      ));
+      );
+      tarjetas.push(tarjeta);
+      lista.appendChild(tarjeta);
       solapa.conectar(boton, i);
     });
 
-    lista.insertAdjacentElement("afterend", solapa.nodo);
+    lugar.appendChild(solapa.nodo);
+    lista.appendChild(lugar);
   }
 
   /* ---------------- 5. Novedades ---------------- */
