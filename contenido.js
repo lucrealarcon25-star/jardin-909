@@ -282,24 +282,6 @@ window.CONTENIDO = {
         ejemplo: false
       },
       {
-        titulo: "¿Por qué aprendemos jugando?",
-        categoria: "experiencias",
-        fecha: "",
-        resumen: "Jugar es una forma de aprender y de ejercer la ciudadanía.",
-        texto: "Cuando las niñas y los niños **juegan, exploran la tierra o construyen con cajas**, están aprendiendo nociones sobre **el espacio, el lenguaje y la convivencia**. Por eso, en el jardín, jugar no es “no hacer nada”.",
-        enlace: { texto: "", url: "" },
-        ejemplo: false
-      },
-      {
-        titulo: "Día del Respeto a la Diversidad Cultural",
-        categoria: "experiencias",
-        fecha: "",
-        resumen: "Las diferencias nos enriquecen y el respeto nos une.",
-        texto: "**12 de octubre.** Exploramos nuestras **raíces** y aprendemos juntos de las **culturas** que forman nuestra comunidad.",
-        enlace: { texto: "", url: "" },
-        ejemplo: false
-      },
-      {
         titulo: "Las 3 R en el Puerto Sustentable",
         categoria: "experiencias",
         fecha: "",
