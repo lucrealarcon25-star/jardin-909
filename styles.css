@@ -1522,3 +1522,14 @@ body.en-portada .pie__pinguinos { visibility: hidden; }
   .portada__ilustracion,
   .portada__ilustracion:has(.portada__video-caja) { justify-self: start; }
 }
+
+/* ---------- Salas, Proyectos y Novedades: el contenido queda centrado en el espacio libre ----------
+   El título queda arriba y las salas, los proyectos o las publicaciones en el medio
+   del espacio que sobra hasta el pie. Al abrir una ficha, todo vuelve a ocupar su lugar natural. */
+.modo-solapas main { display: flex; flex-direction: column; }
+.modo-solapas main > :is(#salas, #proyectos, #novedades):not([hidden]) { flex: 1 0 auto; display: flex; flex-direction: column; }
+.modo-solapas :is(#salas, #proyectos, #novedades) > .seccion__interior { flex: 1 0 auto; display: flex; flex-direction: column; }
+.modo-solapas #salas .salas,
+.modo-solapas #proyectos .proyectos,
+.modo-solapas #novedades #novedades-panel { margin-block: auto; padding-block: 16px; }
+.modo-solapas #salas .seccion__interior:has(> .solapa:not([hidden])) .salas { margin-block: 24px 0; }
