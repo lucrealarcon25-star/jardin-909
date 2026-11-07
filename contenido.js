@@ -144,7 +144,7 @@ window.CONTENIDO = {
         texto: "", // Opcional: un texto que acompañe al mapa
         imagen: {
           src: "assets/mapa/mapa-del-jardin.webp",
-          alt: "Mapa del jardín. Planta baja: Sala Celeste, Sala Lila, patios, patio semicubierto, dirección, preceptoría, cocina y acceso al jardín. Planta alta: Sala Verde, aire y luz, terraza, zona inadmisible y sala de música."
+          alt: "Mapa del jardín. Planta baja: Sala Celeste, patio, Sala Lila, rampa, pasillo, patio semicubierto, escaleras, acceso al jardín, dirección, preceptoría y cocina. Planta alta: Sala Verde, aire y luz, terraza, rampa, escalera y sala de música."
         }
       }
     ]
@@ -223,7 +223,7 @@ window.CONTENIDO = {
         titulo: "Muelle de juegos",
         resumen: "El juego como motor de aprendizajes compartidos.",
         detalle: "El Muelle de Juegos **es el patio, el espacio del juego**. Sus rampas y desniveles invitan a subir, bajar, mirar desde lo alto y recorrer distintos planos, y así enriquecen el **juego simbólico y el juego motor**. Allí se proponen **juegos dramáticos, de construcción y con reglas**, en los que las niñas y los niños aprenden a negociar, a ponerse de acuerdo y a **convivir con otros**.",
-        imagen: { src: "assets/proyectos/muelle-de-juegos-barco.png", alt: "Muelle de madera y barco a vela geométricos" }
+        imagen: { src: "assets/proyectos/muelle-de-juegos.png", alt: "Muelle de madera geométrico en lila y verde" }
       },
       {
         id: "faro-de-historias",

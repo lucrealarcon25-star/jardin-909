@@ -7,7 +7,7 @@
 | `salas/sala-lila-caballito.png` | Listo (ícono original, sin cambios) |
 | `salas/sala-verde-delfin.png` | Listo |
 | `salas/sala-celeste-estrella.png` | Listo |
-| `proyectos/*.png` | Listos: panel original de cada cartel (reciclaje, ola, muelle y barco, faro) |
+| `proyectos/*.png` | Listos: panel original de cada cartel (reciclaje, ola, muelle, faro) |
 | `mapa/mapa-del-jardin.webp` | Listo: mapa del jardín (se abre en "Nuestro jardín → Mapa del jardín") |
 | `tramas/trama-marina.png` | Listo: módulo de la trama de la marca (se repite sin cortes) |
 | `video/animacion-portada.mp4` | Opcional: animación de After Effects para la portada (ver README) |
