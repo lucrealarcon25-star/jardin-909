@@ -287,13 +287,13 @@ window.CONTENIDO = {
     tituloMapa: "Estamos acá",
     mapaInsertado: "https://maps.google.com/maps?q=Beruti%20488%2C%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina&z=16&output=embed",
 
-    // MAPA CON EL PINGÜINO como punto de ubicación.
+    // MAPA CON EL PINGÜINO como punto de ubicación (DESACTIVADO: ahora se usa el de Google).
     // Para que el pingüino quede exacto: en Google Maps hacé clic derecho sobre
     // el jardín y tocá los números (se copian las coordenadas). Pegá el primero
     // en "lat" y el segundo en "lng". Si quedan vacíos, la dirección se busca sola.
     // Si este mapa no carga, se muestra el de Google ("mapaInsertado").
     mapaPinguino: {
-      leaflet: "assets/vendor/leaflet/", // carpeta de la biblioteca de mapas (no cambiar)
+      leaflet: "", // Vacío = se usa el mapa de Google (mapaInsertado). Para el mapa con el pingüino: "assets/vendor/leaflet/"
       marcador: "assets/ilustraciones/pinguino.png",
       lat: "", // PENDIENTE: ej. -34.65
       lng: "", // PENDIENTE: ej. -58.62
