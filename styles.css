@@ -1344,3 +1344,15 @@ html.intro-activa { overflow: hidden; }
 .contacto-mapa__pinguino { filter: drop-shadow(0 3px 3px rgba(19, 74, 128, .35)); }
 .contacto-mapa__leaflet .leaflet-popup-content { color: var(--azul-oscuro); font-size: 0.875rem; line-height: 1.5; }
 .contacto-mapa__leaflet .leaflet-popup-content a { color: var(--azul-oscuro); font-weight: 700; }
+
+/* ---------- Portada en computadora: entra entera en la pantalla, sin barra de desplazamiento ----------
+   El pingüino se achica según el alto de la ventana (encabezado + pie ≈ 390px). */
+@media (min-width: 601px) {
+  body.en-portada main { padding-bottom: 0; }
+  body.en-portada .portada__grilla { padding-block: 24px; }
+  .portada__ilustracion:has(.portada__video-caja) {
+    width: clamp(200px, calc((100vh - 390px) * 0.7778), 440px);
+    width: clamp(200px, calc((100dvh - 390px) * 0.7778), 440px);
+  }
+  .portada__ilustracion .portada__img { max-height: max(220px, calc(100dvh - 390px)); width: auto; margin-inline: auto; }
+}
