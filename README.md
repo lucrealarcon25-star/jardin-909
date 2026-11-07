@@ -42,7 +42,7 @@ El logo (`assets/logo/logo-jardin-909.png`) y el pingüino de la portada salen d
 
 Salas según las piezas y el brandboard: **Lila → caballito de mar · Verde → delfín · Celeste → estrella de mar**.
 
-En la portada el pingüino grande va a la izquierda y mira hacia el texto, en computadora y en celular. En la portada no se muestran los pingüinos chiquitos del pie.
+En la portada el pingüino grande va a la izquierda y mira hacia el texto (en celular, arriba del texto). Su tamaño se calcula para que guarde siempre la misma proporción con el texto (`PROPORCION` en `app.js`, 1.1 = un poco más alto que el texto). En la portada no se muestran los pingüinos chiquitos del pie.
 
 ## Tipografías y colores
 
@@ -57,7 +57,7 @@ En la portada el pingüino grande va a la izquierda y mira hacia el texto, en co
 
 ## Pingüinos del pie
 
-En el pie, a la izquierda, van cuatro pingüinos de distintos tamaños como imagen de la comunidad del jardín (en lugar del logo, que ya está en el encabezado). Se configura en `contenido.js` → `pie.pinguino`; si lo dejás vacío vuelve el logo. Entran caminando cada vez que se elige una solapa del menú (y quedan quietos si la persona tiene activado "reducir movimiento").
+En el pie, a la izquierda, van cuatro pingüinos de distintos tamaños como imagen de la comunidad del jardín (en lugar del logo, que ya está en el encabezado). Se configura en `contenido.js` → `pie.pinguino`; si lo dejás vacío vuelve el logo. En celular van en una franja arriba de los datos del pie. Entran caminando cada vez que se elige una solapa del menú (y quedan quietos si la persona tiene activado "reducir movimiento").
 
 ## Leyenda del pie
 

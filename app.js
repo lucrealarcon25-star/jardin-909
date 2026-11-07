@@ -303,7 +303,7 @@
       actualizarPie(id);
       repetirPinguinos();
       if (id === "contacto") abrirMapa();
-      if (id === "inicio") alinearPortada();
+      if (id === "inicio") requestAnimationFrame(alinearPortada);
       actualizarTrama();
       enlaces.forEach(function (a) {
         if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");
@@ -341,7 +341,9 @@
     }));
     else contenedor.appendChild(imagen(p.ilustracion, "portada__img", { prioridad: true }));
 
-    window.addEventListener("resize", alinearPortada);
+    var espera;
+    window.addEventListener("resize", function () { clearTimeout(espera); espera = setTimeout(alinearPortada, 80); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(alinearPortada);
   }
 
   // En computadora, el texto de la portada empieza donde empieza el menú de arriba
@@ -350,12 +352,56 @@
     var grilla = $(".portada__grilla");
     var primero = $(".navegacion__enlace");
     if (!grilla || !primero) return;
-    if (window.innerWidth <= 900 || !grilla.offsetWidth) { grilla.style.removeProperty("--col-pinguino"); return; }
+    if (window.innerWidth <= 900 || !grilla.offsetWidth) { grilla.style.removeProperty("--col-pinguino"); proporcionPortada(); return; }
     var estilo = getComputedStyle(grilla);
     var inicioGrilla = grilla.getBoundingClientRect().left + parseFloat(estilo.paddingLeft || 0);
     var gap = parseFloat(estilo.columnGap) || 0;
     var ancho = primero.getBoundingClientRect().left - inicioGrilla - gap;
     if (ancho > 120) grilla.style.setProperty("--col-pinguino", Math.round(ancho) + "px");
+    proporcionPortada();
+  }
+
+  // El pingüino guarda siempre la misma proporción con el texto (celular, notebook o escritorio):
+  // su alto visible es un poco mayor que el del bloque de texto. Si no entra en la pantalla
+  // o en su columna, se achican el texto y el pingüino juntos.
+  var PROPORCION = 1.1;            // alto del pingüino / alto del texto
+  var VISIBLE = (595 - 97) / 720;  // parte del alto del video que ocupa el pingüino
+  var FORMA = 340 / 720;           // ancho / alto de la caja del pingüino
+  function proporcionPortada() {
+    var grilla = $(".portada__grilla"), caja = $(".portada__ilustracion"), texto = $(".portada__texto");
+    var titulo = $(".portada__titulo"), bajada = $(".portada__bajada");
+    if (!grilla || !caja || !texto || !grilla.offsetWidth) return;
+    titulo.style.fontSize = ""; if (bajada) bajada.style.fontSize = "";
+    caja.style.width = "";
+    var celular = window.innerWidth <= 600;
+    var computadora = window.innerWidth > 900;
+    var eg = getComputedStyle(grilla);
+    var anchoGrilla = grilla.clientWidth - parseFloat(eg.paddingLeft) - parseFloat(eg.paddingRight);
+    var gap = parseFloat(eg.columnGap) || 0;
+    var fijo = ($(".encabezado") ? $(".encabezado").offsetHeight : 0) + ($(".pie") ? $(".pie").offsetHeight : 0) +
+      parseFloat(getComputedStyle($("main")).paddingBottom || 0) + parseFloat(eg.paddingTop) + parseFloat(eg.paddingBottom) + 4;
+    var tamTitulo = parseFloat(getComputedStyle(titulo).fontSize);
+    var tamBajada = bajada ? parseFloat(getComputedStyle(bajada).fontSize) : 0;
+    var escala = 1, anchoFinal = 0;
+    for (var vuelta = 0; vuelta < 8; vuelta++) {
+      var alto = texto.offsetHeight;
+      var altoCaja = PROPORCION * alto / VISIBLE;
+      var anchoCaja = altoCaja * FORMA;
+      var maxAncho = celular ? anchoGrilla * 0.6
+        : computadora ? (parseFloat(grilla.style.getPropertyValue("--col-pinguino")) || anchoGrilla * 0.42)
+        : anchoGrilla * 0.42;
+      // En celular el pingüino va arriba del texto: comparten el alto de la pantalla
+      var maxAlto = window.innerHeight - fijo - (celular ? alto + (parseFloat(eg.rowGap) || 0) : 0);
+      var ajuste = Math.min(1, maxAncho / anchoCaja, maxAlto / altoCaja);
+      anchoFinal = anchoCaja * ajuste;
+      if (ajuste > 0.98) break;
+      var nueva = Math.max(escala * Math.sqrt(ajuste), 24 / tamTitulo);
+      if (nueva >= escala - 0.005) { anchoFinal = anchoCaja * ajuste; break; }
+      escala = nueva;
+      titulo.style.fontSize = (tamTitulo * escala) + "px";
+      if (bajada) bajada.style.fontSize = Math.max(14, tamBajada * escala) + "px";
+    }
+    caja.style.width = Math.round(anchoFinal) + "px";
   }
 
   // Video de la portada: el pingüino se arma una vez y queda fijo.

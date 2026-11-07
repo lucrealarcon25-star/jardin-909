@@ -1406,3 +1406,41 @@ body.en-portada .pie__pinguinos { visibility: hidden; }
 .proyectos__solapa { grid-column: 1 / -1; list-style: none; }
 .proyectos__solapa:has(> .solapa[hidden]) { display: none; }
 .proyectos__solapa > .solapa { margin-top: 0; margin-bottom: 28px; }
+
+/* ================================================================
+   PORTADA: el pingüino guarda la misma proporción con el texto en todas
+   las pantallas. El ancho lo calcula app.js (proporcionPortada).
+   La caja recorta los costados blancos del video para que el pingüino
+   ocupe mejor su lugar.
+   ================================================================ */
+.portada__ilustracion,
+.portada__ilustracion:has(.portada__video-caja) { max-width: none; }
+.portada__video-caja { aspect-ratio: 340 / 720; }
+.portada__video, .portada__video-final { object-fit: cover; object-position: center; }
+
+/* Celular: el pingüino arriba, a la izquierda, y el texto debajo */
+@media (max-width: 600px) {
+  .portada__grilla,
+  .modo-solapas .portada__grilla,
+  .portada__grilla:has(.portada__video-caja),
+  .modo-solapas .portada__grilla:has(.portada__video-caja) { grid-template-columns: minmax(0, 1fr); row-gap: 8px; padding-block: 16px; }
+  .portada__ilustracion,
+  .portada__ilustracion:has(.portada__video-caja) { grid-column: 1; grid-row: 1; justify-self: start; max-width: none; margin: 0; }
+  .portada__texto { grid-column: 1; grid-row: 2; }
+}
+
+/* ================================================================
+   PIE EN CELULAR: los cuatro pingüinos también entran caminando,
+   en una franja arriba de los datos (en la portada no se muestran).
+   ================================================================ */
+@media (max-width: 760px) {
+  .pie__marca { display: block; grid-column: 1 / -1; grid-row: 1; }
+  .pie__centro, .pie__fila > .pie__texto { grid-row: 2; }
+  .pie__nav { grid-row: 2; }
+  .pie__pinguinos { gap: 6px; }
+  .pie__pinguino--chico   { height: 28px; }
+  .pie__pinguino--mediano { height: 40px; }
+  .pie__pinguino--grande  { height: 56px; }
+  body.en-portada .pie__marca { display: none; }
+  body.en-portada .pie__centro, body.en-portada .pie__fila > .pie__texto, body.en-portada .pie__nav { grid-row: 1; }
+}
