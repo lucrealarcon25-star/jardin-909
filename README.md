@@ -42,7 +42,7 @@ El logo (`assets/logo/logo-jardin-909.png`) y el pingüino de la portada salen d
 
 Salas según las piezas y el brandboard: **Lila → caballito de mar · Verde → delfín · Celeste → estrella de mar**.
 
-Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarIlustracion: true`, porque en el logo mira hacia la derecha; poné `false` si lo preferís igual al logo).
+En la portada el pingüino grande va a la izquierda y mira hacia el texto, en computadora y en celular. En la portada no se muestran los pingüinos chiquitos del pie.
 
 ## Tipografías y colores
 

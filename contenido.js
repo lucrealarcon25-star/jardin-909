@@ -73,7 +73,7 @@ window.CONTENIDO = {
     // Como en el mockup: el pingüino va a la derecha y mira hacia el texto.
     // Es el pingüino del logo, que mira a la derecha; por eso se espeja (true).
     // Poné false si lo querés exactamente igual al logo.
-    espejarIlustracion: true,
+    espejarIlustracion: false, // false: el pingüino va a la izquierda y mira hacia el texto (a la derecha)
 
     // VIDEO ANIMADO (After Effects)
     // Si "src" tiene un archivo, la portada muestra la animación en lugar del pingüino:

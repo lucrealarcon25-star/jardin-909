@@ -1366,3 +1366,30 @@ html.intro-activa { overflow: hidden; }
 /* Resumen de las novedades y datos de Contacto: en azul, con resaltados en negrita */
 .novedad__resumen,
 .contacto__columna p { color: var(--azul-texto); }
+
+/* ================================================================
+   PORTADA: el pingüino grande a la izquierda y el texto a la derecha
+   (en computadora y en celular, para que siempre quede igual).
+   El pingüino mira hacia el texto. En la portada no se muestran
+   los pingüinos chiquitos del pie: queda solo el grande.
+   ================================================================ */
+.portada__grilla,
+.modo-solapas .portada__grilla { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+.portada__ilustracion,
+.portada__ilustracion:has(.portada__video-caja) { order: 0; grid-column: 1; grid-row: 1; justify-self: start; }
+.portada__texto { grid-column: 2; grid-row: 1; }
+
+/* Los archivos del video miran a la izquierda: se dan vuelta para que miren al texto */
+.portada__ilustracion:not(.portada__ilustracion--espejada) .portada__video,
+.portada__ilustracion:not(.portada__ilustracion--espejada) .portada__video-final { transform: scaleX(-1); }
+
+@media (max-width: 600px) {
+  .portada__grilla,
+  .modo-solapas .portada__grilla,
+  .portada__grilla:has(.portada__video-caja),
+  .modo-solapas .portada__grilla:has(.portada__video-caja) { grid-template-columns: 88px minmax(0, 1fr); column-gap: 16px; }
+  .portada__ilustracion,
+  .portada__ilustracion:has(.portada__video-caja) { justify-self: start; max-width: 88px; margin-top: 0; }
+}
+
+body.en-portada .pie__pinguinos { visibility: hidden; }
