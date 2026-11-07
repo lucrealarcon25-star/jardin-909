@@ -61,7 +61,7 @@ En el pie, a la izquierda, van cuatro pingüinos de distintos tamaños como imag
 
 ## Leyenda del pie
 
-Debajo de "Morón · Provincia de Buenos Aires · DGCyE" se lee, en blanco, "Página desarrollada como proyecto de tesis". Se cambia en `contenido.js` → `pie.leyenda` (vacío = no se muestra).
+Debajo de "Morón · Provincia de Buenos Aires · DGCyE" se lee, en celeste clarito, "Página desarrollada como proyecto de tesis". Se cambia en `contenido.js` → `pie.leyenda` (vacío = no se muestra).
 
 ## Portada
 
