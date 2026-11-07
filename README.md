@@ -68,7 +68,7 @@ Debajo de "Morón · Provincia de Buenos Aires · DGCyE" se lee, en gris, "Pági
 Texto a la izquierda (título y bajada) alineado con el logo y el menú. A la derecha, el pingüino del logo o la animación de After Effects.
 
 ### Pingüino animado de la portada
-Al abrir la página, el pingüino se arma pieza por pieza (`assets/video/pinguino-armado.mp4`, 7 s, 115 KB) y al terminar se funde con la imagen quieta (`assets/video/pinguino-final.png`), que queda fija. El video original (4K, fondo crema) se espejó para que mire hacia el texto, se recortó alrededor del pingüino y se pasó a fondo blanco para que se funda con la trama. Si la persona tiene activado "reducir movimiento", se ve directamente la imagen quieta. Se configura en `contenido.js` → `portada.video`.
+Al abrir la página, el pingüino se arma pieza por pieza, salta y aterriza (`assets/video/pinguino-armado.mp4`, 8 s, 118 KB; el final del salto se completó con los cuadros de `intro-marca.mp4`) y al terminar se funde con la imagen quieta (`assets/video/pinguino-final.png`), que queda fija. El video original (4K, fondo crema) se espejó para que mire hacia el texto, se recortó alrededor del pingüino y se pasó a fondo blanco para que se funda con la trama. Si la persona tiene activado "reducir movimiento", se ve directamente la imagen quieta. Se configura en `contenido.js` → `portada.video`.
 
 ## Pantalla de entrada
 

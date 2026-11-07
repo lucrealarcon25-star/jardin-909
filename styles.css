@@ -1393,3 +1393,11 @@ html.intro-activa { overflow: hidden; }
 }
 
 body.en-portada .pie__pinguinos { visibility: hidden; }
+
+/* Computadora: el texto de la portada queda alineado con el menú de arriba ("Inicio").
+   El ancho de la columna del pingüino lo calcula app.js (--col-pinguino). */
+@media (min-width: 901px) {
+  .portada__grilla,
+  .modo-solapas .portada__grilla { grid-template-columns: var(--col-pinguino, minmax(0, 0.85fr)) minmax(0, 1fr); }
+  .portada__titulo { max-width: none; }
+}

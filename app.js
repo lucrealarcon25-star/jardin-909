@@ -301,6 +301,7 @@
       actualizarPie(id);
       repetirPinguinos();
       if (id === "contacto") abrirMapa();
+      if (id === "inicio") alinearPortada();
       actualizarTrama();
       enlaces.forEach(function (a) {
         if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");
@@ -338,6 +339,21 @@
     }));
     else contenedor.appendChild(imagen(p.ilustracion, "portada__img", { prioridad: true }));
 
+    window.addEventListener("resize", alinearPortada);
+  }
+
+  // En computadora, el texto de la portada empieza donde empieza el menú de arriba
+  // (alineado con "Inicio"). El pingüino ocupa el espacio de la izquierda.
+  function alinearPortada() {
+    var grilla = $(".portada__grilla");
+    var primero = $(".navegacion__enlace");
+    if (!grilla || !primero) return;
+    if (window.innerWidth <= 900 || !grilla.offsetWidth) { grilla.style.removeProperty("--col-pinguino"); return; }
+    var estilo = getComputedStyle(grilla);
+    var inicioGrilla = grilla.getBoundingClientRect().left + parseFloat(estilo.paddingLeft || 0);
+    var gap = parseFloat(estilo.columnGap) || 0;
+    var ancho = primero.getBoundingClientRect().left - inicioGrilla - gap;
+    if (ancho > 120) grilla.style.setProperty("--col-pinguino", Math.round(ancho) + "px");
   }
 
   // Video de la portada: el pingüino se arma una vez y queda fijo.
