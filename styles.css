@@ -36,8 +36,8 @@
   --beige-tarjeta: #f7f1e7; /* tarjetas e íconos */
   --beige-circulo: #f7f0e6; /* fondo de los círculos de salas (igual al fondo de los íconos) */
   --borde-circulo: #e6dccd;
-  --gris: #4f545b;          /* texto */
-  --gris-suave: #63676e;    /* texto secundario */
+  --gris: #185d9f;          /* texto: azul institucional (todos los textos en azul) */
+  --gris-suave: #36699c;    /* texto secundario: azul más suave (contraste AA sobre blanco y crema) */
   --blanco: #ffffff;
 
   /* Tipografía: IvySoft para títulos y resaltes, Nunito Sans para textos */
