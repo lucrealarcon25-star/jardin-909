@@ -164,7 +164,7 @@ window.CONTENIDO = {
         imagen: { src: "assets/salas/sala-lila-caballito.png", alt: "Caballito de mar geométrico, símbolo de la Sala Lila" },
         // Valor y texto del animal tomados del brandboard.
         valor: "Exploración",
-        animal: "**Caballito de mar.** Es un animal de tamaño reducido que habita la **costa bonaerense y patagónica**. **Explora su entorno** aferrándose con su cola prensil a restos de algas flotantes, viajando a nuevos micro hábitats de forma **pausada y minuciosa**.",
+        animal: "**Caballito de mar.** Es un animal de tamaño reducido que habita la **costa bonaerense y patagónica**. **Explora su entorno** aferrándose con su cola a restos de algas y viaja a nuevos microhábitats de forma **pausada y minuciosa**. Así aprenden las niñas y los niños de esta sala: **explorando, tocando y manipulando** materiales concretos.",
         descripcion: "", // PENDIENTE: información de la sala
         datos: [
           { etiqueta: "Edad",     valor: "Multiedad, 2 y 3 años" },
@@ -176,7 +176,7 @@ window.CONTENIDO = {
         nombre: "Sala Celeste",
         imagen: { src: "assets/salas/sala-celeste-estrella.png", alt: "Estrella de mar geométrica, símbolo de la Sala Celeste" },
         valor: "Abstracción",
-        animal: "**Estrella de mar.** Sus formas **no siguen un patrón rígido**, pueden **regenerar partes de su cuerpo** con asimetrías orgánicas. Su capacidad de **fragmentarse y reconstruirse** remite a la deconstrucción y reorganización de formas propia del **pensamiento abstracto**.",
+        animal: "**Estrella de mar.** Puede **fragmentarse y regenerarse**, lo que remite a la deconstrucción y reorganización de formas del **pensamiento abstracto**. A esta edad, las niñas y los niños comienzan a **hacer asociaciones** sin necesidad de tener el objeto presente.",
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "4 años" },
@@ -188,7 +188,7 @@ window.CONTENIDO = {
         nombre: "Sala Verde",
         imagen: { src: "assets/salas/sala-verde-delfin.png", alt: "Delfín geométrico, símbolo de la Sala Verde" },
         valor: "Curiosidad",
-        animal: "**Delfín.** Es el cetáceo más emblemático de la **costa bonaerense**. De color gris azulado, suele nadar cerca de la orilla. **La curiosidad** es inherente a los cetáceos juveniles, que suelen **asomarse y seguir la trayectoria de las olas** costeras.",
+        animal: "**Delfín.** Es uno de los cetáceos característicos de la **costa bonaerense**. Los ejemplares jóvenes suelen **asomarse y seguir la trayectoria de las olas** costeras. Así son las niñas y los niños de esta sala: **preguntan “¿por qué?”** y **relacionan lo que descubren** con lo que ya conocen.",
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "5 años" },
