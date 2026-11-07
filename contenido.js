@@ -258,7 +258,7 @@ window.CONTENIDO = {
         titulo: "Inscripciones 2027",
         categoria: "comunicaciones",
         fecha: "",
-        resumen: "Fechas, requisitos y documentación para el ciclo lectivo 2027.",
+        resumen: "Fechas, requisitos y documentación para el **ciclo lectivo 2027**.",
         texto: "Recibimos a niñas y niños de **2 a 5 años**, en **turno mañana** (de 8:00 a 12:00) y **turno tarde** (de 13:00 a 17:00).\n\n**Del 12 al 23 de octubre.** Ratificación de matrícula 2027 y preinscripción de hermanas y hermanos.\n\n**Del 9 al 20 de noviembre.** Inscripción por ingreso general y pases.\n\n**Del 27 de noviembre al 4 de diciembre.** Confirmación de las vacantes asignadas y exhibición de los listados oficiales.\n\n**Documentación.** DNI, partida de nacimiento y carnet de vacunación al día. Las planillas de inscripción se adquieren en la cooperadora ($3.000) y se presentan en folio.\n\nPor consultas, acercate al jardín en **Beruti 488** o llamanos al **(011) 3758-1782**.",
         enlace: { texto: "", url: "" },
         ejemplo: false
@@ -274,8 +274,8 @@ window.CONTENIDO = {
     domicilio: "Beruti 488",
     entreCalles: "entre Constituyentes y Gándara",
     codigoPostal: "1708",
-    nivel: "Nivel Inicial · Región Educativa 8 · DGCyE", // Opcional: se muestra debajo de la dirección
-    horarios: "Turno mañana, de 8:00 a 12:00\n\nTurno tarde, de 13:00 a 17:00",
+    nivel: "**Nivel Inicial** · Región Educativa 8 · DGCyE", // Opcional: se muestra debajo de la dirección
+    horarios: "**Turno mañana**, de 8:00 a 12:00\n\n**Turno tarde**, de 13:00 a 17:00",
     telefono: "(011) 3758-1782",
     email: "jardin909moron@abc.gob.ar",
     // Enlace "Ver en el mapa" (abre Google Maps)

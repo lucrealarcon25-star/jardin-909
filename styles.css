@@ -1362,3 +1362,7 @@ html.intro-activa { overflow: hidden; }
 .jardin__presentacion { color: var(--azul-texto); }
 .portada__bajada .resaltado,
 .jardin__presentacion .resaltado { color: var(--azul); font-weight: 800; }
+
+/* Resumen de las novedades y datos de Contacto: en azul, con resaltados en negrita */
+.novedad__resumen,
+.contacto__columna p { color: var(--azul-texto); }

@@ -607,7 +607,7 @@
           contenido: [
             h("h3", { class: "solapa__titulo" }, it.titulo),
             meta(it),
-            h("p", { class: "ficha__resumen" }, it.resumen),
+            h("p", { class: "ficha__resumen" }, conResaltados(it.resumen)),
             bloqueTexto(it.texto),
             enlace
           ]
@@ -625,7 +625,7 @@
             meta(it),
             boton
           ),
-          h("p", { class: "novedad__resumen" }, it.resumen)
+          h("p", { class: "novedad__resumen" }, conResaltados(it.resumen))
         ));
         solapa.conectar(boton, i);
       });
@@ -698,13 +698,13 @@
     // Dirección
     var direccion = [];
     if (!vacio(D.domicilio)) {
-      direccion.push(h("p", null, D.domicilio + (vacio(D.entreCalles) ? "" : ", " + D.entreCalles)));
+      direccion.push(h("p", null, h("strong", { class: "resaltado" }, D.domicilio), vacio(D.entreCalles) ? "" : ", " + D.entreCalles));
     } else if (PROPUESTA) {
       direccion.push(h("p", null, pendiente("Domicilio a confirmar")));
     }
     var lineaLocalidad = [vacio(D.codigoPostal) ? "" : "CP " + D.codigoPostal, D.localidad || ""].filter(Boolean).join(" · ");
-    if (lineaLocalidad) direccion.push(h("p", null, lineaLocalidad));
-    if (!vacio(D.nivel)) direccion.push(h("p", null, D.nivel));
+    if (lineaLocalidad) direccion.push(h("p", null, conResaltados(lineaLocalidad.replace(/^(.*?)(Morón)/, "$1**$2**"))));
+    if (!vacio(D.nivel)) direccion.push(h("p", null, conResaltados(D.nivel)));
     if (!vacio(D.mapa)) {
       direccion.push(h("p", { class: "contacto__mapa-enlace" }, h("a", { class: "enlace-pico enlace-pico--chico", href: D.mapa, target: "_blank", rel: "noopener" },
         pico("pico"), h("span", { class: "enlace-pico__texto" }, "Ver en el mapa"),
@@ -718,11 +718,11 @@
     // Contacto institucional
     var datos = [];
     if (!vacio(D.telefono)) {
-      datos.push(h("p", null, "Teléfono: ",
+      datos.push(h("p", null, h("strong", { class: "resaltado" }, "Teléfono: "),
         h("a", { class: "enlace-texto", href: "tel:" + D.telefono.replace(/[^\d+]/g, "") }, D.telefono)));
     }
     if (!vacio(D.email)) {
-      datos.push(h("p", null, "Correo: ", h("a", { class: "enlace-texto", href: "mailto:" + D.email }, D.email)));
+      datos.push(h("p", null, h("strong", { class: "resaltado" }, "Correo: "), h("a", { class: "enlace-texto", href: "mailto:" + D.email }, D.email)));
     }
     var igContacto = enlaceInstagram();
     if (igContacto) datos.push(h("p", null, igContacto));
