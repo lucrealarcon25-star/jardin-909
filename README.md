@@ -28,7 +28,7 @@ Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
 Aprobar el borrador de Misión y Visión, descripción de cada sala, textos de las novedades (calendario escolar y menú incluidos) y horario exacto de cada turno.
 
-Ya cargados: edad y turno de cada sala (Lila 3 años, Celeste 4 años, Verde 5 años; mañana y tarde), dirección (Beruti 488, entre Constituyentes y Gándara, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
+Ya cargados: edad y turno de cada sala (Lila multiedad 2 y 3 años, Celeste 4 años, Verde 5 años; mañana y tarde), dirección (Beruti 488, entre Constituyentes y Gándara, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
 
 La presentación de "El jardín" se tomó del mockup: confirmarla.
 
@@ -54,6 +54,10 @@ Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarI
 - **Solapas del menú:** la primera pantalla muestra solo la portada. Cada opción del menú (Inicio, El jardín, Salas, Proyectos, Novedades, Contacto) abre su sección, de a una por vez. El logo o la solapa "Inicio" regresan a la portada. En el pie, al apoyar el mouse (o llegar con Tab) sobre los picos amarillos aparece la etiqueta "Anterior" o "Siguiente"; el pico "Siguiente" lleva a la página siguiente; en Contacto, la última, lleva de vuelta al inicio. La dirección cambia (`#salas`, `#proyectos`…), así funcionan el botón Atrás del navegador y los enlaces directos.
 - **Mapa del jardín:** está en "El jardín", junto a Historia, Misión, Visión y Propuesta educativa. Se puede abrir en tamaño completo.
 - **Solapas internas:** dentro de cada sección, "Nuestra historia", "Conocer la sala", "Conocer más" o "Leer comunicación" abren debajo **solo la información de ese ítem**. Se cierran con "Cerrar", con Esc o tocando de nuevo el mismo enlace.
+
+## Bloque "¡Qué bueno encontrarnos!"
+
+Al final de Novedades hay una invitación a seguir el Instagram del jardín, con los cuatro pingüinos de distintos tamaños como imagen de la comunidad. Se edita en `contenido.js` → `novedades.comunidad` (vacío el `titulo` = no se muestra).
 
 ## Leyenda del pie
 
