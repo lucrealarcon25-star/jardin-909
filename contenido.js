@@ -155,7 +155,7 @@ window.CONTENIDO = {
      Completá "valor" en cada dato que falte cuando la institución lo confirme. */
   salas: {
     titulo: "Nuestras salas",
-    bajada: "Propuestas para niñas y niños de 2 a 5 años, en turno mañana y turno tarde.",
+    bajada: "", // Texto opcional debajo de "Nuestras salas". Vacío = no se muestra.
     textoEnlace: "Conocer la sala",
     items: [
       {
@@ -164,7 +164,7 @@ window.CONTENIDO = {
         imagen: { src: "assets/salas/sala-lila-caballito.png", alt: "Caballito de mar geométrico, símbolo de la Sala Lila" },
         // Valor y texto del animal tomados del brandboard.
         valor: "Exploración",
-        animal: "Caballito de mar. Es un animal de tamaño reducido que habita la costa bonaerense y patagónica. Explora su entorno aferrándose con su cola prensil a restos de algas flotantes, viajando a nuevos micro hábitats de forma pausada y minuciosa.",
+        animal: "**Caballito de mar.** Es un animal de tamaño reducido que habita la **costa bonaerense y patagónica**. **Explora su entorno** aferrándose con su cola prensil a restos de algas flotantes, viajando a nuevos micro hábitats de forma **pausada y minuciosa**.",
         descripcion: "", // PENDIENTE: información de la sala
         datos: [
           { etiqueta: "Edad",     valor: "Multiedad, 2 y 3 años" },
@@ -176,7 +176,7 @@ window.CONTENIDO = {
         nombre: "Sala Celeste",
         imagen: { src: "assets/salas/sala-celeste-estrella.png", alt: "Estrella de mar geométrica, símbolo de la Sala Celeste" },
         valor: "Abstracción",
-        animal: "Estrella de mar. Sus formas no siguen un patrón rígido, pueden regenerar partes de su cuerpo con asimetrías orgánicas. Su capacidad de fragmentarse y reconstruirse remite a la deconstrucción y reorganización de formas propia del pensamiento abstracto.",
+        animal: "**Estrella de mar.** Sus formas **no siguen un patrón rígido**, pueden **regenerar partes de su cuerpo** con asimetrías orgánicas. Su capacidad de **fragmentarse y reconstruirse** remite a la deconstrucción y reorganización de formas propia del **pensamiento abstracto**.",
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "4 años" },
@@ -188,7 +188,7 @@ window.CONTENIDO = {
         nombre: "Sala Verde",
         imagen: { src: "assets/salas/sala-verde-delfin.png", alt: "Delfín geométrico, símbolo de la Sala Verde" },
         valor: "Curiosidad",
-        animal: "Delfín. Es el cetáceo más emblemático de la costa bonaerense. De color gris azulado, suele nadar cerca de la orilla. La curiosidad es inherente a los cetáceos juveniles, que suelen asomarse y seguir la trayectoria de las olas costeras.",
+        animal: "**Delfín.** Es el cetáceo más emblemático de la **costa bonaerense**. De color gris azulado, suele nadar cerca de la orilla. **La curiosidad** es inherente a los cetáceos juveniles, que suelen **asomarse y seguir la trayectoria de las olas** costeras.",
         descripcion: "", // PENDIENTE
         datos: [
           { etiqueta: "Edad",     valor: "5 años" },

@@ -491,7 +491,7 @@
           h("div", { class: "ficha__texto" },
             h("h3", { class: "solapa__titulo" }, s.nombre),
             vacio(s.valor) ? null : h("p", { class: "ficha__valor" }, s.valor),
-            vacio(s.animal) ? null : h("p", { class: "ficha__animal" }, s.animal),
+            vacio(s.animal) ? null : h("p", { class: "ficha__animal" }, conResaltados(s.animal)),
             bloqueTexto(s.descripcion),
             datos.childNodes.length ? datos : null
           )
