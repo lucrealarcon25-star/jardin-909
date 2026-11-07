@@ -143,7 +143,7 @@ window.CONTENIDO = {
         titulo: "Mapa del jardín",
         texto: "", // Opcional: un texto que acompañe al mapa
         imagen: {
-          src: "assets/mapa/mapa-del-jardin.webp",
+          src: "assets/mapa/mapa-del-jardin-2026.webp",
           alt: "Mapa del jardín. Planta baja: Sala Celeste, patio, Sala Lila, rampa, pasillo, patio semicubierto, escaleras, acceso al jardín, dirección, preceptoría y cocina. Planta alta: Sala Verde, aire y luz, terraza, rampa, escalera y sala de música."
         }
       }
