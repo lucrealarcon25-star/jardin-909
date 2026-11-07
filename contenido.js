@@ -222,7 +222,7 @@ window.CONTENIDO = {
         id: "muelle-de-juegos",
         titulo: "Muelle de Juegos",
         resumen: "El juego como motor de aprendizajes compartidos.",
-        detalle: "El Muelle de Juegos es **el patio, el espacio del juego**. Sus rampas y desniveles lo convierten en un **verdadero muelle** donde las niñas y los niños suben, bajan, miran desde lo alto y recorren distintos planos, enriqueciendo el **juego simbólico y motor**. Allí se proponen **juegos dramáticos, de construcción y con reglas**, en los que aprenden a negociar, ponerse de acuerdo y **convivir con otros**.",
+        detalle: "El Muelle de Juegos es **el patio, el espacio del juego**. Sus rampas y desniveles lo convierten en un **verdadero muelle** donde las niñas y los niños suben, bajan, miran desde lo alto y recorren distintos planos, lo que enriquece tanto el **juego simbólico** como el **juego corporal y de movimiento**. Allí se proponen **juegos dramáticos, de construcción y con reglas**, en los que aprenden a negociar, ponerse de acuerdo y **convivir con otros**.",
         imagen: { src: "assets/proyectos/muelle-de-juegos.png", alt: "Muelle de madera geométrico en lila y verde" }
       },
       {
