@@ -57,7 +57,7 @@ Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarI
 
 ## Pingüinos del pie
 
-En el pie, a la izquierda, van cuatro pingüinos de distintos tamaños como imagen de la comunidad del jardín (en lugar del logo, que ya está en el encabezado). Se configura en `contenido.js` → `pie.pinguino`; si lo dejás vacío vuelve el logo.
+En el pie, a la izquierda, van cuatro pingüinos de distintos tamaños como imagen de la comunidad del jardín (en lugar del logo, que ya está en el encabezado). Se configura en `contenido.js` → `pie.pinguino`; si lo dejás vacío vuelve el logo. Entran caminando cada vez que se elige una solapa del menú (y quedan quietos si la persona tiene activado "reducir movimiento").
 
 ## Leyenda del pie
 
@@ -82,7 +82,7 @@ La trama de la marca (`assets/tramas/trama-marina.png`) se repite de fondo en to
 
 ## Contacto: mapa y formulario
 
-- **Mapa "Estamos acá":** mapa de Google con la dirección del jardín. Para cambiarlo, en `contenido.js` reemplazá `mapaInsertado` por el enlace de Google Maps → Compartir → Insertar un mapa (solo lo que está dentro de `src="..."`).
+- **Mapa "Estamos acá":** mapa de OpenStreetMap con **el pingüino como punto de ubicación** (biblioteca Leaflet, incluida en `assets/vendor/leaflet/`). Al tocar el pingüino aparece la dirección y "Cómo llegar". Para que el pingüino quede exacto, cargá las coordenadas en `contenido.js` → `contacto.mapaPinguino` (`lat` y `lng`; en Google Maps, clic derecho sobre el jardín → se copian los números). Sin coordenadas, la dirección se busca sola. Si el mapa no carga, se muestra el mapa de Google de `mapaInsertado`.
 - **Formulario "¿Nos empezamos a conocer?":** para que los mensajes lleguen al correo del jardín:
   1. Creá una cuenta gratis en https://formspree.io con el correo del jardín.
   2. Creá un formulario nuevo y copiá su dirección (`https://formspree.io/f/xxxxxx`).

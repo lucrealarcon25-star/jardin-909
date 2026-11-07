@@ -299,6 +299,8 @@
       secciones.forEach(function (s) { s.hidden = s.id !== id; });
       document.body.classList.toggle("en-portada", id === "inicio");
       actualizarPie(id);
+      repetirPinguinos();
+      if (id === "contacto") abrirMapa();
       actualizarTrama();
       enlaces.forEach(function (a) {
         if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");
@@ -744,20 +746,95 @@
     }
   }
 
-  // Mapa de Google dentro de la página ("Estamos acá")
+  // Mapa "Estamos acá" con el pingüino como marcador (Leaflet + OpenStreetMap).
+  // Se arma la primera vez que se abre Contacto. Si algo falla, se muestra el mapa de Google.
+  var abrirMapa = function () {};
   function mapaInsertado(D) {
-    if (vacio(D.mapaInsertado)) return;
+    var M = D.mapaPinguino || {};
+    if (vacio(D.mapaInsertado) && vacio(M.leaflet)) return;
     var caja = $("#contacto-mapa");
+    var lugar = [D.domicilio, D.localidad].filter(Boolean).join(", ");
     caja.appendChild(h("h3", { class: "contacto-sub__titulo" }, D.tituloMapa || "Estamos acá"));
-    caja.appendChild(h("div", { class: "contacto-mapa__marco" },
-      h("iframe", {
+    var marco = h("div", { class: "contacto-mapa__marco" });
+    caja.appendChild(marco);
+    caja.hidden = false;
+
+    function mapaGoogle() {
+      if (vacio(D.mapaInsertado)) return;
+      marco.textContent = "";
+      marco.appendChild(h("iframe", {
         src: D.mapaInsertado,
-        title: "Mapa de Google con la ubicación del jardín: " + [D.domicilio, D.localidad].filter(Boolean).join(", "),
+        title: "Mapa de Google con la ubicación del jardín: " + lugar,
         loading: "lazy",
         referrerpolicy: "no-referrer-when-downgrade",
         allowfullscreen: true
-      })));
-    caja.hidden = false;
+      }));
+    }
+
+    if (vacio(M.leaflet)) { mapaGoogle(); return; }
+
+    function cargar(etiqueta, attrs) {
+      return new Promise(function (ok, mal) {
+        var n = document.createElement(etiqueta);
+        Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+        n.onload = ok; n.onerror = mal;
+        document.head.appendChild(n);
+      });
+    }
+
+    function coordenadas() {
+      if (M.lat != null && M.lng != null && M.lat !== "" && M.lng !== "") {
+        return Promise.resolve([Number(M.lat), Number(M.lng)]);
+      }
+      // Sin coordenadas: se busca la dirección en OpenStreetMap
+      var q = encodeURIComponent([D.domicilio, D.localidad, "Argentina"].filter(Boolean).join(", "));
+      return fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" + q)
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res || !res.length) throw new Error("Dirección no encontrada");
+          return [Number(res[0].lat), Number(res[0].lon)];
+        });
+    }
+
+    var abierto = false;
+    abrirMapa = function () {
+      if (abierto) return;
+      abierto = true;
+      marco.classList.add("contacto-mapa__marco--cargando");
+      Promise.all([
+        cargar("link", { rel: "stylesheet", href: M.leaflet + "leaflet.css" }),
+        cargar("script", { src: M.leaflet + "leaflet.js" }),
+        coordenadas()
+      ]).then(function (res) {
+        var pos = res[2];
+        var L = window.L;
+        marco.classList.remove("contacto-mapa__marco--cargando");
+        var mapa = h("div", { class: "contacto-mapa__leaflet", role: "region", "aria-label": "Mapa con la ubicación del jardín: " + lugar });
+        marco.appendChild(mapa);
+        var m = L.map(mapa, { scrollWheelZoom: false }).setView(pos, M.zoom || 16);
+        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+          maxZoom: 19, subdomains: "abcd",
+          attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> &copy; <a href=\"https://carto.com/attributions\">CARTO</a>"
+        }).addTo(m);
+        var icono = L.icon({
+          iconUrl: M.marcador, iconSize: [40, 71], iconAnchor: [20, 71], popupAnchor: [0, -66],
+          className: "contacto-mapa__pinguino"
+        });
+        var popup = document.createElement("div");
+        popup.appendChild(h("strong", null, C.sitio.nombre));
+        popup.appendChild(h("br"));
+        popup.appendChild(document.createTextNode(lugar));
+        if (!vacio(D.mapa)) {
+          popup.appendChild(h("br"));
+          popup.appendChild(h("a", { href: D.mapa, target: "_blank", rel: "noopener" }, "Cómo llegar"));
+        }
+        L.marker(pos, { icon: icono, title: C.sitio.nombre, alt: C.sitio.nombre }).addTo(m).bindPopup(popup);
+        setTimeout(function () { m.invalidateSize(); }, 50);
+      }).catch(function () {
+        marco.classList.remove("contacto-mapa__marco--cargando");
+        mapaGoogle();
+      });
+    };
   }
 
   // Formulario de contacto (envía de verdad solo si hay "destino")
@@ -892,6 +969,8 @@
 
   // Los pingüinos del pie entran caminando la primera vez que el pie aparece en pantalla.
   // Si la persona tiene activado "reducir movimiento", quedan quietos.
+  // También vuelven a entrar cada vez que se elige una solapa del menú.
+  var repetirPinguinos = function () {};
   function caminarPinguinos(grupo) {
     var quieto = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (quieto || !("IntersectionObserver" in window)) return;
@@ -900,9 +979,15 @@
       entradas.forEach(function (e) {
         if (!e.isIntersecting) return;
         grupo.classList.add("pie__pinguinos--caminando");
-        obs.disconnect();
+        obs.unobserve(grupo);
       });
     }, { threshold: 0.6 });
+    repetirPinguinos = function () {
+      obs.unobserve(grupo);
+      grupo.classList.remove("pie__pinguinos--caminando");
+      void grupo.offsetWidth; // reinicia la animación
+      obs.observe(grupo);
+    };
     obs.observe(grupo);
   }
 
