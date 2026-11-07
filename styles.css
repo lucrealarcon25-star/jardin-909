@@ -1301,7 +1301,7 @@ html.intro-activa { overflow: hidden; }
 }
 
 /* Leyenda del pie */
-.pie__leyenda { font-style: italic; color: #6a93bd; } /* azul clarito: discreto sobre el crema */
+.pie__leyenda { font-style: italic; color: var(--blanco); } /* blanco: muy discreto sobre el crema */
 
 /* ---------- Pie: los cuatro pingüinos (la comunidad) en lugar del logo ---------- */
 .pie__pinguinos { display: flex; align-items: flex-end; gap: 8px; }
