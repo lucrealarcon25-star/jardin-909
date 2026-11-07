@@ -1516,3 +1516,9 @@ body.en-portada .pie__pinguinos { visibility: hidden; }
   .pie__pinguino--grande  { height: 38px; }
   .pie__fila { padding-block: 10px; }
 }
+
+/* Computadora: el pingüino de la portada se ubica en el medio entre la marca y el texto (lo calcula app.js) */
+@media (min-width: 901px) {
+  .portada__ilustracion,
+  .portada__ilustracion:has(.portada__video-caja) { justify-self: start; }
+}

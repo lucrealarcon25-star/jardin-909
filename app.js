@@ -402,6 +402,18 @@
       if (bajada) bajada.style.fontSize = Math.max(14, tamBajada * escala) + "px";
     }
     caja.style.width = Math.round(anchoFinal) + "px";
+
+    // Computadora: el pingüino queda en el medio del espacio entre el final
+    // de la marca de arriba (logo) y el comienzo del texto.
+    caja.style.marginLeft = "";
+    var logo = $(".marca__logo") || $(".marca");
+    if (computadora && logo) {
+      var izq = logo.getBoundingClientRect().right;
+      var der = texto.getBoundingClientRect().left;
+      var inicioCol = grilla.getBoundingClientRect().left + parseFloat(eg.paddingLeft);
+      var lugar = (izq + der) / 2 - anchoFinal / 2;
+      caja.style.marginLeft = Math.max(0, Math.round(lugar - inicioCol)) + "px";
+    }
   }
 
   // Video de la portada: el pingüino se arma una vez y queda fijo.
