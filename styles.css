@@ -1303,53 +1303,9 @@ html.intro-activa { overflow: hidden; }
 /* Leyenda del pie */
 .pie__leyenda { font-style: italic; }
 
-/* ---------- Novedades: "¡Qué bueno encontrarnos!" (Instagram y comunidad) ----------
-   Los cuatro pingüinos, de distintos tamaños, representan a la comunidad del jardín. */
-.comunidad {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: 24px 40px;
-  margin-top: clamp(32px, 5vw, 56px);
-  padding: clamp(24px, 4vw, 44px) clamp(20px, 4vw, 48px) 0;
-  background: var(--beige);
-  border-radius: 20px;
-  overflow: hidden;
-}
-.comunidad[hidden] { display: none; }
-.comunidad__texto { align-self: center; padding-bottom: clamp(24px, 4vw, 44px); max-width: 30rem; }
-.comunidad__titulo {
-  color: var(--azul);
-  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-  font-weight: 800;
-  line-height: 1.05;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-}
-.comunidad__texto p { margin-top: 14px; color: var(--azul); font-size: 1.0625rem; line-height: 1.5; }
-.comunidad__boton {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: #cfe8f7;
-  color: var(--azul-oscuro);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: transform .15s ease, background-color .15s ease;
-}
-@media (hover: hover) { .comunidad__boton:hover { transform: scale(var(--zoom)); background: #b9def4; } }
-.comunidad__boton:focus-visible { transform: scale(var(--zoom)); }
-.comunidad__pinguinos { display: flex; align-items: flex-end; gap: clamp(8px, 1.6vw, 18px); }
-.comunidad__pinguino { display: block; width: auto; height: auto; }
-.comunidad__pinguino--chico   { height: clamp(64px, 8vw, 96px); }
-.comunidad__pinguino--mediano { height: clamp(96px, 12vw, 140px); }
-.comunidad__pinguino--grande  { height: clamp(140px, 18vw, 210px); }
-@media (max-width: 700px) {
-  .comunidad { grid-template-columns: 1fr; }
-  .comunidad__texto { padding-bottom: 0; }
-  .comunidad__pinguinos { justify-content: center; }
-}
-@media (prefers-reduced-motion: reduce) { .comunidad__boton { transition: none; } }
+/* ---------- Pie: los cuatro pingüinos (la comunidad) en lugar del logo ---------- */
+.pie__pinguinos { display: flex; align-items: flex-end; gap: 8px; }
+.pie__pinguino { display: block; width: auto; }
+.pie__pinguino--chico   { height: 40px; }
+.pie__pinguino--mediano { height: 56px; }
+.pie__pinguino--grande  { height: 80px; }

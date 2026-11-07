@@ -26,7 +26,7 @@ Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
 ### Pendientes de la institución
 
-Aprobar el borrador de Misión y Visión, descripción de cada sala, textos de las novedades (calendario escolar y menú incluidos) y horario exacto de cada turno.
+Aprobar el borrador de Misión y Visión, descripción de cada sala, textos de las novedades y horario exacto de cada turno.
 
 Ya cargados: edad y turno de cada sala (Lila multiedad 2 y 3 años, Celeste 4 años, Verde 5 años; mañana y tarde), dirección (Beruti 488, entre Constituyentes y Gándara, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
 
@@ -55,9 +55,9 @@ Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarI
 - **Mapa del jardín:** está en "El jardín", junto a Historia, Misión, Visión y Propuesta educativa. Se puede abrir en tamaño completo.
 - **Solapas internas:** dentro de cada sección, "Nuestra historia", "Conocer la sala", "Conocer más" o "Leer comunicación" abren debajo **solo la información de ese ítem**. Se cierran con "Cerrar", con Esc o tocando de nuevo el mismo enlace.
 
-## Bloque "¡Qué bueno encontrarnos!"
+## Pingüinos del pie
 
-Al final de Novedades hay una invitación a seguir el Instagram del jardín, con los cuatro pingüinos de distintos tamaños como imagen de la comunidad. Se edita en `contenido.js` → `novedades.comunidad` (vacío el `titulo` = no se muestra).
+En el pie, a la izquierda, van cuatro pingüinos de distintos tamaños como imagen de la comunidad del jardín (en lugar del logo, que ya está en el encabezado). Se configura en `contenido.js` → `pie.pinguino`; si lo dejás vacío vuelve el logo.
 
 ## Leyenda del pie
 

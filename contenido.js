@@ -245,16 +245,6 @@ window.CONTENIDO = {
     titulo: "Información para las familias",
     textoEnlace: "Leer comunicación",
     textoSinResultados: "Todavía no hay publicaciones en esta categoría.",
-
-    // BLOQUE "¡QUÉ BUENO ENCONTRARNOS!" (invitación al Instagram)
-    // Va debajo de las publicaciones. Los cuatro pingüinos representan a la comunidad.
-    // El botón lleva al Instagram de "redes.instagram". Dejá "titulo" vacío para ocultarlo.
-    comunidad: {
-      titulo: "¡Qué bueno encontrarnos!",
-      texto: "Este es un espacio para compartir nuestras experiencias, proyectos y novedades.",
-      boton: "¡Seguinos!",
-      pinguino: "assets/ilustraciones/pinguino.png"
-    },
     filtros: [
       { id: "todas",          texto: "Todas" },
       { id: "comunicaciones", texto: "Comunicaciones", enlace: "Leer comunicación" },
@@ -268,24 +258,6 @@ window.CONTENIDO = {
         resumen: "Fechas, requisitos y documentación para el ciclo lectivo 2027.",
         texto: "Recibimos a niñas y niños de **2 a 5 años**, en **turno mañana** y **turno tarde**.\n\n**Del 12 al 23 de octubre.** Ratificación de matrícula 2027 y preinscripción de hermanas y hermanos.\n\n**Del 9 al 20 de noviembre.** Inscripción por ingreso general y pases.\n\n**Del 27 de noviembre al 4 de diciembre.** Confirmación de las vacantes asignadas y exhibición de los listados oficiales.\n\n**Documentación.** DNI, partida de nacimiento y carnet de vacunación al día. Las planillas de inscripción se adquieren en la cooperadora ($3.000) y se presentan en folio.\n\nPor consultas, acercate al jardín en **Beruti 488** o llamanos al **(011) 3758-1782**.",
         enlace: { texto: "", url: "" },
-        ejemplo: false
-      },
-      {
-        titulo: "Calendario escolar",
-        categoria: "comunicaciones",
-        fecha: "",
-        resumen: "Inicio y fin de clases, recesos, actos y fechas especiales del ciclo lectivo.",
-        texto: "", // PENDIENTE: fechas del ciclo lectivo. Se puede enlazar un PDF en "enlace"
-        enlace: { texto: "Ver calendario escolar", url: "" },
-        ejemplo: false
-      },
-      {
-        titulo: "Menú",
-        categoria: "comunicaciones",
-        fecha: "",
-        resumen: "El menú semanal del Servicio Alimentario Escolar (SAE).",
-        texto: "", // PENDIENTE: menú de la semana. Se puede enlazar un PDF o imagen en "enlace"
-        enlace: { texto: "Ver menú", url: "" },
         ejemplo: false
       },
       {
@@ -369,6 +341,8 @@ window.CONTENIDO = {
 
   /* ---------- PIE DE PÁGINA ---------- */
   pie: {
+    // Los cuatro pingüinos (la comunidad) a la izquierda del pie, en lugar del logo.
+    pinguino: "assets/ilustraciones/pinguino.png",
     lineas: ["Morón · Provincia de Buenos Aires · DGCyE"],
     leyenda: "Página desarrollada como proyecto de tesis", // Leyenda debajo. Vacío = no se muestra.
     anterior: "Anterior",        // lleva a la página anterior (no aparece en la portada)

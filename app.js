@@ -555,29 +555,7 @@
 
   /* ---------------- 5. Novedades ---------------- */
 
-  // Bloque "¡Qué bueno encontrarnos!": invitación al Instagram con los cuatro pingüinos
-  function comunidad() {
-    var K = C.novedades.comunidad;
-    var ig = (C.redes && C.redes.instagram) || {};
-    var lugar = $("#novedades-comunidad");
-    if (!K || vacio(K.titulo) || !lugar) return;
-    var pinguinos = h("div", { class: "comunidad__pinguinos", "aria-hidden": "true" });
-    ["chico", "chico", "mediano", "grande"].forEach(function (t) {
-      pinguinos.appendChild(h("img", { class: "comunidad__pinguino comunidad__pinguino--" + t, src: K.pinguino, alt: "" }));
-    });
-    var texto = h("div", { class: "comunidad__texto" },
-      h("h3", { class: "comunidad__titulo" }, K.titulo),
-      vacio(K.texto) ? null : h("p", null, K.texto),
-      vacio(ig.url) ? null : h("a", { class: "comunidad__boton", href: ig.url, target: "_blank", rel: "noopener" },
-        K.boton || "Seguinos",
-        h("span", { class: "visualmente-oculto" }, " en Instagram (se abre en una pestaña nueva)")));
-    lugar.appendChild(texto);
-    lugar.appendChild(pinguinos);
-    lugar.hidden = false;
-  }
-
   function novedades() {
-    comunidad();
     var N = C.novedades;
     var filtros = $("#novedades-filtros");
     var panelTabs = $("#novedades-panel");
@@ -885,7 +863,17 @@
   /* ---------------- Pie ---------------- */
 
   function pie() {
-    $("#pie-marca").appendChild(imagen({ src: C.sitio.logo.src, alt: C.sitio.nombre + " " + C.sitio.denominacion }, "pie__logo"));
+    // Cuatro pingüinos de distintos tamaños: la comunidad del jardín
+    var marca = $("#pie-marca");
+    if (!vacio(C.pie.pinguino)) {
+      var grupo = h("div", { class: "pie__pinguinos", "aria-hidden": "true" });
+      ["chico", "chico", "mediano", "grande"].forEach(function (t) {
+        grupo.appendChild(h("img", { class: "pie__pinguino pie__pinguino--" + t, src: C.pie.pinguino, alt: "" }));
+      });
+      marca.appendChild(grupo);
+    } else {
+      marca.appendChild(imagen({ src: C.sitio.logo.src, alt: C.sitio.nombre + " " + C.sitio.denominacion }, "pie__logo"));
+    }
     var texto = $("#pie-texto");
     (C.pie.lineas || []).forEach(function (l, i) {
       if (i) texto.appendChild(h("br"));
