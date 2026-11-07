@@ -1444,3 +1444,75 @@ body.en-portada .pie__pinguinos { visibility: hidden; }
   body.en-portada .pie__marca { display: none; }
   body.en-portada .pie__centro, body.en-portada .pie__fila > .pie__texto, body.en-portada .pie__nav { grid-row: 1; }
 }
+
+/* Computadora: el pingüino de la portada va pegado al texto (no contra el borde izquierdo) */
+@media (min-width: 601px) {
+  .portada__ilustracion,
+  .portada__ilustracion:has(.portada__video-caja) { justify-self: end; }
+}
+
+/* ================================================================
+   LAS PÁGINAS ENTRAN EN LA PANTALLA (con las solapas cerradas)
+   En pantallas de computadora no tan altas se achican los espacios
+   del encabezado, el pie y las secciones.
+   ================================================================ */
+@media (min-width: 761px) and (max-height: 1000px) {
+  .encabezado__fila { padding-block: 18px 14px; }
+  .marca__logo { width: clamp(140px, 13vw, 180px); }
+  .pie__fila { padding-block: 16px; }
+  .pie__pinguino--chico   { height: 32px; }
+  .pie__pinguino--mediano { height: 46px; }
+  .pie__pinguino--grande  { height: 64px; }
+  main, body.en-portada main { padding-bottom: 0; }
+  .seccion__interior,
+  .modo-solapas .seccion__interior { padding-block: 28px 32px; }
+  .seccion__titulo { font-size: clamp(1.75rem, 2.6vw, 2.25rem); }
+  .jardin__presentacion { margin-top: 10px; }
+  .apartados { margin-top: 20px; }
+  .apartados__botones .enlace-indicador { padding-block: 11px; }
+  .salas { margin-top: 24px; gap: 24px; }
+  .sala__circulo { width: clamp(120px, 11vw, 160px); }
+  .proyectos { margin-top: 24px; }
+  .proyecto { padding-block: 2px 16px; }
+  .proyecto:nth-child(-n + 2 of .proyecto) { margin-bottom: 16px; }
+  .proyecto__icono { width: clamp(72px, 7vw, 92px); }
+}
+
+/* ---------- Celular: Salas y Proyectos entran en una pantalla ---------- */
+@media (max-width: 600px) {
+  .seccion__interior,
+  .modo-solapas .seccion__interior { padding-block: 24px 24px; }
+  /* Salas: las tres en una fila */
+  .salas { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 8px; margin-top: 20px; }
+  .sala__circulo { width: min(100%, 104px); }
+  .sala__nombre { font-size: 1rem; margin-top: 10px; }
+  .sala .enlace-pico { font-size: 0.8125rem; gap: 4px; }
+  .sala .enlace-pico .pico { width: 9px; height: 11px; }
+  /* Proyectos: de a dos, con el ícono arriba (el resumen se lee al abrir "Conocer más") */
+  .proyectos { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; row-gap: 18px; margin-top: 20px; }
+  .proyectos .proyecto { flex-direction: column; gap: 10px; padding: 0; margin: 0; border: 0; }
+  .proyecto__icono { width: 68px; }
+  .proyecto__titulo { font-size: 1.0625rem; }
+  .proyecto__resumen { display: none; }
+  .proyecto .enlace-pico { margin-top: 4px; }
+  /* Pie un poco más bajo */
+  .pie__pinguino--chico   { height: 24px; }
+  .pie__pinguino--mediano { height: 34px; }
+  .pie__pinguino--grande  { height: 46px; }
+  .pie__fila { padding-block: 14px; row-gap: 6px; }
+}
+/* Celulares bajos (por ejemplo iPhone SE): un poco más compacto */
+@media (max-width: 600px) and (max-height: 760px) {
+  .seccion__titulo { font-size: 1.6rem; }
+  .seccion__interior, .modo-solapas .seccion__interior { padding-block: 16px; }
+  .jardin__presentacion { font-size: 0.9375rem; margin-top: 8px; }
+  .apartados { margin-top: 14px; }
+  .apartados__botones .enlace-indicador { padding-block: 9px; }
+  .seccion__bajada { font-size: 0.9375rem; margin-top: 6px; }
+  .proyectos { margin-top: 14px; row-gap: 12px; }
+  .proyecto__icono { width: 56px; }
+  .pie__pinguino--chico   { height: 20px; }
+  .pie__pinguino--mediano { height: 28px; }
+  .pie__pinguino--grande  { height: 38px; }
+  .pie__fila { padding-block: 10px; }
+}
