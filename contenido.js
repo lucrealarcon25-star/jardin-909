@@ -45,7 +45,7 @@ window.CONTENIDO = {
     // Logo original. No se modifica ni se redibuja.
     logo: {
       src: "assets/logo/logo-jardin-909.png",
-      alt: "Jardín de Infantes N.º 909 Malvinas Argentinas · Morón · DGCyE"
+      alt: "Jardín de Infantes N.º 909 Malvinas Argentinas · Morón · Provincia de Buenos Aires · DGCyE"
     }
   },
 
@@ -136,7 +136,7 @@ window.CONTENIDO = {
         id: "propuesta",
         titulo: "Propuesta educativa",
         // Texto tomado del relevamiento institucional. Revisar con la institución.
-        texto: "Nuestra propuesta se organiza alrededor del proyecto anual **“Travesía de Infancias: Juego, identidad y horizontes comunes”**. Concebimos a las niñas y los niños como **sujetos de derecho** y **ciudadanos activos** desde la primera infancia, y hacemos d**el juego, la literatura y la educación ambiental** los ejes que atraviesan la tarea de todos los días.\n\nEl nombre del jardín, “Malvinas Argentinas”, se trabaja desde la memoria, la soberanía y la cultura de la paz, y da origen a una **metáfora marítima** que recorre la propuesta y los espacios. Por eso el jardín se organiza en cuatro sectores con nombre propio, **el Puerto Sustentable, el Faro de Historias, las Mareas Creativas y el Muelle de Juegos**. El edificio, de más de 50 años, con sus rampas, barandas, desniveles y galerías, acompaña esa idea y se recorre como si fuera **un barco o un muelle**.\n\nTrabajamos desde un **enfoque de derechos, constructivista y sociocrítico**, en diálogo con el **Diseño Curricular de la Provincia de Buenos Aires**. Entendemos **el ambiente como parte del aprendizaje** e incorporamos de manera transversal la **Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral**."
+        texto: "Nuestra propuesta se organiza alrededor del proyecto anual **“Travesía de Infancias: Juego, identidad y horizontes comunes”**. Concebimos a las niñas y los niños como **sujetos de derecho** y **ciudadanos activos** desde la primera infancia, y hacemos del **juego, la literatura y la educación ambiental** los ejes que atraviesan la tarea de todos los días.\n\nEl nombre del jardín, “Malvinas Argentinas”, se trabaja desde la memoria, la soberanía y la cultura de la paz, y da origen a una **metáfora marítima** que recorre la propuesta y los espacios. Por eso el jardín se organiza en cuatro sectores con nombre propio, **el Puerto Sustentable, el Faro de Historias, las Mareas Creativas y el Muelle de Juegos**. El edificio, de más de 50 años, con sus rampas, barandas, desniveles y galerías, acompaña esa idea y se recorre como si fuera **un barco o un muelle**.\n\nTrabajamos desde un **enfoque de derechos, constructivista y sociocrítico**, en diálogo con el **Diseño Curricular de la Provincia de Buenos Aires**. Entendemos **el ambiente como parte del aprendizaje** e incorporamos de manera transversal la **Educación Ambiental Integral, la interculturalidad, la Justicia Curricular y la Educación Sexual Integral**."
       },
       {
         id: "mapa",
@@ -252,6 +252,33 @@ window.CONTENIDO = {
     ],
     items: [
       {
+        titulo: "Inscripciones",
+        categoria: "comunicaciones",
+        fecha: "",
+        resumen: "Cómo inscribir a tu hija o hijo en el jardín.",
+        texto: "Recibimos a niñas y niños de **2 a 5 años**, en **turno mañana** y **turno tarde**. Para consultar fechas, requisitos y vacantes, acercate al jardín en **Beruti 488** o llamanos al **(011) 3758-1782**.\n\nCuando se abra el período de inscripción, vamos a publicar en esta sección las fechas y la documentación necesaria.", // Completar con las fechas y requisitos de cada año
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Calendario escolar",
+        categoria: "comunicaciones",
+        fecha: "",
+        resumen: "Inicio y fin de clases, recesos, actos y fechas especiales del ciclo lectivo.",
+        texto: "", // PENDIENTE: fechas del ciclo lectivo. Se puede enlazar un PDF en "enlace"
+        enlace: { texto: "Ver calendario escolar", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Menú",
+        categoria: "comunicaciones",
+        fecha: "",
+        resumen: "El menú semanal del Servicio Alimentario Escolar (SAE).",
+        texto: "", // PENDIENTE: menú de la semana. Se puede enlazar un PDF o imagen en "enlace"
+        enlace: { texto: "Ver menú", url: "" },
+        ejemplo: false
+      },
+      {
         titulo: "Comunicaciones para las familias",
         categoria: "comunicaciones",
         fecha: "",
@@ -278,7 +305,7 @@ window.CONTENIDO = {
     titulo: "Estamos cerca",
     localidad: "Morón, Provincia de Buenos Aires",
     domicilio: "Beruti 488",
-    entreCalles: "entre Constituyentes y Gandora",
+    entreCalles: "entre Constituyentes y Gándara",
     codigoPostal: "1708",
     nivel: "Nivel Inicial · Región Educativa 8 · DGCyE", // Opcional: se muestra debajo de la dirección
     horarios: "Turno mañana y turno tarde",   // PENDIENTE: agregar el horario exacto de cada turno
@@ -332,8 +359,8 @@ window.CONTENIDO = {
 
   /* ---------- PIE DE PÁGINA ---------- */
   pie: {
-    lineas: ["Morón · DGCyE"],
-    leyenda: "Página para proyecto institucional", // Leyenda debajo. Vacío = no se muestra.
+    lineas: ["Morón · Provincia de Buenos Aires · DGCyE"],
+    leyenda: "Página desarrollada como proyecto de tesis", // Leyenda debajo. Vacío = no se muestra.
     anterior: "Anterior",        // lleva a la página anterior (no aparece en la portada)
     siguiente: "Siguiente",      // lleva a la página siguiente del menú
     volver: "Volver al inicio"   // solo en la última página (Contacto)

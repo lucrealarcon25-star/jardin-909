@@ -26,9 +26,9 @@ Todo se edita en **`contenido.js`**. Cada bloque tiene comentarios.
 
 ### Pendientes de la institución
 
-Aprobar el borrador de Misión y Visión, descripción de cada sala, textos de las novedades y horario exacto de cada turno.
+Aprobar el borrador de Misión y Visión, descripción de cada sala, textos de las novedades (calendario escolar y menú incluidos) y horario exacto de cada turno.
 
-Ya cargados: edad y turno de cada sala (Lila 3 años, Celeste 4 años, Verde 5 años; mañana y tarde), dirección (Beruti 488, entre Constituyentes y Gandora, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
+Ya cargados: edad y turno de cada sala (Lila 3 años, Celeste 4 años, Verde 5 años; mañana y tarde), dirección (Beruti 488, entre Constituyentes y Gándara, CP 1708, Morón), nivel educativo, teléfono, correo, historia, Propuesta educativa y el detalle de los cuatro proyectos (tomados del relevamiento, del cuestionario institucional y del Informe de Establecimiento: revisarlos con la institución).
 
 La presentación de "El jardín" se tomó del mockup: confirmarla.
 
@@ -57,7 +57,7 @@ Como en el mockup, el pingüino va a la derecha y mira hacia el texto (`espejarI
 
 ## Leyenda del pie
 
-Debajo de "Morón · DGCyE" se lee "Página para proyecto institucional". Se cambia en `contenido.js` → `pie.leyenda` (vacío = no se muestra).
+Debajo de "Morón · Provincia de Buenos Aires · DGCyE" se lee "Página desarrollada como proyecto de tesis". Se cambia en `contenido.js` → `pie.leyenda` (vacío = no se muestra).
 
 ## Portada
 
