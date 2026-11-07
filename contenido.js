@@ -201,35 +201,35 @@ window.CONTENIDO = {
   /* ---------- 4. PROYECTOS Y EXPERIENCIAS ---------- */
   proyectos: {
     titulo: "Aprender jugando",
-    bajada: "Proyectos que integran el juego, la exploración y la creatividad.",
+    bajada: "Nuestros cuatro territorios pedagógicos, inspirados en la **travesía** que recorre todo el jardín.",
     textoEnlace: "Conocer más",
     items: [
       {
         id: "puerto-sustentable",
-        titulo: "Puerto sustentable",
+        titulo: "Puerto Sustentable",
         resumen: "Exploramos el cuidado del ambiente y nuestro entorno.",
-        detalle: "En el Puerto Sustentable trabajamos el **cuidado del ambiente** desde la **Educación Ambiental Integral**. Las niñas y los niños exploran la tierra y sus texturas, observan, hacen preguntas y construyen junto a sus docentes **hábitos de cuidado** del entorno y de los demás. Aunque el jardín cuenta con poco espacio verde, el ambiente ocupa un **lugar central** en la propuesta.",
+        detalle: "El Puerto Sustentable es el territorio del **ambiente y el cuidado**. Desde la **Educación Ambiental Integral**, las niñas y los niños exploran la tierra y sus texturas, observan, preguntan y construyen junto a sus docentes **hábitos de cuidado** del entorno y de los demás. Aunque el jardín cuenta con poco espacio verde, el ambiente ocupa un **lugar central** en nuestra propuesta.",
         imagen: { src: "assets/proyectos/puerto-sustentable-reciclaje.png", alt: "Símbolo geométrico de reciclaje en verde y celeste" }
       },
       {
         id: "mareas-creativas",
-        titulo: "Mareas creativas",
+        titulo: "Mareas Creativas",
         resumen: "Arte, expresión y nuevas formas de comunicar.",
-        detalle: "Mareas Creativas reúne las propuestas de **expresión artística**, con **la plástica, la música, el cuerpo y el movimiento** como lenguajes para expresarse y comunicarse. **Valoramos el proceso tanto como el resultado**, porque una experiencia artística no siempre termina en un trabajo para la carpeta y muchas veces deja una huella en toda la sala. Las producciones de los chicos **se exhiben en las salas** y en los pasillos.",
+        detalle: "Mareas Creativas reúne las propuestas de **expresión artística**: la plástica, la música, el cuerpo y el movimiento como **lenguajes para expresarse y comunicarse**. **Valoramos el proceso tanto como el resultado**, porque una experiencia artística no siempre termina en un trabajo para la carpeta: muchas veces deja **una huella en toda la sala**.",
         imagen: { src: "assets/proyectos/mareas-creativas-ola.png", alt: "Ola geométrica en azules y verde agua" }
       },
       {
         id: "muelle-de-juegos",
-        titulo: "Muelle de juegos",
+        titulo: "Muelle de Juegos",
         resumen: "El juego como motor de aprendizajes compartidos.",
-        detalle: "El Muelle de Juegos **es el patio, el espacio del juego**. Sus rampas y desniveles invitan a subir, bajar, mirar desde lo alto y recorrer distintos planos, y así enriquecen el **juego simbólico y el juego motor**. Allí se proponen **juegos dramáticos, de construcción y con reglas**, en los que las niñas y los niños aprenden a negociar, a ponerse de acuerdo y a **convivir con otros**.",
+        detalle: "El Muelle de Juegos es **el patio, el espacio del juego**. Sus rampas y desniveles lo convierten en un **verdadero muelle** donde las niñas y los niños suben, bajan, miran desde lo alto y recorren distintos planos, enriqueciendo el **juego simbólico y motor**. Allí se proponen **juegos dramáticos, de construcción y con reglas**, en los que aprenden a negociar, ponerse de acuerdo y **convivir con otros**.",
         imagen: { src: "assets/proyectos/muelle-de-juegos.png", alt: "Muelle de madera geométrico en lila y verde" }
       },
       {
         id: "faro-de-historias",
-        titulo: "Faro de historias",
+        titulo: "Faro de Historias",
         resumen: "La lectura como puente hacia nuevos mundos.",
-        detalle: "El Faro de Historias es la **biblioteca del jardín**, donde compartimos cuentos, relatos y poesías y disfrutamos de la **lectura en voz alta**. Con los cuadernos y las **bolsas viajeras literarias**, los libros también llegan a las casas para que la lectura se comparta **en familia**.",
+        detalle: "El Faro de Historias es la **biblioteca del jardín**, el lugar de la **literatura**. Allí compartimos cuentos, relatos y poesías y disfrutamos de la **lectura en voz alta**. Con los cuadernos y las **bolsas viajeras literarias**, los libros también llegan a las casas para que la lectura se comparta **en familia**.",
         imagen: { src: "assets/proyectos/faro-de-historias-faro.png", alt: "Faro geométrico en amarillo y coral, con rayos de luz" }
       }
     ]
