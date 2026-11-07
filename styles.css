@@ -1356,3 +1356,9 @@ html.intro-activa { overflow: hidden; }
   }
   .portada__ilustracion .portada__img { max-height: max(220px, calc(100dvh - 390px)); width: auto; margin-inline: auto; }
 }
+
+/* Bajada de la portada y presentación de "Nuestro jardín": en azul, con palabras resaltadas en negrita */
+.portada__bajada,
+.jardin__presentacion { color: var(--azul-texto); }
+.portada__bajada .resaltado,
+.jardin__presentacion .resaltado { color: var(--azul); font-weight: 800; }

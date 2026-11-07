@@ -64,7 +64,7 @@ window.CONTENIDO = {
   portada: {
     titulo: "Un lugar para jugar, descubrir y crecer.",
     // Bajada basada en la propuesta educativa. Se puede cambiar.
-    bajada: "Un jardín de infantes en Morón donde el juego, la literatura y la educación ambiental guían cada travesía.",
+    bajada: "Un jardín de infantes en Morón donde **el juego, la literatura y la educación ambiental** guían cada **travesía**.",
 
     ilustracion: {
       src: "assets/ilustraciones/pinguino.png",
@@ -110,7 +110,7 @@ window.CONTENIDO = {
     titulo: "Nuestro jardín",
     // Lema y presentación tomados del mockup y del brandboard. Confirmar con la institución.
     lema: "", // Subtítulo opcional debajo de "Nuestro jardín". Vacío = no se muestra.
-    presentacion: "Una mirada inclusiva, orientada a los derechos de las infancias, que acompaña la autonomía y fortalece el lazo comunitario y la cultura del encuentro.",
+    presentacion: "Una **mirada inclusiva**, orientada a los **derechos de las infancias**, que acompaña la **autonomía** y fortalece el **lazo comunitario** y la **cultura del encuentro**.",
 
     // Cada apartado se abre en una solapa al hacer clic. Completá "texto".
     apartados: [

@@ -207,7 +207,7 @@
     $$("[data-texto]").forEach(function (nodo) {
       var valor = leer(nodo.getAttribute("data-texto"));
       if (vacio(valor)) nodo.hidden = true;
-      else nodo.textContent = valor;
+      else { nodo.textContent = ""; agregar(nodo, conResaltados(valor)); } // admite **negritas**
     });
   }
 
