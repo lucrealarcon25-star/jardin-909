@@ -1537,3 +1537,36 @@ body.en-portada .pie__pinguinos { visibility: hidden; }
 .novedades__solapa { list-style: none; }
 .novedades__solapa:has(> .solapa[hidden]) { display: none; }
 .novedades__solapa > .solapa { margin: 0 0 24px; }
+
+/* ---------- Tipografía un poco más grande en todo el sitio ----------
+   Todos los tamaños en rem crecen juntos (100% = 16px; 106.25% = 17px). */
+html { font-size: 106.25%; }
+/* Con la letra más grande: Novedades y celulares bajos un poco más compactos */
+@media (min-width: 761px) and (max-height: 1000px) {
+  .filtros { margin-top: 16px; }
+  .novedad { padding-block: 14px 18px; }
+  .modo-solapas #novedades #novedades-panel { padding-block: 8px; }
+}
+@media (max-width: 600px) {
+  .filtros { margin-top: 14px; }
+  #novedades-panel { margin-top: 4px; }
+  .novedad { padding-block: 12px 14px; row-gap: 6px; }
+  .modo-solapas #novedades #novedades-panel { padding-block: 4px; }
+}
+@media (max-width: 600px) and (max-height: 760px) {
+  .proyectos { row-gap: 8px; }
+  .proyecto__icono { width: 48px; }
+  .proyecto__titulo { font-size: 1rem; }
+  .apartados__botones .enlace-indicador { padding-block: 8px; }
+  .novedad__resumen { font-size: 0.875rem; }
+}
+/* Celular: en la lista de Novedades se ve el título y "Leer…"; la frase corta aparece al abrir */
+@media (max-width: 600px) {
+  .novedades .novedad__resumen { display: none; }
+}
+@media (max-width: 600px) and (max-height: 700px) {
+  .marca__logo { width: 108px; }
+  .encabezado__fila { padding-block: 8px; }
+  .seccion__titulo { font-size: 1.45rem; }
+  .pie__leyenda { display: none; }
+}
