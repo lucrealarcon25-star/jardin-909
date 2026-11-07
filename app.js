@@ -367,6 +367,7 @@
   var PROPORCION = 1.1;            // alto del pingüino / alto del texto
   var VISIBLE = (595 - 97) / 720;  // parte del alto del video que ocupa el pingüino
   var FORMA = 340 / 720;           // ancho / alto de la caja del pingüino
+  var CENTRO_OPTICO = 0.42;        // 0.5 = justo en el medio entre la marca y el texto; menos = más a la izquierda
   function proporcionPortada() {
     var grilla = $(".portada__grilla"), caja = $(".portada__ilustracion"), texto = $(".portada__texto");
     var titulo = $(".portada__titulo"), bajada = $(".portada__bajada");
@@ -411,7 +412,8 @@
       var izq = logo.getBoundingClientRect().right;
       var der = texto.getBoundingClientRect().left;
       var inicioCol = grilla.getBoundingClientRect().left + parseFloat(eg.paddingLeft);
-      var lugar = (izq + der) / 2 - anchoFinal / 2;
+      // Centro óptico: un poco a la izquierda del medio, para equilibrar el peso del texto
+      var lugar = izq + (der - izq) * CENTRO_OPTICO - anchoFinal / 2;
       caja.style.marginLeft = Math.max(0, Math.round(lugar - inicioCol)) + "px";
     }
   }
