@@ -704,25 +704,36 @@
             enlace
           ]
         };
-      }));
+      }), {
+        // La ficha se abre justo debajo de la publicación elegida
+        ubicar: function (i) {
+          var li = tarjetas[i];
+          if (li && li.nextSibling !== lugarFicha) li.insertAdjacentElement("afterend", lugarFicha);
+        }
+      });
+      var tarjetas = [];
+      var lugarFicha = h("li", { class: "novedades__solapa" });
 
       visibles.forEach(function (it, i) {
         var boton = h("button", { class: "enlace-indicador", type: "button" },
           pico("pico"), h("span", null, (N.filtros.filter(function (f) { return f.id === it.categoria; })[0] || {}).enlace || N.textoEnlace),
           h("span", { class: "visualmente-oculto" }, ": " + it.titulo));
 
-        lista.appendChild(h("li", { class: "novedad" },
+        var tarjeta = h("li", { class: "novedad" },
           h("div", { class: "novedad__encabezado" },
             h("h3", { class: "novedad__titulo" }, it.titulo),
             meta(it),
             boton
           ),
           h("p", { class: "novedad__resumen" }, conResaltados(it.resumen))
-        ));
+        );
+        tarjetas.push(tarjeta);
+        lista.appendChild(tarjeta);
         solapa.conectar(boton, i);
       });
 
-      lugarSolapa.appendChild(solapa.nodo);
+      lugarFicha.appendChild(solapa.nodo);
+      lista.appendChild(lugarFicha);
     }
 
     // Sin filtros: se muestran todas las publicaciones, sin pestañas ni categoría

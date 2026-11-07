@@ -1533,3 +1533,7 @@ body.en-portada .pie__pinguinos { visibility: hidden; }
 .modo-solapas #proyectos .proyectos,
 .modo-solapas #novedades #novedades-panel { margin-block: auto; padding-block: 16px; }
 .modo-solapas #salas .seccion__interior:has(> .solapa:not([hidden])) .salas { margin-block: 24px 0; }
+/* Novedades: la ficha se abre debajo de la publicación elegida */
+.novedades__solapa { list-style: none; }
+.novedades__solapa:has(> .solapa[hidden]) { display: none; }
+.novedades__solapa > .solapa { margin: 0 0 24px; }

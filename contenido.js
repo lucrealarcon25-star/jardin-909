@@ -246,7 +246,7 @@ window.CONTENIDO = {
     textoEnlace: "Leer comunicación",
     // true = muestra las pestañas Todas / Comunicaciones / Experiencias
     // y la categoría debajo de cada título. false = solo la lista.
-    mostrarFiltros: false,
+    mostrarFiltros: true,
     textoSinResultados: "Todavía no hay publicaciones en esta categoría.",
     filtros: [
       { id: "todas",          texto: "Todas" },
@@ -260,6 +260,69 @@ window.CONTENIDO = {
         fecha: "",
         resumen: "Fechas, requisitos y documentación para el **ciclo lectivo 2027**.",
         texto: "Recibimos a niñas y niños de **2 a 5 años**, en **turno mañana** (de 8:00 a 12:00) y **turno tarde** (de 13:00 a 17:00).\n\n**Del 12 al 23 de octubre.** Ratificación de matrícula 2027 y preinscripción de hermanas y hermanos.\n\n**Del 9 al 20 de noviembre.** Inscripción por ingreso general y pases.\n\n**Del 27 de noviembre al 4 de diciembre.** Confirmación de las vacantes asignadas y exhibición de los listados oficiales.\n\n**Documentación.** DNI, partida de nacimiento y carnet de vacunación al día. Las planillas de inscripción se adquieren en la cooperadora ($3.000) y se presentan en folio.\n\nPor consultas, acercate al jardín en **Beruti 488** o llamanos al **(011) 3758-1782**.",
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Reunión de familias",
+        categoria: "comunicaciones",
+        fecha: "",
+        resumen: "Queremos encontrarnos para compartir información sobre proyectos y propuestas para el resto del ciclo lectivo.",
+        texto: "Queremos encontrarnos para compartir información sobre los **proyectos y propuestas** para el resto del ciclo lectivo.\n\nPronto vamos a comunicar la **fecha, el horario y el lugar**.", // PENDIENTE: completar fecha, horario y lugar
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Cooperadora",
+        categoria: "comunicaciones",
+        fecha: "",
+        resumen: "La cooperadora sostiene, junto a las familias, muchas de las propuestas del jardín.",
+        texto: "La cooperadora sostiene, **junto a las familias**, muchas de las propuestas del jardín. La información sobre la **cuota social** y los **materiales** se comunica por el **cuaderno de comunicados** y la **cartelera del hall**.\n\n¡Gracias por acompañar!",
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "¿Por dónde llega cada información?",
+        categoria: "comunicaciones",
+        fecha: "",
+        resumen: "Los canales del jardín y para qué sirve cada uno.",
+        texto: "El **cuaderno de comunicados** y la **cartelera del hall** son los canales oficiales. **WhatsApp** refuerza los avisos, **Instagram** comparte lo que vivimos en las salas y **esta web** reúne la información permanente.",
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "¿Por qué aprendemos jugando?",
+        categoria: "experiencias",
+        fecha: "",
+        resumen: "Jugar es una forma de aprender y de ejercer la ciudadanía.",
+        texto: "Cuando las niñas y los niños **juegan, exploran la tierra o construyen con cajas**, están aprendiendo nociones sobre **el espacio, el lenguaje y la convivencia**. En el jardín, jugar no es “no hacer nada”, es **una forma de aprender y de ejercer la ciudadanía**.",
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Día del Respeto a la Diversidad Cultural",
+        categoria: "experiencias",
+        fecha: "",
+        resumen: "Las diferencias nos enriquecen y el respeto nos une.",
+        texto: "**12 de octubre.** Las **diferencias nos enriquecen** y el **respeto nos une**. Exploramos nuestras raíces y aprendemos juntos.",
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Las 3 R en el Puerto Sustentable",
+        categoria: "experiencias",
+        fecha: "",
+        resumen: "Reducir, reutilizar y reciclar para cuidar el ambiente.",
+        texto: "En el jardín aprendemos a **cuidar el ambiente**, a **reducir, reutilizar y reciclar**. Entre todos cuidamos nuestro mundo.",
+        enlace: { texto: "", url: "" },
+        ejemplo: false
+      },
+      {
+        titulo: "Lecturas que viajan",
+        categoria: "experiencias",
+        fecha: "",
+        resumen: "Los libros del Faro de Historias llegan a las casas.",
+        texto: "Con los cuadernos y las **bolsas viajeras literarias**, los libros del **Faro de Historias** llegan a las casas para **compartir la lectura en familia**.",
         enlace: { texto: "", url: "" },
         ejemplo: false
       }
