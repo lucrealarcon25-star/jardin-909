@@ -82,7 +82,7 @@ La trama de la marca (`assets/tramas/trama-marina.png`) se repite de fondo en to
 
 ## Contacto: mapa y formulario
 
-- **Mapa "Estamos acá":** mapa de OpenStreetMap con **el pingüino como punto de ubicación** (biblioteca Leaflet, incluida en `assets/vendor/leaflet/`). Al tocar el pingüino aparece la dirección y "Cómo llegar". Para que el pingüino quede exacto, cargá las coordenadas en `contenido.js` → `contacto.mapaPinguino` (`lat` y `lng`; en Google Maps, clic derecho sobre el jardín → se copian los números). Sin coordenadas, la dirección se busca sola. Si el mapa no carga, se muestra el mapa de Google de `mapaInsertado`.
+- **Mapa "Estamos acá":** mapa estándar de OpenStreetMap (gratuito, sin clave) con **el pingüino como punto de ubicación** (biblioteca Leaflet, incluida en `assets/vendor/leaflet/`). Al tocar el pingüino aparece la dirección y "Cómo llegar". Para que el pingüino quede exacto, cargá las coordenadas en `contenido.js` → `contacto.mapaPinguino` (`lat` y `lng`; en Google Maps, clic derecho sobre el jardín → se copian los números). Sin coordenadas, la dirección se busca sola. Si el mapa no carga, se muestra el mapa de Google de `mapaInsertado`.
 - **Formulario "¿Nos empezamos a conocer?":** para que los mensajes lleguen al correo del jardín:
   1. Creá una cuenta gratis en https://formspree.io con el correo del jardín.
   2. Creá un formulario nuevo y copiá su dirección (`https://formspree.io/f/xxxxxx`).

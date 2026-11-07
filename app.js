@@ -821,9 +821,10 @@
         var mapa = h("div", { class: "contacto-mapa__leaflet", role: "region", "aria-label": "Mapa con la ubicación del jardín: " + lugar });
         marco.appendChild(mapa);
         var m = L.map(mapa, { scrollWheelZoom: false }).setView(pos, M.zoom || 16);
-        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-          maxZoom: 19, subdomains: "abcd",
-          attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> &copy; <a href=\"https://carto.com/attributions\">CARTO</a>"
+        // Mapa estándar de OpenStreetMap: gratuito y sin clave
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
         }).addTo(m);
         var icono = L.icon({
           iconUrl: M.marcador, iconSize: [40, 71], iconAnchor: [20, 71], popupAnchor: [0, -66],
