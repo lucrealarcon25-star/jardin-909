@@ -215,7 +215,7 @@ window.CONTENIDO = {
         id: "mareas-creativas",
         titulo: "Mareas Creativas",
         resumen: "Arte, expresión y nuevas formas de comunicar.",
-        detalle: "Mareas Creativas reúne las propuestas de **expresión artística**: la plástica, la música, el cuerpo y el movimiento como **lenguajes para expresarse y comunicarse**. **Valoramos el proceso tanto como el resultado**, porque una experiencia artística no siempre termina en un trabajo para la carpeta: muchas veces deja **una huella en toda la sala**.",
+        detalle: "Mareas Creativas reúne **la expresión artística, la música, el cuerpo y el movimiento** como **lenguajes para expresarse y comunicarse**. **Valoramos el proceso tanto como el resultado**, porque una experiencia artística no siempre termina en un trabajo para la carpeta y muchas veces deja **una huella en toda la sala**.",
         imagen: { src: "assets/proyectos/mareas-creativas-ola.png", alt: "Ola geométrica en azules y verde agua" }
       },
       {
