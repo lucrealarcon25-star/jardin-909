@@ -244,6 +244,9 @@ window.CONTENIDO = {
   novedades: {
     titulo: "Información para las familias",
     textoEnlace: "Leer comunicación",
+    // true = muestra las pestañas Todas / Comunicaciones / Experiencias
+    // y la categoría debajo de cada título. false = solo la lista.
+    mostrarFiltros: false,
     textoSinResultados: "Todavía no hay publicaciones en esta categoría.",
     filtros: [
       { id: "todas",          texto: "Todas" },
@@ -257,24 +260,6 @@ window.CONTENIDO = {
         fecha: "",
         resumen: "Fechas, requisitos y documentación para el ciclo lectivo 2027.",
         texto: "Recibimos a niñas y niños de **2 a 5 años**, en **turno mañana** y **turno tarde**.\n\n**Del 12 al 23 de octubre.** Ratificación de matrícula 2027 y preinscripción de hermanas y hermanos.\n\n**Del 9 al 20 de noviembre.** Inscripción por ingreso general y pases.\n\n**Del 27 de noviembre al 4 de diciembre.** Confirmación de las vacantes asignadas y exhibición de los listados oficiales.\n\n**Documentación.** DNI, partida de nacimiento y carnet de vacunación al día. Las planillas de inscripción se adquieren en la cooperadora ($3.000) y se presentan en folio.\n\nPor consultas, acercate al jardín en **Beruti 488** o llamanos al **(011) 3758-1782**.",
-        enlace: { texto: "", url: "" },
-        ejemplo: false
-      },
-      {
-        titulo: "Comunicaciones para las familias",
-        categoria: "comunicaciones",
-        fecha: "",
-        resumen: "Un espacio para los avisos y la información institucional.",
-        texto: "", // PENDIENTE
-        enlace: { texto: "", url: "" },
-        ejemplo: false
-      },
-      {
-        titulo: "Experiencias en el jardín",
-        categoria: "experiencias",
-        fecha: "",
-        resumen: "Propuestas y experiencias para compartir con las familias.",
-        texto: "", // PENDIENTE
         enlace: { texto: "", url: "" },
         ejemplo: false
       }
@@ -340,7 +325,7 @@ window.CONTENIDO = {
      Se muestran en Contacto solo los que tengan "url".
      Ejemplo: { texto: "Instagram del jardín", url: "https://..." } */
   enlaces: [
-    // { texto: "", url: "" },
+    // { texto: "", url: "" }
   ],
 
   /* ---------- REDES SOCIALES ----------

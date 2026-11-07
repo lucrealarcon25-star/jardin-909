@@ -579,7 +579,7 @@
     function meta(it) {
       var partes = [];
       var cat = N.filtros.filter(function (f) { return f.id === it.categoria; })[0];
-      if (cat) partes.push(h("span", { class: "novedad__categoria" }, cat.texto));
+      if (cat && N.mostrarFiltros !== false) partes.push(h("span", { class: "novedad__categoria" }, cat.texto));
       if (!vacio(it.fecha)) partes.push(h("time", { datetime: it.fecha }, (partes.length ? " · " : "") + formatoFecha(it.fecha)));
       if (it.ejemplo) partes.push(h("span", null, (partes.length ? " · " : "") + "Contenido de ejemplo"));
       return partes.length ? h("p", { class: "novedad__meta" }, partes) : null;
@@ -631,6 +631,15 @@
       });
 
       lugarSolapa.appendChild(solapa.nodo);
+    }
+
+    // Sin filtros: se muestran todas las publicaciones, sin pestañas ni categoría
+    if (N.mostrarFiltros === false) {
+      filtros.hidden = true;
+      panelTabs.removeAttribute("role");
+      panelTabs.removeAttribute("tabindex");
+      pintar("todas");
+      return;
     }
 
     // Pestañas de filtro (flechas izquierda/derecha para moverse)
