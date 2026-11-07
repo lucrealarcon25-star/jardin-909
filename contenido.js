@@ -264,20 +264,11 @@ window.CONTENIDO = {
         ejemplo: false
       },
       {
-        titulo: "Reunión de familias",
-        categoria: "comunicaciones",
-        fecha: "",
-        resumen: "Queremos encontrarnos para compartir información sobre proyectos y propuestas para el resto del ciclo lectivo.",
-        texto: "Queremos encontrarnos para compartir información sobre los **proyectos y propuestas** para el resto del ciclo lectivo.\n\nPronto vamos a comunicar la **fecha, el horario y el lugar**.", // PENDIENTE: completar fecha, horario y lugar
-        enlace: { texto: "", url: "" },
-        ejemplo: false
-      },
-      {
         titulo: "Cooperadora",
         categoria: "comunicaciones",
         fecha: "",
         resumen: "La cooperadora sostiene, junto a las familias, muchas de las propuestas del jardín.",
-        texto: "La cooperadora sostiene, **junto a las familias**, muchas de las propuestas del jardín. La información sobre la **cuota social** y los **materiales** se comunica por el **cuaderno de comunicados** y la **cartelera del hall**.\n\n¡Gracias por acompañar!",
+        texto: "La información sobre la **cuota social** y los **materiales** se comunica por el **cuaderno de comunicados** y la **cartelera del hall**.\n\n¡Gracias por acompañar!",
         enlace: { texto: "", url: "" },
         ejemplo: false
       },
@@ -295,7 +286,7 @@ window.CONTENIDO = {
         categoria: "experiencias",
         fecha: "",
         resumen: "Jugar es una forma de aprender y de ejercer la ciudadanía.",
-        texto: "Cuando las niñas y los niños **juegan, exploran la tierra o construyen con cajas**, están aprendiendo nociones sobre **el espacio, el lenguaje y la convivencia**. En el jardín, jugar no es “no hacer nada”, es **una forma de aprender y de ejercer la ciudadanía**.",
+        texto: "Cuando las niñas y los niños **juegan, exploran la tierra o construyen con cajas**, están aprendiendo nociones sobre **el espacio, el lenguaje y la convivencia**. Por eso, en el jardín, jugar no es “no hacer nada”.",
         enlace: { texto: "", url: "" },
         ejemplo: false
       },
@@ -304,7 +295,7 @@ window.CONTENIDO = {
         categoria: "experiencias",
         fecha: "",
         resumen: "Las diferencias nos enriquecen y el respeto nos une.",
-        texto: "**12 de octubre.** Las **diferencias nos enriquecen** y el **respeto nos une**. Exploramos nuestras raíces y aprendemos juntos.",
+        texto: "**12 de octubre.** Exploramos nuestras **raíces** y aprendemos juntos de las **culturas** que forman nuestra comunidad.",
         enlace: { texto: "", url: "" },
         ejemplo: false
       },
@@ -313,7 +304,7 @@ window.CONTENIDO = {
         categoria: "experiencias",
         fecha: "",
         resumen: "Reducir, reutilizar y reciclar para cuidar el ambiente.",
-        texto: "En el jardín aprendemos a **cuidar el ambiente**, a **reducir, reutilizar y reciclar**. Entre todos cuidamos nuestro mundo.",
+        texto: "En el **Puerto Sustentable** aprendemos, con gestos de todos los días, a cuidar lo que usamos. **Entre todos cuidamos nuestro mundo.**",
         enlace: { texto: "", url: "" },
         ejemplo: false
       },
@@ -322,7 +313,7 @@ window.CONTENIDO = {
         categoria: "experiencias",
         fecha: "",
         resumen: "Los libros del Faro de Historias llegan a las casas.",
-        texto: "Con los cuadernos y las **bolsas viajeras literarias**, los libros del **Faro de Historias** llegan a las casas para **compartir la lectura en familia**.",
+        texto: "Viajan en los cuadernos y las **bolsas viajeras literarias**, para que la lectura se **comparta en familia**.",
         enlace: { texto: "", url: "" },
         ejemplo: false
       }
