@@ -46,10 +46,19 @@
     return nodo;
   }
 
+  // Las palabras cortas (y, de, la, en, a, que…) no quedan solas al final de un renglón:
+  // se unen a la palabra siguiente con un espacio que no se corta, así bajan juntas.
+  var CONECTORES = /(^|[\s\u00A0(“"¿¡])(a|al|con|de|del|e|el|en|es|la|las|lo|los|mi|ni|o|para|por|que|se|sin|su|sus|u|un|una|y|ya)[ ]+(?=\S|$)/gi;
+  function sinConectoresColgados(texto) {
+    var antes, t = String(texto);
+    do { antes = t; t = t.replace(CONECTORES, "$1$2\u00A0"); } while (t !== antes);
+    return t;
+  }
+
   function agregar(nodo, hijo) {
     if (hijo == null || hijo === false) return;
     if (Array.isArray(hijo)) { hijo.forEach(function (x) { agregar(nodo, x); }); return; }
-    nodo.appendChild(hijo.nodeType ? hijo : document.createTextNode(String(hijo)));
+    nodo.appendChild(hijo.nodeType ? hijo : document.createTextNode(sinConectoresColgados(hijo)));
   }
 
   // Texto de dato pendiente (solo visible en modo propuesta)
@@ -64,7 +73,7 @@
   function conResaltados(texto) {
     var partes = String(texto).split(/\*\*(.+?)\*\*/g);
     return partes.map(function (t, i) {
-      return i % 2 ? h("strong", { class: "resaltado" }, t) : document.createTextNode(t);
+      return i % 2 ? h("strong", { class: "resaltado" }, t) : document.createTextNode(sinConectoresColgados(t));
     });
   }
 
