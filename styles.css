@@ -1577,3 +1577,9 @@ html { font-size: 106.25%; }
   .seccion__titulo { font-size: 1.45rem; }
   .pie__leyenda { display: none; }
 }
+
+/* IvySoft desde Adobe Fonts: los títulos en Bold (700) mediante el eje de peso de la fuente variable */
+h1, h2, h3,
+.jardin__lema,
+.ficha__valor,
+.solapa__titulo { font-variation-settings: "slnt" 0, "wght" 700; }
