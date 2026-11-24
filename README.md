@@ -68,7 +68,7 @@ Debajo de "Morón · Provincia de Buenos Aires · DGCyE" se lee, en celeste clar
 Texto a la izquierda (título y bajada) alineado con el logo y el menú. A la derecha, el pingüino del logo o la animación de After Effects.
 
 ### Pingüino animado de la portada
-Al abrir la página, el pingüino se arma pieza por pieza, salta y aterriza (`assets/video/pinguino-armado.mp4`, 8 s, 118 KB; el final del salto se completó con los cuadros de `intro-marca.mp4`) y al terminar se funde con la imagen quieta (`assets/video/pinguino-final.png`), que queda fija. El video original (4K, fondo crema) se espejó para que mire hacia el texto, se recortó alrededor del pingüino y se pasó a fondo blanco para que se funda con la trama. Si la persona tiene activado "reducir movimiento", se ve directamente la imagen quieta. Se configura en `contenido.js` → `portada.video`.
+Al abrir la página, el pingüino se arma pieza por pieza, salta y aterriza (se reproduce a 1,6× = unos 5 s; se cambia en `contenido.js` → `portada.video.velocidad`) (`assets/video/pinguino-armado.mp4`, 8 s, 118 KB; el final del salto se completó con los cuadros de `intro-marca.mp4`) y al terminar se funde con la imagen quieta (`assets/video/pinguino-final.png`), que queda fija. El video original (4K, fondo crema) se espejó para que mire hacia el texto, se recortó alrededor del pingüino y se pasó a fondo blanco para que se funda con la trama. Si la persona tiene activado "reducir movimiento", se ve directamente la imagen quieta. Se configura en `contenido.js` → `portada.video`.
 
 ## Pantalla de entrada
 
@@ -78,7 +78,7 @@ El video original (4K, fondo crema) se convirtió a 1280 px con fondo blanco par
 
 ## Trama de fondo
 
-La trama de la marca (`assets/tramas/trama-marina.png`) se repite de fondo en todas las páginas, muy suave para que no compita con el contenido. Cuando se abre un panel, se desvanece para que el texto se lea mejor, y vuelve al cerrarlo. La intensidad se cambia en `styles.css`: `--trama-portada` y `--trama-secciones` (0 = invisible, 1 = plena).
+La trama de formas orgánicas, la misma de las piezas de Instagram (`assets/tramas/trama-formas.png`, módulo de 303 × 136 px que empalma sin cortes; la anterior, `trama-marina.png`, queda guardada) se repite de fondo en todas las páginas, muy suave para que no compita con el contenido. Cuando se abre un panel, se desvanece para que el texto se lea mejor, y vuelve al cerrarlo. La intensidad se cambia en `styles.css`: `--trama-portada` y `--trama-secciones` (0 = invisible, 1 = plena).
 
 ## Contacto: mapa y formulario
 

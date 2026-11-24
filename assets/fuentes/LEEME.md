@@ -9,7 +9,9 @@ El sitio usa las tipografías del brandboard:
 
 Mientras falten, el sitio usa una fuente de respaldo (Nunito Sans si está, o Helvetica/Arial).
 
-## Nunito Sans (gratuita, licencia OFL)
+## Nunito Sans (gratuita, licencia OFL) — YA INCLUIDA
+Están `NunitoSans-Variable.woff2` (normal) y `NunitoSans-Variable-Italic.woff2` (itálica), con su licencia en `NunitoSans-OFL.txt`.
+Si algún día hay que reemplazarla:
 1. Entrá a https://fonts.google.com/specimen/Nunito+Sans y tocá **Get font → Download all**.
 2. En el ZIP, buscá el archivo `NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf`.
 3. Copialo acá y cambiale el nombre a `NunitoSans-Variable.ttf`.

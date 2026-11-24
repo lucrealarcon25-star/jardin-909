@@ -87,7 +87,8 @@ window.CONTENIDO = {
       src: "assets/video/pinguino-armado.mp4",
       imagenFinal: "assets/video/pinguino-final.png",
       descripcion: "El pingüino del jardín se arma pieza por pieza",
-      repetir: false      // false = se arma una vez y queda fijo (recomendado)
+      repetir: false,     // false = se arma una vez y queda fijo (recomendado)
+      velocidad: 1.6      // 1 = velocidad original (8 s); 1.6 = más rápido (unos 5 s)
     }
   },
 

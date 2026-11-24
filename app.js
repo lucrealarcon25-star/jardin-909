@@ -449,6 +449,12 @@
     video.defaultMuted = true;
     video.loop = V.repetir === true;
     video.autoplay = true;
+    // Velocidad del armado (1 = normal; más alto = más rápido)
+    var velocidad = Number(V.velocidad) > 0 ? Number(V.velocidad) : 1;
+    function aplicarVelocidad() { video.defaultPlaybackRate = velocidad; video.playbackRate = velocidad; }
+    aplicarVelocidad();
+    video.addEventListener("loadedmetadata", aplicarVelocidad);
+    video.addEventListener("play", aplicarVelocidad);
     video.addEventListener("error", alFallar, { once: true });
     function mostrarFinal() {
       if (!final) return;
@@ -457,7 +463,7 @@
     }
     // Se funde un poco antes del final, para que el saltito termine en la imagen quieta
     video.addEventListener("timeupdate", function () {
-      if (video.duration && video.currentTime >= video.duration - 0.35) mostrarFinal();
+      if (video.duration && video.currentTime >= video.duration - 0.35 * velocidad) mostrarFinal();
     });
     video.addEventListener("ended", mostrarFinal);
     var intento = video.play && video.play();

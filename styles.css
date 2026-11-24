@@ -21,6 +21,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("assets/fuentes/NunitoSans-Variable-Italic.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   /* Paleta del brandboard
@@ -872,8 +879,8 @@ main { position: relative; isolation: isolate; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url("assets/tramas/trama-marina.png") repeat;
-  background-size: 323px 359px;
+  background: url("assets/tramas/trama-formas.png") repeat;
+  background-size: 303px 136px;
   opacity: var(--trama-secciones);
   transition: opacity .4s ease;
   pointer-events: none;
@@ -886,7 +893,7 @@ main { position: relative; isolation: isolate; }
 .contacto-mapa__marco { background-color: var(--blanco); }
 
 @media (max-width: 600px) {
-  .trama { background-size: 215px 239px; }
+  .trama { background-size: 227px 102px; }
 }
 
 /* ================================================================
