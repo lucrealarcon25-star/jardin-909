@@ -49,7 +49,7 @@
 
   /* Tipografía: IvySoft para títulos y resaltes, Nunito Sans para textos */
   --fuente: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --fuente-titulos: "IvySoft Variable", "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fuente-titulos: "ivysoft-variable", "IvySoft Variable", "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* Medidas */
   --ancho: 1200px;
