@@ -23,3 +23,7 @@ instalada en la computadora no alcanza: quien visite el sitio no la tiene.
 - Si la usás desde Adobe Fonts: creá un "proyecto web" con la familia y
   pegá el `<link>` que te da Adobe en `index.html` (hay un comentario que indica dónde).
   Luego, en `styles.css`, en `--fuente-titulos` agregá el nombre que indique Adobe al principio de la lista.
+
+
+## Estado actual
+IvySoft Variable se carga desde **Adobe Fonts** (proyecto web `azv6mub`, enlazado en `index.html`). En CSS se llama `"ivysoft-variable"` y los títulos usan el peso 700 con `font-variation-settings`. El archivo de la fuente **no** se sube al sitio: la licencia de Adobe no lo permite.

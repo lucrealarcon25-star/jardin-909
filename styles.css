@@ -1582,4 +1582,4 @@ html { font-size: 106.25%; }
 h1, h2, h3,
 .jardin__lema,
 .ficha__valor,
-.solapa__titulo { font-variation-settings: "slnt" 0, "wght" 700; }
+.solapa__titulo { font-variation-settings: "slnt" 0, "wght" 700; font-synthesis: none; }
