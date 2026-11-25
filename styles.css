@@ -1613,19 +1613,8 @@ html, body, main, .encabezado { background-color: var(--crema); }
 /* La trama suave sigue detrás del contenido, como antes (sin las formas onduladas grandes) */
 .formas { display: none; }
 
-/* Pie con la trama */
-.pie { position: relative; isolation: isolate; }
-.pie::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: url("assets/tramas/trama-formas.png") repeat;
-  background-size: 303px 136px;
-  opacity: 0.28;
-  pointer-events: none;
-}
-@media (max-width: 600px) { .pie::before { background-size: 227px 102px; } }
+/* Pie liso en color crema (sin trama) */
+.pie { background: var(--crema); border-top: 1px solid var(--linea); }
 
 /* Óvalo celeste que envuelve una palabra (como "20 DE NOVIEMBRE" en las piezas) */
 .ovalo,
@@ -1643,3 +1632,7 @@ html, body, main, .encabezado { background-color: var(--crema); }
   font-variation-settings: normal;
 }
 .ficha__valor { margin-top: 8px; }
+
+/* Proyectos: el nombre de cada territorio va dentro del óvalo celeste */
+.proyecto__titulo .ovalo { font-size: 0.8125rem; padding: 6px 14px 5px; line-height: 1.3; }
+@media (max-width: 600px) { .proyecto__titulo .ovalo { font-size: 0.66rem; letter-spacing: 0.05em; padding: 5px 9px 4px; white-space: nowrap; } }

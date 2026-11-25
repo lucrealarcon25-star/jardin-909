@@ -685,7 +685,7 @@
       var tarjeta = h("li", { class: "proyecto" },
         h("div", { class: "proyecto__icono" }, imagen(p.imagen, "proyecto__img")),
         h("div", { class: "proyecto__texto" },
-          h("h3", { class: "proyecto__titulo" }, p.titulo),
+          h("h3", { class: "proyecto__titulo" }, h("span", { class: "ovalo" }, p.titulo)),
           h("p", { class: "proyecto__resumen" }, p.resumen),
           boton
         )
