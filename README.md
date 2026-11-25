@@ -76,6 +76,10 @@ Al abrir la página, el pingüino se arma pieza por pieza, salta y aterriza (se 
 
 El video original (4K, fondo crema) se convirtió a 1280 px con fondo blanco para que se funda con la trama.
 
+## Sistema visual de Instagram
+
+Fondo crema (`--crema`), formas onduladas grandes y suaves que `app.js` ubica al azar en cada página (función `decorarFondo`), la trama de formas en el pie y el óvalo celeste (clase `.ovalo`) que envuelve una palabra, como en las piezas de redes. Hoy se usa en el valor de cada sala (Exploración, Abstracción, Curiosidad).
+
 ## Trama de fondo
 
 La trama de formas orgánicas, la misma de las piezas de Instagram (`assets/tramas/trama-formas.png`, módulo de 303 × 136 px que empalma sin cortes; la anterior, `trama-marina.png`, queda guardada) se repite de fondo en todas las páginas, muy suave para que no compita con el contenido. Cuando se abre un panel, se desvanece para que el texto se lea mejor, y vuelve al cerrarlo. La intensidad se cambia en `styles.css`: `--trama-portada` y `--trama-secciones` (0 = invisible, 1 = plena).

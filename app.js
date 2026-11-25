@@ -128,6 +128,43 @@
   }
 
   // La trama de fondo se desvanece mientras hay un panel abierto en la sección visible
+  // Formas onduladas grandes de fondo (como en las piezas de Instagram).
+  // En cada página se ubican dos o tres en lugares al azar de los bordes.
+  var FORMAS = [
+    "M30 40 C70 120 110 150 120 210 C130 150 180 110 230 60",          // forma en V
+    "M20 170 C70 70 140 200 200 90 C225 45 255 70 275 40",             // forma en S
+    "M40 60 C120 20 170 120 120 170 C80 210 150 260 230 220"           // forma ondulada
+  ];
+  var COLORES_FORMAS = ["#dde8ea", "#e8e0ee", "#d9ebf3"];
+  var LUGARES = [
+    { top: "-6%", right: "-8%" }, { top: "30%", right: "-12%" }, { bottom: "-10%", right: "4%" },
+    { bottom: "-8%", left: "-10%" }, { top: "40%", left: "-14%" }, { top: "-8%", left: "30%" }
+  ];
+  function decorarFondo() {
+    var caja = $("#formas");
+    if (!caja) return;
+    caja.textContent = "";
+    var lugares = LUGARES.slice().sort(function () { return Math.random() - 0.5; });
+    var cantidad = window.innerWidth <= 600 ? 2 : 3;
+    for (var i = 0; i < cantidad; i++) {
+      var svg = document.createElementNS(SVG_NS, "svg");
+      svg.setAttribute("viewBox", "0 0 300 280");
+      svg.setAttribute("class", "formas__forma");
+      var lugar = lugares[i];
+      Object.keys(lugar).forEach(function (k) { svg.style[k] = lugar[k]; });
+      svg.style.transform = "rotate(" + Math.round(Math.random() * 360) + "deg)";
+      var trazo = document.createElementNS(SVG_NS, "path");
+      trazo.setAttribute("d", FORMAS[Math.floor(Math.random() * FORMAS.length)]);
+      trazo.setAttribute("fill", "none");
+      trazo.setAttribute("stroke", COLORES_FORMAS[Math.floor(Math.random() * COLORES_FORMAS.length)]);
+      trazo.setAttribute("stroke-width", "46");
+      trazo.setAttribute("stroke-linecap", "round");
+      trazo.setAttribute("stroke-linejoin", "round");
+      svg.appendChild(trazo);
+      caja.appendChild(svg);
+    }
+  }
+
   function actualizarTrama() {
     var abierto = document.querySelector("main > section:not([hidden]) .solapa:not([hidden])");
     document.body.classList.toggle("panel-abierto", !!abierto);
@@ -313,6 +350,7 @@
       repetirPinguinos();
       if (id === "contacto") abrirMapa();
       if (id === "inicio") requestAnimationFrame(alinearPortada);
+      decorarFondo();
       actualizarTrama();
       enlaces.forEach(function (a) {
         if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");

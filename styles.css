@@ -1599,3 +1599,52 @@ h1, h2, h3,
     #81c9ef 68% 100%);
 }
 .portada__bajada { margin-top: clamp(14px, 1.6vw, 22px); }
+
+/* ================================================================
+   SISTEMA VISUAL DE INSTAGRAM
+   Fondo crema, formas onduladas grandes al azar, la trama en el pie
+   y una palabra envuelta en un óvalo celeste.
+   ================================================================ */
+:root { --crema: #f5f1e6; --celeste-ovalo: #b8e3fc; }
+
+/* Fondo crema en toda la página (las fichas que se abren siguen en blanco) */
+html, body, main, .encabezado { background-color: var(--crema); }
+
+/* La trama ya no va detrás del contenido: pasa al pie */
+main > .trama { display: none; }
+
+/* Formas onduladas grandes, suaves, detrás del contenido */
+.formas { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.formas__forma { position: absolute; width: clamp(200px, 26vw, 380px); height: auto; transform-origin: center; }
+@media (max-width: 600px) { .formas__forma { width: 190px; } }
+
+/* Pie con la trama */
+.pie { position: relative; isolation: isolate; }
+.pie::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("assets/tramas/trama-formas.png") repeat;
+  background-size: 303px 136px;
+  opacity: 0.28;
+  pointer-events: none;
+}
+@media (max-width: 600px) { .pie::before { background-size: 227px 102px; } }
+
+/* Óvalo celeste que envuelve una palabra (como "20 DE NOVIEMBRE" en las piezas) */
+.ovalo,
+.ficha__valor {
+  display: inline-block;
+  padding: 5px 14px 4px;
+  border-radius: 999px;
+  background: var(--celeste-ovalo);
+  color: var(--azul);
+  font-family: var(--fuente);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-variation-settings: normal;
+}
+.ficha__valor { margin-top: 8px; }
