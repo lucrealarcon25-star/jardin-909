@@ -1605,9 +1605,9 @@ h1, h2, h3,
    Fondo crema, la trama suave de fondo y en el pie,
    y una palabra envuelta en un óvalo celeste.
    ================================================================ */
-:root { --crema: #f5f1e6; --celeste-ovalo: #b8e3fc; }
+:root { --crema: #f7f1e7; --celeste-ovalo: #b8e3fc; }  /* crema de la marca: #f7f1e7 · RGB 247, 241, 231 */
 
-/* Fondo crema en toda la página (las fichas que se abren siguen en blanco) */
+/* Fondo crema en toda la página, también en las fichas que se abren */
 html, body, main, .encabezado { background-color: var(--crema); }
 
 /* La trama suave sigue detrás del contenido, como antes (sin las formas onduladas grandes) */
@@ -1636,3 +1636,6 @@ html, body, main, .encabezado { background-color: var(--crema); }
 /* Proyectos: el nombre de cada territorio va dentro del óvalo celeste */
 .proyecto__titulo .ovalo { font-size: 0.8125rem; padding: 6px 14px 5px; line-height: 1.3; }
 @media (max-width: 600px) { .proyecto__titulo .ovalo { font-size: 0.66rem; letter-spacing: 0.05em; padding: 5px 9px 4px; white-space: nowrap; } }
+
+/* Las fichas que se abren ("Conocer más", "Conocer la sala", etc.) también en crema */
+.solapa { background-color: var(--crema); }
