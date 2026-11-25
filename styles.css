@@ -1645,3 +1645,7 @@ html, body, main, .encabezado { background-color: var(--crema); }
 h3,
 .solapa__titulo,
 .jardin__lema { font-family: var(--fuente); font-variation-settings: normal; }
+
+/* La línea de la portada llega hasta el final del título (el renglón más largo) */
+.portada__titulo { width: fit-content; }
+.portada__titulo::after { width: 100%; }
