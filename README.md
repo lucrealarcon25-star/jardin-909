@@ -78,7 +78,7 @@ El video original (4K, fondo crema) se convirtió a 1280 px con fondo blanco par
 
 ## Sistema visual de Instagram
 
-Fondo crema (`--crema`), formas onduladas grandes y suaves que `app.js` ubica al azar en cada página (función `decorarFondo`), la trama de formas en el pie y el óvalo celeste (clase `.ovalo`) que envuelve una palabra, como en las piezas de redes. Hoy se usa en el valor de cada sala (Exploración, Abstracción, Curiosidad).
+Fondo crema (`--crema`), la trama suave de fondo y también en el pie y el óvalo celeste (clase `.ovalo`) que envuelve una palabra, como en las piezas de redes. Hoy se usa en el valor de cada sala (Exploración, Abstracción, Curiosidad).
 
 ## Trama de fondo
 

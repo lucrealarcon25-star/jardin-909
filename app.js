@@ -350,7 +350,6 @@
       repetirPinguinos();
       if (id === "contacto") abrirMapa();
       if (id === "inicio") requestAnimationFrame(alinearPortada);
-      decorarFondo();
       actualizarTrama();
       enlaces.forEach(function (a) {
         if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");

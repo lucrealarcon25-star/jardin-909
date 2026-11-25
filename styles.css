@@ -1602,7 +1602,7 @@ h1, h2, h3,
 
 /* ================================================================
    SISTEMA VISUAL DE INSTAGRAM
-   Fondo crema, formas onduladas grandes al azar, la trama en el pie
+   Fondo crema, la trama suave de fondo y en el pie,
    y una palabra envuelta en un óvalo celeste.
    ================================================================ */
 :root { --crema: #f5f1e6; --celeste-ovalo: #b8e3fc; }
@@ -1610,13 +1610,8 @@ h1, h2, h3,
 /* Fondo crema en toda la página (las fichas que se abren siguen en blanco) */
 html, body, main, .encabezado { background-color: var(--crema); }
 
-/* La trama ya no va detrás del contenido: pasa al pie */
-main > .trama { display: none; }
-
-/* Formas onduladas grandes, suaves, detrás del contenido */
-.formas { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-.formas__forma { position: absolute; width: clamp(200px, 26vw, 380px); height: auto; transform-origin: center; }
-@media (max-width: 600px) { .formas__forma { width: 190px; } }
+/* La trama suave sigue detrás del contenido, como antes (sin las formas onduladas grandes) */
+.formas { display: none; }
 
 /* Pie con la trama */
 .pie { position: relative; isolation: isolate; }
