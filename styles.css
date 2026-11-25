@@ -1639,3 +1639,9 @@ html, body, main, .encabezado { background-color: var(--crema); }
 
 /* Las fichas que se abren ("Conocer más", "Conocer la sala", etc.) también en crema */
 .solapa { background-color: var(--crema); }
+
+/* IvySoft solo para los títulos grandes (portada, títulos de sección y subtítulos de Contacto).
+   Los demás textos —nombres de salas, títulos de fichas y novedades, datos— van en Nunito Sans. */
+h3,
+.solapa__titulo,
+.jardin__lema { font-family: var(--fuente); font-variation-settings: normal; }
