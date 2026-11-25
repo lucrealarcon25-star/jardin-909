@@ -1605,7 +1605,7 @@ h1, h2, h3,
    Fondo crema, la trama suave de fondo y en el pie,
    y una palabra envuelta en un óvalo celeste.
    ================================================================ */
-:root { --crema: #f7f1e7; --celeste-ovalo: #b8e3fc; }  /* crema de la marca: #f7f1e7 · RGB 247, 241, 231 */
+:root { --crema: #fbf8f2; --celeste-ovalo: #b8e3fc; }  /* crema aclarado (el de la marca es #f7f1e7 · RGB 247, 241, 231) */
 
 /* Fondo crema en toda la página, también en las fichas que se abren */
 html, body, main, .encabezado { background-color: var(--crema); }
