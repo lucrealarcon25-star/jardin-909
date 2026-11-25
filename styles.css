@@ -1583,3 +1583,19 @@ h1, h2, h3,
 .jardin__lema,
 .ficha__valor,
 .solapa__titulo { font-variation-settings: "slnt" 0, "wght" 700; font-synthesis: none; }
+
+/* ---------- Portada: línea divisoria como la del logo ----------
+   Celeste, un tramo corto amarillo en el medio y celeste otra vez,
+   entre el título y la bajada. */
+.portada__titulo::after {
+  content: "";
+  display: block;
+  width: clamp(150px, 18vw, 280px);
+  height: clamp(3px, 0.3vw, 5px);
+  margin-top: clamp(14px, 1.6vw, 24px);
+  background: linear-gradient(to right,
+    #81c9ef 0 45%, transparent 45% 49%,
+    var(--amarillo) 49% 64%, transparent 64% 68%,
+    #81c9ef 68% 100%);
+}
+.portada__bajada { margin-top: clamp(14px, 1.6vw, 22px); }
